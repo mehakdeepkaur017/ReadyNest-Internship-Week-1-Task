@@ -1070,7 +1070,7 @@ export default function FormBuilderPage() {
                 <div className="space-y-6 pt-4">
                   {fields.length === 0 ? (
                     <div className="text-center py-8 opacity-40 italic text-sm">
-                      Drag and drop fields here to build your form.
+                      Select elements from the Builder to start creating your form.
                     </div>
                   ) : (
                     fields.map((field) => (
