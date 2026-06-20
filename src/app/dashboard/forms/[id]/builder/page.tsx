@@ -49,6 +49,7 @@ export default function FormBuilderPage() {
   
   // Workspace Modes
   const [leftTab, setLeftTab] = useState<"build" | "settings">("build");
+  const [mobileView, setMobileView] = useState<"workspace" | "preview">("workspace");
   const [expandedConfig, setExpandedConfig] = useState<string | null>("context");
   const [status, setStatus] = useState<FormStatus>("draft");
 
@@ -296,8 +297,8 @@ export default function FormBuilderPage() {
   return (
     <div className="flex flex-col h-[calc(100vh-6rem)] -m-4 sm:-m-8">
       {/* Top action header - Global Workspace Toggle */}
-      <div className="shrink-0 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-background border-b border-border p-4 z-20 overflow-x-auto">
-        <div className="min-w-0 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full md:w-auto">
+      <div className="shrink-0 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 bg-background border-b border-border p-4 z-20 overflow-x-auto">
+        <div className="min-w-0 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full lg:w-auto">
           <div className="flex items-center space-x-2.5 sm:border-r border-border/50 sm:pr-4 max-w-full">
             <h1 className="font-extrabold text-foreground text-lg truncate tracking-tight">{form.title}</h1>
             <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
@@ -308,7 +309,8 @@ export default function FormBuilderPage() {
               {status}
             </span>
           </div>
-          <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border w-full sm:w-auto">
+
+          <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border w-full sm:w-auto shrink-0">
             <button
               onClick={() => { setLeftTab("build"); setSelectedFieldId(null); }}
               className={`flex-1 sm:flex-none px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
@@ -328,7 +330,7 @@ export default function FormBuilderPage() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+        <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto shrink-0">
           {/* Quiz Mode Toggle */}
           <button
             onClick={handleQuizModeToggle}
@@ -368,10 +370,32 @@ export default function FormBuilderPage() {
         </div>
       </div>
 
+      {/* Mobile View Toggle */}
+      <div className="lg:hidden flex bg-muted/40 p-1 mx-4 sm:mx-8 mt-4 rounded-xl border border-border shrink-0">
+        <button
+          onClick={() => setMobileView("workspace")}
+          className={`flex-1 px-4 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${
+            mobileView === "workspace" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Settings className="h-4 w-4" /> Builder Workspace
+        </button>
+        <button
+          onClick={() => setMobileView("preview")}
+          className={`flex-1 px-4 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${
+            mobileView === "preview" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <LayoutTemplate className="h-4 w-4" /> Live Preview
+        </button>
+      </div>
+
       {/* Main Split Layout */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
+      <div className="flex-1 flex overflow-hidden">
         {/* LEFT PANEL - DYNAMIC WORKSPACE */}
-        <div className="w-full lg:w-[450px] min-h-[60vh] lg:min-h-0 shrink-0 lg:border-r border-b lg:border-b-0 border-border bg-background flex flex-col z-10 relative lg:overflow-hidden">
+        <div className={`w-full lg:w-[450px] shrink-0 lg:border-r border-border bg-background flex-col z-10 relative lg:overflow-hidden ${
+          mobileView === "workspace" ? "flex flex-1 lg:flex-none" : "hidden lg:flex"
+        }`}>
           
           <div className="flex-1 relative overflow-hidden flex flex-col">
             {leftTab === "build" ? (
@@ -912,7 +936,9 @@ export default function FormBuilderPage() {
         </div>
 
         {/* RIGHT PANEL - REAL TIME LIVE PREVIEW */}
-        <div className="flex-1 bg-muted/20 relative overflow-hidden flex flex-col">
+        <div className={`bg-muted/20 relative overflow-hidden flex-col ${
+          mobileView === "preview" ? "flex flex-1" : "hidden lg:flex lg:flex-1"
+        }`}>
           <div className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-background/80 backdrop-blur-md rounded-full border border-border shadow-sm text-[10px] font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
