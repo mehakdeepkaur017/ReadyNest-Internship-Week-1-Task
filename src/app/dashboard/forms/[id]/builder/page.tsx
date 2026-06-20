@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { 
   Save, Trash2, Copy, ToggleLeft, ToggleRight,
   Settings, GripVertical, PlusCircle, MinusCircle, FileText, Sparkles, LayoutGrid,
-  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate
+  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock
 } from "lucide-react";
 import { 
   DndContext, closestCenter, KeyboardSensor, PointerSensor, 
@@ -370,9 +370,9 @@ export default function FormBuilderPage() {
       </div>
 
       {/* Main Split Layout */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
         {/* LEFT PANEL - DYNAMIC WORKSPACE */}
-        <div className="w-full lg:w-[450px] shrink-0 border-r border-border bg-background flex flex-col z-10 relative overflow-hidden">
+        <div className="w-full lg:w-[450px] min-h-[60vh] lg:min-h-0 shrink-0 lg:border-r border-b lg:border-b-0 border-border bg-background flex flex-col z-10 relative lg:overflow-hidden">
           
           <div className="flex-1 relative overflow-hidden flex flex-col">
             {leftTab === "build" ? (
@@ -882,6 +882,31 @@ export default function FormBuilderPage() {
                     </div>
                   </div>
                 </Accordion>
+
+                {isQuizMode && (
+                  <Accordion 
+                    id="quizSettings" 
+                    title="Quiz Settings" 
+                    icon={Clock} 
+                    expanded={expandedConfig} 
+                    onToggle={setExpandedConfig}
+                  >
+                    <p className="text-[10px] text-muted-foreground mb-4">Set time limits and quiz rules.</p>
+                    <div className="space-y-3 p-3 border border-border/50 rounded-xl bg-background/50 shadow-inner">
+                      <div>
+                        <label className="block text-[10px] font-bold text-muted-foreground">Time Limit (in minutes)</label>
+                        <input
+                          type="number"
+                          min={0}
+                          value={quizSettings.timeLimit || 0}
+                          onChange={(e) => setQuizSettings({ ...quizSettings, timeLimit: parseInt(e.target.value) || 0 })}
+                          className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-1.5 text-foreground text-xs focus:ring-1 focus:ring-primary focus:outline-none"
+                        />
+                        <p className="text-[9px] text-muted-foreground mt-1">Set to 0 for no time limit.</p>
+                      </div>
+                    </div>
+                  </Accordion>
+                )}
               </div>
             )}
           </div>
