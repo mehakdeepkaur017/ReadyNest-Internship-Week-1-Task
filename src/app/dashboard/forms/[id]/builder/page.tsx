@@ -296,22 +296,21 @@ export default function FormBuilderPage() {
   return (
     <div className="flex flex-col h-[calc(100vh-6rem)] -m-4 sm:-m-8">
       {/* Top action header - Global Workspace Toggle */}
-      <div className="shrink-0 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-background border-b border-border p-4 z-20">
-        <div className="min-w-0 flex items-center space-x-4">
-          <div className="flex items-center space-x-2.5 border-r border-border/50 pr-4">
+      <div className="shrink-0 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-background border-b border-border p-4 z-20 overflow-x-auto">
+        <div className="min-w-0 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full md:w-auto">
+          <div className="flex items-center space-x-2.5 sm:border-r border-border/50 sm:pr-4 max-w-full">
             <h1 className="font-extrabold text-foreground text-lg truncate tracking-tight">{form.title}</h1>
             <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
               status === "published" 
                 ? "bg-emerald-500/15 text-emerald-500 border-emerald-500/20" 
                 : "bg-amber-500/15 text-amber-500 border-amber-500/20"
             }`}>
-              {status}
-            </span>
-          </div>
-          <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border">
+           </div>
+
+          <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border w-full sm:w-auto">
             <button
               onClick={() => { setLeftTab("build"); setSelectedFieldId(null); }}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 ${
+              className={`flex-1 sm:flex-none px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                 leftTab === "build" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -319,7 +318,7 @@ export default function FormBuilderPage() {
             </button>
             <button
               onClick={() => setLeftTab("settings")}
-              className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 ${
+              className={`flex-1 sm:flex-none px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                 leftTab === "settings" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -328,7 +327,7 @@ export default function FormBuilderPage() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
           {/* Quiz Mode Toggle */}
           <button
             onClick={handleQuizModeToggle}
