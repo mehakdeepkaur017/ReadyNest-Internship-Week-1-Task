@@ -1213,6 +1213,139 @@ export default function FormBuilderPage() {
           </div>
         </div>
       </div>
+
+      {/* Smart Builder Modal */}
+      <AnimatePresence>
+        {showBuilderModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-card w-full max-w-lg rounded-2xl shadow-2xl border border-border overflow-hidden"
+            >
+              <div className="p-6 border-b border-border bg-muted/20">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2 text-primary">
+                    <Sparkles className="h-6 w-6" />
+                    <h2 className="text-lg font-black tracking-tight">Smart Assessment Builder</h2>
+                  </div>
+                  <button onClick={() => setShowBuilderModal(false)} className="text-muted-foreground hover:text-foreground">
+                    ✕
+                  </button>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2 font-medium">Dynamically update or add questions to your current assessment.</p>
+              </div>
+
+              <form onSubmit={handleSmartBuild} className="p-6 space-y-5 bg-background">
+                <div className="grid grid-cols-2 gap-5">
+                  <div className="space-y-2 col-span-2">
+                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Subject</label>
+                    <select
+                      value={builderSubject}
+                      onChange={(e) => setBuilderSubject(e.target.value)}
+                      className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="mathematics">Mathematics</option>
+                      <option value="science">Science</option>
+                      <option value="english">English Literature</option>
+                      <option value="history">History</option>
+                      <option value="geography">Geography</option>
+                      <option value="computer science">Computer Science</option>
+                      <option value="dbms">DBMS</option>
+                      <option value="java">Java Programming</option>
+                      <option value="python">Python</option>
+                      <option value="data structures">Data Structures</option>
+                      <option value="operating systems">Operating Systems</option>
+                      <option value="computer networks">Computer Networks</option>
+                      <option value="cyber security">Cyber Security</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Difficulty</label>
+                    <select
+                      value={builderDifficulty}
+                      onChange={(e) => setBuilderDifficulty(e.target.value)}
+                      className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="mixed">Mixed</option>
+                      <option value="easy">Easy</option>
+                      <option value="medium">Medium</option>
+                      <option value="hard">Hard</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Question Type</label>
+                    <select
+                      value={builderType}
+                      onChange={(e) => setBuilderType(e.target.value)}
+                      className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="mixed">Mixed Types</option>
+                      <option value="mcq">Multiple Choice</option>
+                      <option value="tf">True / False</option>
+                      <option value="sa">Short Answer</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Number of Questions</label>
+                    <input
+                      type="number"
+                      min={1}
+                      max={50}
+                      value={builderCount}
+                      onChange={(e) => setBuilderCount(parseInt(e.target.value) || 10)}
+                      className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Action</label>
+                    <select
+                      value={builderAction}
+                      onChange={(e) => setBuilderAction(e.target.value as any)}
+                      className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="replace">Replace Existing Canvas</option>
+                      <option value="append">Append to Canvas</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-border flex justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setShowBuilderModal(false)}
+                    className="px-4 py-2 font-bold text-sm text-muted-foreground hover:text-foreground transition cursor-pointer"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={buildingAssessment}
+                    className="flex items-center space-x-2 bg-primary text-primary-foreground hover:opacity-90 px-6 py-2 rounded-xl text-sm font-bold transition disabled:opacity-50 cursor-pointer shadow-lg shadow-primary/25"
+                  >
+                    {buildingAssessment ? (
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
+                    ) : (
+                      <Sparkles className="h-4 w-4" />
+                    )}
+                    <span>{buildingAssessment ? "Generating..." : "Generate & Apply"}</span>
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
