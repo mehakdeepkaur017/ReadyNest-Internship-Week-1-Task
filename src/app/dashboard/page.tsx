@@ -419,7 +419,7 @@ function DashboardContent() {
           >
             <div className="flex justify-between items-start">
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Active Published</span>
-              <div className="h-2 w-2 rounded-full bg-emerald-500 animate-ping mt-1.5" />
+              <Globe className="h-5 w-5 text-emerald-500" />
             </div>
             <p className="text-3xl font-extrabold mt-2 text-foreground">{stats?.publishedForms || 0}</p>
             <p className="text-xs text-muted-foreground mt-1">Forms ready to collect responses</p>
