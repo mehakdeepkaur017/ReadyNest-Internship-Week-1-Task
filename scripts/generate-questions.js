@@ -194,7 +194,13 @@ function generatePool(subject, topic, baseLabel, answer, falseAnswers, type, dif
   } else if (type === "tf") {
     const isTrue = Math.random() > 0.5;
     const stmt = isTrue ? answer : falseAnswers[0];
-    questionBank.push({ subject, topic, difficulty: diff, type: "radio", label: `True or False: ${baseLabel.replace("What", stmt)}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue ? "true" : "false", explanation: isTrue ? `Yes, it is true.` : `No, it is false.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
+    let finalLabel = baseLabel;
+    if (baseLabel.includes("[STMT]")) {
+       finalLabel = `True or False: ${baseLabel.replace("[STMT]", stmt)}`;
+    } else {
+       finalLabel = `True or False: ${baseLabel.replace("What", stmt)}`;
+    }
+    questionBank.push({ subject, topic, difficulty: diff, type: "radio", label: finalLabel, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue ? "true" : "false", explanation: isTrue ? `Yes, it is true.` : `No, it is false.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
   }
 }
 
@@ -212,13 +218,32 @@ subjectsInfo.forEach(info => {
         
         if (info.isArray) {
            ans = info.data[Math.floor(Math.random() * info.data.length)];
-           falseAns = info.data.filter(x => x !== ans).sort(() => Math.random() - 0.5);
-           label = `Identify the correct concept regarding ${ans} (Variation ${c}_${diff}_${t})`;
+           
+           if (t === "radio") {
+             falseAns = info.data.filter(x => x !== ans).sort(() => Math.random() - 0.5);
+             label = `Which of the following is a fundamental concept in ${info.id.toUpperCase()}? (Variation ${c}_${diff}_${t})`;
+           } else if (t === "text") {
+             const hidden = ans.split('').map((char, i) => i % 2 === 0 ? char : '_').join('');
+             label = `Identify the ${info.id.toUpperCase()} concept: ${hidden} (Variation ${c}_${diff}_${t})`;
+             falseAns = [];
+           } else if (t === "tf") {
+             const otherSubjects = subjectsInfo.filter(s => s.id !== info.id && s.isArray);
+             const randomOtherSubject = otherSubjects[Math.floor(Math.random() * otherSubjects.length)];
+             const falseConcept = randomOtherSubject.data[Math.floor(Math.random() * randomOtherSubject.data.length)];
+             
+             falseAns = [falseConcept];
+             label = `[STMT] is a fundamental concept in ${info.id.toUpperCase()}. (Variation ${c}_${diff}_${t})`;
+           }
         } else {
            const item = info.data[Math.floor(Math.random() * info.data.length)];
            ans = item[info.prop2];
            falseAns = info.data.filter(x => x[info.prop2] !== ans).map(x => x[info.prop2]).sort(() => Math.random() - 0.5);
-           label = `What is the ${info.prop2} of ${item[info.prop1]}? (Variation ${c}_${diff}_${t})`;
+           
+           if (t === "tf") {
+               label = `[STMT] is the ${info.prop2} of ${item[info.prop1]}. (Variation ${c}_${diff}_${t})`;
+           } else {
+               label = `What is the ${info.prop2} of ${item[info.prop1]}? (Variation ${c}_${diff}_${t})`;
+           }
         }
         generatePool(info.id, info.topic, label, String(ans), falseAns.map(String), t, diff);
       }
