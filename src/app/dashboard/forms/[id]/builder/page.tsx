@@ -308,8 +308,7 @@ export default function FormBuilderPage() {
               {status}
             </span>
           </div>
-
-          <div className="hidden md:flex bg-muted/40 p-1 rounded-xl border border-border">
+          <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border">
             <button
               onClick={() => { setLeftTab("build"); setSelectedFieldId(null); }}
               className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 ${
