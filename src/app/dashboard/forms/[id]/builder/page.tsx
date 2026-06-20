@@ -200,6 +200,8 @@ export default function FormBuilderPage() {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          title: form?.title,
+          description: form?.description,
           fields: fields.map((f, i) => ({ ...f, order: i })),
           status,
           themeSettings,
@@ -599,6 +601,36 @@ export default function FormBuilderPage() {
             ) : (
               /* CONFIGURATION MODE (ACCORDIONS) */
               <div className="absolute inset-0 overflow-y-auto p-4 custom-scrollbar space-y-3">
+                <Accordion 
+                  id="general" 
+                  title="General Settings" 
+                  icon={FileText} 
+                  expanded={expandedConfig} 
+                  onToggle={setExpandedConfig}
+                >
+                  <p className="text-[10px] text-muted-foreground mb-4">Set the name and description of this form.</p>
+                  <div className="space-y-3 p-3 border border-border/50 rounded-xl bg-background/50 shadow-inner">
+                    <div>
+                      <label className="block text-[10px] font-bold text-muted-foreground">Form Title</label>
+                      <input
+                        type="text"
+                        value={form?.title || ""}
+                        onChange={(e) => setForm((prev) => prev ? { ...prev, title: e.target.value } : null)}
+                        className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-1.5 text-foreground text-xs focus:ring-1 focus:ring-primary focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-bold text-muted-foreground">Form Description</label>
+                      <textarea
+                        value={form?.description || ""}
+                        onChange={(e) => setForm((prev) => prev ? { ...prev, description: e.target.value } : null)}
+                        rows={3}
+                        className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-1.5 text-foreground text-xs focus:ring-1 focus:ring-primary focus:outline-none custom-scrollbar"
+                      />
+                    </div>
+                  </div>
+                </Accordion>
+
                 <Accordion 
                   id="context" 
                   title={builderContext.infoSectionTitle} 
