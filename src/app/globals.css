@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-border: oklch(0.922 0.004 286.32);
+  --color-input: oklch(0.922 0.004 286.32);
+  --color-ring: oklch(0.645 0.246 276.935);
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.145 0.004 286.32);
+
+  --color-primary: oklch(0.645 0.246 276.935);
+  --color-primary-foreground: oklch(0.985 0.002 286.32);
+
+  --color-secondary: oklch(0.97 0.001 286.32);
+  --color-secondary-foreground: oklch(0.205 0.012 286.32);
+
+  --color-muted: oklch(0.97 0.001 286.32);
+  --color-muted-foreground: oklch(0.556 0.008 286.32);
+
+  --color-accent: oklch(0.97 0.001 286.32);
+  --color-accent-foreground: oklch(0.205 0.012 286.32);
+
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.985 0.002 286.32);
+
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0.004 286.32);
+
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0.004 286.32);
+
+  --color-success: oklch(0.6 0.2 145);
+  --color-warning: oklch(0.75 0.18 80);
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+.dark {
+  --color-border: oklch(0.274 0.006 286.32);
+  --color-input: oklch(0.274 0.006 286.32);
+  --color-ring: oklch(0.541 0.281 275.0);
+  --color-background: oklch(0.1 0.005 286.32);
+  --color-foreground: oklch(0.985 0.002 286.32);
+
+  --color-primary: oklch(0.541 0.281 275.0);
+  --color-primary-foreground: oklch(0.985 0.002 286.32);
+
+  --color-secondary: oklch(0.17 0.006 286.32);
+  --color-secondary-foreground: oklch(0.985 0.002 286.32);
+
+  --color-muted: oklch(0.17 0.006 286.32);
+  --color-muted-foreground: oklch(0.556 0.008 286.32);
+
+  --color-accent: oklch(0.17 0.006 286.32);
+  --color-accent-foreground: oklch(0.985 0.002 286.32);
+
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.985 0.002 286.32);
+
+  --color-card: oklch(0.13 0.005 286.32);
+  --color-card-foreground: oklch(0.985 0.002 286.32);
+
+  --color-popover: oklch(0.13 0.005 286.32);
+  --color-popover-foreground: oklch(0.985 0.002 286.32);
+
+  --color-success: oklch(0.6 0.2 145);
+  --color-warning: oklch(0.75 0.18 80);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, oklch(0.645 0.246 276.935), oklch(0.6 0.25 300), oklch(0.65 0.22 250));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium glow effect */
+.glow {
+  box-shadow: 0 0 40px -10px oklch(0.541 0.281 275.0 / 0.3);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 50px -10px oklch(0.541 0.281 275.0 / 0.4);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.556 0.008 286.32 / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.556 0.008 286.32 / 0.5);
+}
+
+/* Skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    oklch(0.97 0.001 286.32) 25%,
+    oklch(0.94 0.002 286.32) 50%,
+    oklch(0.97 0.001 286.32) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    oklch(0.17 0.006 286.32) 25%,
+    oklch(0.22 0.006 286.32) 50%,
+    oklch(0.17 0.006 286.32) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Gradient mesh background */
+.mesh-gradient {
+  background:
+    radial-gradient(at 40% 20%, oklch(0.541 0.281 275.0 / 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, oklch(0.6 0.25 300 / 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, oklch(0.65 0.22 250 / 0.06) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, oklch(0.6 0.2 145 / 0.04) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, oklch(0.541 0.281 275.0 / 0.06) 0px, transparent 50%);
+}
+
+/* Focus ring */
+.focus-ring {
+  @apply outline-none ring-2 ring-primary/30 ring-offset-2 ring-offset-background;
+}
+
+/* Dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, oklch(0.556 0.008 286.32 / 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Force hide Next.js development indicator */
+nextjs-portal, [data-nextjs-toast] {
+  display: none !important;
+}
