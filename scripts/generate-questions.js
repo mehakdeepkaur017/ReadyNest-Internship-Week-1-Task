@@ -219,12 +219,34 @@ subjectsInfo.forEach(info => {
         if (info.isArray) {
            ans = info.data[Math.floor(Math.random() * info.data.length)];
            
+           const mcqTemplates = [
+             `Which of the following is a fundamental concept in ${info.id.toUpperCase()}?`,
+             `Identify the term that is closely associated with ${info.id.toUpperCase()}:`,
+             `In the context of ${info.id.toUpperCase()}, which concept is fundamental?`,
+             `Which concept belongs to the field of ${info.id.toUpperCase()}?`,
+             `Select the core concept related to ${info.id.toUpperCase()}:`
+           ];
+           const saTemplates = [
+             `Identify the ${info.id.toUpperCase()} concept: [HIDDEN]`,
+             `What core ${info.id.toUpperCase()} concept fits this pattern: [HIDDEN]?`,
+             `Fill in the missing letters to reveal a ${info.id.toUpperCase()} concept: [HIDDEN]`,
+             `Guess the ${info.id.toUpperCase()} concept based on this outline: [HIDDEN]`,
+             `Complete the word for this ${info.id.toUpperCase()} concept: [HIDDEN]`
+           ];
+           const tfTemplates = [
+             `[STMT] is a fundamental concept in ${info.id.toUpperCase()}.`,
+             `In the field of ${info.id.toUpperCase()}, [STMT] is a widely recognized concept.`,
+             `The concept of [STMT] is heavily utilized in ${info.id.toUpperCase()}.`,
+             `${info.id.toUpperCase()} relies heavily on the concept of [STMT].`,
+             `[STMT] is a term that directly relates to ${info.id.toUpperCase()}.`
+           ];
+
            if (t === "radio") {
              falseAns = info.data.filter(x => x !== ans).sort(() => Math.random() - 0.5);
-             label = `Which of the following is a fundamental concept in ${info.id.toUpperCase()}?`;
+             label = mcqTemplates[Math.floor(Math.random() * mcqTemplates.length)];
            } else if (t === "text") {
              const hidden = ans.split('').map((char, i) => i % 2 === 0 ? char : '_').join('');
-             label = `Identify the ${info.id.toUpperCase()} concept: ${hidden}`;
+             label = saTemplates[Math.floor(Math.random() * saTemplates.length)].replace("[HIDDEN]", hidden);
              falseAns = [];
            } else if (t === "tf") {
              const otherSubjects = subjectsInfo.filter(s => s.id !== info.id && s.isArray);
@@ -232,7 +254,7 @@ subjectsInfo.forEach(info => {
              const falseConcept = randomOtherSubject.data[Math.floor(Math.random() * randomOtherSubject.data.length)];
              
              falseAns = [falseConcept];
-             label = `[STMT] is a fundamental concept in ${info.id.toUpperCase()}.`;
+             label = tfTemplates[Math.floor(Math.random() * tfTemplates.length)];
            }
         } else {
            const item = info.data[Math.floor(Math.random() * info.data.length)];
