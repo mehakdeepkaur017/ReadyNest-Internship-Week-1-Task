@@ -305,8 +305,9 @@ export default function FormBuilderPage() {
                 ? "bg-emerald-500/15 text-emerald-500 border-emerald-500/20" 
                 : "bg-amber-500/15 text-amber-500 border-amber-500/20"
             }`}>
-           </div>
-
+              {status}
+            </span>
+          </div>
           <div className="flex overflow-x-auto bg-muted/40 p-1 rounded-xl border border-border w-full sm:w-auto">
             <button
               onClick={() => { setLeftTab("build"); setSelectedFieldId(null); }}
