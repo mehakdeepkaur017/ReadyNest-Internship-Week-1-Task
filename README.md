@@ -5,7 +5,6 @@ FormForge is a modern, powerful, and dynamic form-building application designed 
 ## ✨ Key Features
 
 - **Drag-and-Drop Form Builder**: Visually construct your forms with a seamless drag-and-drop interface. Support for Short Text, Long Text, Multiple Choice, Checkboxes, Dropdowns, Date, File Uploads, Ratings, and more!
-- **AI Form Generator**: Don't want to build from scratch? Give a prompt to the AI, and FormForge will automatically generate a tailored form structure for you.
 - **Advanced Quizzes & Assessments**: Create scored quizzes with customizable passing thresholds, automatic grading, and time limits.
 - **Robust Analytics & Insights**: Track form performance with beautiful area and bar charts, visual statistics, response leaderboards, and an interactive Date Range filter.
 - **PDF Export**: Generate high-resolution, branded PDF reports of your Form Analytics or Quiz Results with a single click.
@@ -47,9 +46,6 @@ MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/formforge
 # You can generate a secret by running: openssl rand -base64 32
 NEXTAUTH_SECRET=your-super-secret-key
 NEXTAUTH_URL=http://localhost:3000
-
-# Groq API Key for AI Form Generation (Optional but recommended)
-GROQ_API_KEY=your-groq-api-key
 ```
 
 ### 4. Run the Development Server
