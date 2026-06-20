@@ -20,42 +20,42 @@ for (let i = 1; i <= 40; i++) {
   const a = Math.floor(Math.random() * 20) + 1;
   const b = Math.floor(Math.random() * 20) + 1;
   const ans1 = a + b;
-  questionBank.push({ subject: "mathematics", topic: "Arithmetic", difficulty: "easy", type: "radio", label: `What is the sum of ${a} and ${b}? (Variation ${i})`, options: [{ label: `${ans1}`, value: `${ans1}` }, { label: `${ans1+1}`, value: `${ans1+1}` }, { label: `${ans1-1}`, value: `${ans1-1}` }, { label: `${ans1+2}`, value: `${ans1+2}` }], correctAnswer: `${ans1}`, explanation: `${a} + ${b} = ${ans1}`, marks: 1 });
+    questionBank.push({ id: `math_arithmetic_easy_mcq_${i}`, subject: "mathematics", topic: "Arithmetic", difficulty: "easy", type: "radio", label: `What is the sum of ${a} and ${b}?`, options: [{ label: `${ans1}`, value: `${ans1}` }, { label: `${ans1+1}`, value: `${ans1+1}` }, { label: `${ans1-1}`, value: `${ans1-1}` }, { label: `${ans1+2}`, value: `${ans1+2}` }], correctAnswer: `${ans1}`, explanation: `${a} + ${b} = ${ans1}`, marks: 1 });
 
   // Medium MCQ
   const c = Math.floor(Math.random() * 10) + 2;
   const d = Math.floor(Math.random() * 10) + 2;
   const ans2 = c * d;
-  questionBank.push({ subject: "mathematics", topic: "Multiplication", difficulty: "medium", type: "radio", label: `What is the product of ${c} and ${d}? (Variation ${i})`, options: [{ label: `${ans2}`, value: `${ans2}` }, { label: `${ans2+c}`, value: `${ans2+c}` }, { label: `${ans2-d}`, value: `${ans2-d}` }, { label: `${ans2+2}`, value: `${ans2+2}` }], correctAnswer: `${ans2}`, explanation: `${c} * ${d} = ${ans2}`, marks: 2 });
+    questionBank.push({ id: `math_mult_med_mcq_${i}`, subject: "mathematics", topic: "Multiplication", difficulty: "medium", type: "radio", label: `What is the product of ${c} and ${d}?`, options: [{ label: `${ans2}`, value: `${ans2}` }, { label: `${ans2+c}`, value: `${ans2+c}` }, { label: `${ans2-d}`, value: `${ans2-d}` }, { label: `${ans2+2}`, value: `${ans2+2}` }], correctAnswer: `${ans2}`, explanation: `${c} * ${d} = ${ans2}`, marks: 2 });
 
   // Hard MCQ
   const e = Math.floor(Math.random() * 5) + 2;
   const f = Math.floor(Math.random() * 5) + 2;
   const ans3 = Math.pow(e, f);
-  questionBank.push({ subject: "mathematics", topic: "Exponents", difficulty: "hard", type: "radio", label: `What is ${e} raised to the power of ${f}? (Variation ${i})`, options: [{ label: `${ans3}`, value: `${ans3}` }, { label: `${ans3+1}`, value: `${ans3+1}` }, { label: `${ans3-1}`, value: `${ans3-1}` }, { label: `${ans3+2}`, value: `${ans3+2}` }], correctAnswer: `${ans3}`, explanation: `${e}^${f} = ${ans3}`, marks: 3 });
+    questionBank.push({ id: `math_exp_hard_mcq_${i}`, subject: "mathematics", topic: "Exponents", difficulty: "hard", type: "radio", label: `What is ${e} raised to the power of ${f}?`, options: [{ label: `${ans3}`, value: `${ans3}` }, { label: `${ans3+1}`, value: `${ans3+1}` }, { label: `${ans3-1}`, value: `${ans3-1}` }, { label: `${ans3+2}`, value: `${ans3+2}` }], correctAnswer: `${ans3}`, explanation: `${e}^${f} = ${ans3}`, marks: 3 });
 
   // Easy T/F
   const isTrue1 = Math.random() > 0.5;
   const g = Math.floor(Math.random() * 10) + 1;
   const h = Math.floor(Math.random() * 10) + 1;
-  questionBank.push({ subject: "mathematics", topic: "Logic", difficulty: "easy", type: "radio", label: `True or False: ${g} + ${h} = ${isTrue1 ? g+h : g+h+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue1 ? "true" : "false", explanation: `${g} + ${h} is ${g+h}.`, marks: 1 });
+    questionBank.push({ id: `math_logic_easy_tf_${i}`, subject: "mathematics", topic: "Logic", difficulty: "easy", type: "radio", label: `True or False: ${g} + ${h} = ${isTrue1 ? g+h : g+h+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue1 ? "true" : "false", explanation: `${g} + ${h} is ${g+h}.`, marks: 1 });
 
   // Medium T/F
   const isTrue2 = Math.random() > 0.5;
-  questionBank.push({ subject: "mathematics", topic: "Geometry", difficulty: "medium", type: "radio", label: `True or False: The area of a square with side length ${g} is ${isTrue2 ? g*g : g*g+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue2 ? "true" : "false", explanation: `Area = side * side.`, marks: 2 });
+    questionBank.push({ id: `math_geom_med_tf_${i}`, subject: "mathematics", topic: "Geometry", difficulty: "medium", type: "radio", label: `True or False: The area of a square with side length ${g} is ${isTrue2 ? g*g : g*g+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue2 ? "true" : "false", explanation: `Area = side * side.`, marks: 2 });
 
   // Hard T/F
   const isTrue3 = Math.random() > 0.5;
-  questionBank.push({ subject: "mathematics", topic: "Calculus", difficulty: "hard", type: "radio", label: `True or False: The derivative of ${g}x is ${isTrue3 ? g : g+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue3 ? "true" : "false", explanation: `d/dx(${g}x) = ${g}.`, marks: 3 });
+    questionBank.push({ id: `math_calc_hard_tf_${i}`, subject: "mathematics", topic: "Calculus", difficulty: "hard", type: "radio", label: `True or False: The derivative of ${g}x is ${isTrue3 ? g : g+1}`, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue3 ? "true" : "false", explanation: `d/dx(${g}x) = ${g}.`, marks: 3 });
 
   // Easy Short Answer
-  questionBank.push({ subject: "mathematics", topic: "Arithmetic", difficulty: "easy", type: "text", label: `Calculate ${g} - ${h}.`, correctAnswer: `${g-h}`, explanation: `Basic subtraction.`, marks: 1 });
+    questionBank.push({ id: `math_arith_easy_sa_${i}`, subject: "mathematics", topic: "Arithmetic", difficulty: "easy", type: "text", label: `Calculate ${g} - ${h}.`, correctAnswer: `${g-h}`, explanation: `Basic subtraction.`, marks: 1 });
 
   // Medium Short Answer
-  questionBank.push({ subject: "mathematics", topic: "Algebra", difficulty: "medium", type: "text", label: `Solve for x: x - ${g} = ${h}.`, correctAnswer: `${g+h}`, explanation: `x = ${h} + ${g} = ${g+h}.`, marks: 2 });
+    questionBank.push({ id: `math_alg_med_sa_${i}`, subject: "mathematics", topic: "Algebra", difficulty: "medium", type: "text", label: `Solve for x: x - ${g} = ${h}.`, correctAnswer: `${g+h}`, explanation: `x = ${h} + ${g} = ${g+h}.`, marks: 2 });
 
   // Hard Short Answer
-  questionBank.push({ subject: "mathematics", topic: "Algebra", difficulty: "hard", type: "text", label: `Solve for x: ${g}x = ${g*h}.`, correctAnswer: `${h}`, explanation: `Divide both sides by ${g}.`, marks: 3 });
+    questionBank.push({ id: `math_alg_hard_sa_${i}`, subject: "mathematics", topic: "Algebra", difficulty: "hard", type: "text", label: `Solve for x: ${g}x = ${g*h}.`, correctAnswer: `${h}`, explanation: `Divide both sides by ${g}.`, marks: 3 });
 }
 
 // Data structures for procedural generation
@@ -188,9 +188,9 @@ function generatePool(subject, topic, baseLabel, answer, falseAnswers, type, dif
   opts = shuffle(opts);
   
   if (type === "radio") {
-    questionBank.push({ subject, topic, difficulty: diff, type: "radio", label: baseLabel, options: opts, correctAnswer: answer, explanation: `The correct answer is ${answer}.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
+    questionBank.push({ id: `${subject}_${diff}_mcq_${Math.random().toString(36).substring(7)}`, subject, topic, difficulty: diff, type: "radio", label: baseLabel, options: opts, correctAnswer: answer, explanation: `The correct answer is ${answer}.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
   } else if (type === "text") {
-    questionBank.push({ subject, topic, difficulty: diff, type: "text", label: baseLabel, correctAnswer: answer, explanation: `The correct answer is ${answer}.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
+    questionBank.push({ id: `${subject}_${diff}_sa_${Math.random().toString(36).substring(7)}`, subject, topic, difficulty: diff, type: "text", label: baseLabel, correctAnswer: answer, explanation: `The correct answer is ${answer}.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
   } else if (type === "tf") {
     const isTrue = Math.random() > 0.5;
     const stmt = isTrue ? answer : falseAnswers[0];
@@ -200,7 +200,7 @@ function generatePool(subject, topic, baseLabel, answer, falseAnswers, type, dif
     } else {
        finalLabel = `True or False: ${baseLabel.replace("What", stmt)}`;
     }
-    questionBank.push({ subject, topic, difficulty: diff, type: "radio", label: finalLabel, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue ? "true" : "false", explanation: isTrue ? `Yes, it is true.` : `No, it is false.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
+    questionBank.push({ id: `${subject}_${diff}_tf_${Math.random().toString(36).substring(7)}`, subject, topic, difficulty: diff, type: "radio", label: finalLabel, options: [{ label: "True", value: "true" }, { label: "False", value: "false" }], correctAnswer: isTrue ? "true" : "false", explanation: isTrue ? `Yes, it is true.` : `No, it is false.`, marks: diff === 'easy' ? 1 : diff === 'medium' ? 2 : 3 });
   }
 }
 
@@ -221,10 +221,10 @@ subjectsInfo.forEach(info => {
            
            if (t === "radio") {
              falseAns = info.data.filter(x => x !== ans).sort(() => Math.random() - 0.5);
-             label = `Which of the following is a fundamental concept in ${info.id.toUpperCase()}? (Variation ${c}_${diff}_${t})`;
+             label = `Which of the following is a fundamental concept in ${info.id.toUpperCase()}?`;
            } else if (t === "text") {
              const hidden = ans.split('').map((char, i) => i % 2 === 0 ? char : '_').join('');
-             label = `Identify the ${info.id.toUpperCase()} concept: ${hidden} (Variation ${c}_${diff}_${t})`;
+             label = `Identify the ${info.id.toUpperCase()} concept: ${hidden}`;
              falseAns = [];
            } else if (t === "tf") {
              const otherSubjects = subjectsInfo.filter(s => s.id !== info.id && s.isArray);
@@ -232,7 +232,7 @@ subjectsInfo.forEach(info => {
              const falseConcept = randomOtherSubject.data[Math.floor(Math.random() * randomOtherSubject.data.length)];
              
              falseAns = [falseConcept];
-             label = `[STMT] is a fundamental concept in ${info.id.toUpperCase()}. (Variation ${c}_${diff}_${t})`;
+             label = `[STMT] is a fundamental concept in ${info.id.toUpperCase()}.`;
            }
         } else {
            const item = info.data[Math.floor(Math.random() * info.data.length)];
@@ -240,9 +240,9 @@ subjectsInfo.forEach(info => {
            falseAns = info.data.filter(x => x[info.prop2] !== ans).map(x => x[info.prop2]).sort(() => Math.random() - 0.5);
            
            if (t === "tf") {
-               label = `[STMT] is the ${info.prop2} of ${item[info.prop1]}. (Variation ${c}_${diff}_${t})`;
+               label = `[STMT] is the ${info.prop2} of ${item[info.prop1]}.`;
            } else {
-               label = `What is the ${info.prop2} of ${item[info.prop1]}? (Variation ${c}_${diff}_${t})`;
+               label = `What is the ${info.prop2} of ${item[info.prop1]}?`;
            }
         }
         generatePool(info.id, info.topic, label, String(ans), falseAns.map(String), t, diff);
@@ -254,6 +254,7 @@ subjectsInfo.forEach(info => {
 // Write to file
 const outPath = path.join(__dirname, '../src/lib/question-bank.ts');
 const fileContent = `export interface BankQuestion {
+  id?: string;
   subject: string;
   topic: string;
   difficulty: "easy" | "medium" | "hard";

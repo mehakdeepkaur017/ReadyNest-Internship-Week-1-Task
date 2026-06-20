@@ -89,7 +89,7 @@ export function buildCuratedAssessment(
   } else {
     // We have enough total questions, but we need to strictly filter them based on criteria
     const shuffledPool = [...subjectPool].sort(() => Math.random() - 0.5);
-    const selectedLabels = new Set<string>();
+    const selectedIds = new Set<string>();
     
     // Strict Filtering: Only accept questions that EXACTLY match requested difficulty and type
     for (const q of shuffledPool) {
@@ -98,9 +98,9 @@ export function buildCuratedAssessment(
       const difficultyMatch = normDifficulty === "mixed" || q.difficulty === normDifficulty;
       const typeMatch = matchesType(q, normType);
       
-      if (difficultyMatch && typeMatch && !selectedLabels.has(q.label)) {
+      if (difficultyMatch && typeMatch && !selectedIds.has(q.id || q.label)) {
         finalSelected.push(q);
-        selectedLabels.add(q.label);
+        selectedIds.add(q.id || q.label);
       }
     }
 
