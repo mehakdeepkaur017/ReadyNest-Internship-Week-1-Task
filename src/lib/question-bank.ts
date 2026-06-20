@@ -21,20 +21,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is the result of adding two numbers called?",
     "options": [
       {
-        "label": "Product",
-        "value": "Product"
-      },
-      {
         "label": "Sum",
         "value": "Sum"
       },
       {
-        "label": "Quotient",
-        "value": "Quotient"
+        "label": "Product",
+        "value": "Product"
       },
       {
         "label": "Difference",
         "value": "Difference"
+      },
+      {
+        "label": "Quotient",
+        "value": "Quotient"
       }
     ],
     "correctAnswer": "Sum",
@@ -47,7 +47,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Arithmetic",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Sum is the answer to the following question - What is the result of adding two numbers called.",
+    "label": "True or False: The result of adding two numbers is called a Product.",
     "options": [
       {
         "label": "True",
@@ -58,8 +58,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Sum is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Sum.",
     "marks": 1
   },
   {
@@ -68,7 +68,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Arithmetic",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is the result of adding two numbers called?",
+    "label": "Answer the following concisely: What is the result of adding two numbers called?",
     "correctAnswer": "Sum",
     "explanation": "The correct term is Sum.",
     "marks": 1
@@ -86,16 +86,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Pentagon"
       },
       {
-        "label": "Triangle",
-        "value": "Triangle"
+        "label": "Circle",
+        "value": "Circle"
       },
       {
         "label": "Square",
         "value": "Square"
       },
       {
-        "label": "Circle",
-        "value": "Circle"
+        "label": "Triangle",
+        "value": "Triangle"
       }
     ],
     "correctAnswer": "Triangle",
@@ -108,7 +108,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Circle is the correct term for: What shape has exactly three sides.",
+    "label": "True or False: A Triangle is a shape that has exactly three sides.",
     "options": [
       {
         "label": "True",
@@ -119,8 +119,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Triangle.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Triangle is correct.",
     "marks": 1
   },
   {
@@ -129,7 +129,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "easy",
     "type": "text",
-    "label": "What shape has exactly three sides?",
+    "label": "Provide the exact term: What shape has exactly three sides?",
     "correctAnswer": "Triangle",
     "explanation": "The correct term is Triangle.",
     "marks": 1
@@ -140,12 +140,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Fractions",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the top number of a fraction called?",
+    "label": "Which of these best answers the following? What is the top number of a fraction called?",
     "options": [
-      {
-        "label": "Numerator",
-        "value": "Numerator"
-      },
       {
         "label": "Denominator",
         "value": "Denominator"
@@ -153,6 +149,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Divisor",
         "value": "Divisor"
+      },
+      {
+        "label": "Numerator",
+        "value": "Numerator"
       },
       {
         "label": "Base",
@@ -169,7 +169,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Fractions",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Numerator is the correct term for: What is the top number of a fraction called.",
+    "label": "True or False: The top number of a fraction is called the Numerator.",
     "options": [
       {
         "label": "True",
@@ -190,7 +190,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Fractions",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is the top number of a fraction called?",
+    "label": "Answer the following concisely: What is the top number of a fraction called?",
     "correctAnswer": "Numerator",
     "explanation": "The correct term is Numerator.",
     "marks": 1
@@ -204,20 +204,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is the distance around a circle called?",
     "options": [
       {
-        "label": "Area",
-        "value": "Area"
-      },
-      {
-        "label": "Diameter",
-        "value": "Diameter"
-      },
-      {
         "label": "Circumference",
         "value": "Circumference"
       },
       {
+        "label": "Area",
+        "value": "Area"
+      },
+      {
         "label": "Radius",
         "value": "Radius"
+      },
+      {
+        "label": "Diameter",
+        "value": "Diameter"
       }
     ],
     "correctAnswer": "Circumference",
@@ -230,7 +230,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is the distance around a circle called.', the correct answer is Radius.",
+    "label": "True or False: The distance around a circle is called the Radius.",
     "options": [
       {
         "label": "True",
@@ -251,7 +251,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What is the distance around a circle called?",
+    "label": "What is the distance around a circle called?",
     "correctAnswer": "Circumference",
     "explanation": "The correct term is Circumference.",
     "marks": 1
@@ -262,16 +262,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algebra",
     "difficulty": "easy",
     "type": "radio",
-    "label": "What is an unknown number represented by a letter called?",
+    "label": "Which of these best answers the following? What is an unknown number represented by a letter called?",
     "options": [
-      {
-        "label": "Constant",
-        "value": "Constant"
-      },
-      {
-        "label": "Variable",
-        "value": "Variable"
-      },
       {
         "label": "Coefficient",
         "value": "Coefficient"
@@ -279,6 +271,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Exponent",
         "value": "Exponent"
+      },
+      {
+        "label": "Variable",
+        "value": "Variable"
+      },
+      {
+        "label": "Constant",
+        "value": "Constant"
       }
     ],
     "correctAnswer": "Variable",
@@ -291,7 +291,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algebra",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is an unknown number represented by a letter called.', the correct answer is Variable.",
+    "label": "True or False: An unknown number represented by a letter is called a Coefficient.",
     "options": [
       {
         "label": "True",
@@ -302,8 +302,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Variable is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Variable.",
     "marks": 1
   },
   {
@@ -323,23 +323,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What theorem states a² + b² = c² for a right triangle?",
+    "label": "Which of these best answers the following? What theorem states a² + b² = c² for a right triangle?",
     "options": [
       {
-        "label": "Binomial Theorem",
-        "value": "Binomial Theorem"
+        "label": "Pythagorean Theorem",
+        "value": "Pythagorean Theorem"
       },
       {
         "label": "Fermat's Theorem",
         "value": "Fermat's Theorem"
       },
       {
-        "label": "Euler's Formula",
-        "value": "Euler's Formula"
+        "label": "Binomial Theorem",
+        "value": "Binomial Theorem"
       },
       {
-        "label": "Pythagorean Theorem",
-        "value": "Pythagorean Theorem"
+        "label": "Euler's Formula",
+        "value": "Euler's Formula"
       }
     ],
     "correctAnswer": "Pythagorean Theorem",
@@ -352,7 +352,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Pythagorean Theorem is the answer to the following question - What theorem states a² + b² = c² for a right triangle.",
+    "label": "True or False: The theorem that states a² + b² = c² for a right triangle is the Euler's Formula.",
     "options": [
       {
         "label": "True",
@@ -363,8 +363,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Pythagorean Theorem is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Pythagorean Theorem.",
     "marks": 2
   },
   {
@@ -373,7 +373,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Geometry",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What theorem states a² + b² = c² for a right triangle?",
+    "label": "Answer the following concisely: What theorem states a² + b² = c² for a right triangle?",
     "correctAnswer": "Pythagorean Theorem",
     "explanation": "The correct term is Pythagorean Theorem.",
     "marks": 2
@@ -384,11 +384,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algebra",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is the mathematical term for the 'steepness' of a line?",
+    "label": "Which of these best answers the following? What is the mathematical term for the 'steepness' of a line?",
     "options": [
       {
-        "label": "Tangent",
-        "value": "Tangent"
+        "label": "Slope",
+        "value": "Slope"
       },
       {
         "label": "Origin",
@@ -399,8 +399,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Intercept"
       },
       {
-        "label": "Slope",
-        "value": "Slope"
+        "label": "Tangent",
+        "value": "Tangent"
       }
     ],
     "correctAnswer": "Slope",
@@ -413,7 +413,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algebra",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Origin is the answer to the following question - What is the mathematical term for the 'steepness' of a line.",
+    "label": "True or False: The mathematical term for the steepness of a line is its Slope.",
     "options": [
       {
         "label": "True",
@@ -424,8 +424,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Slope.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Slope is correct.",
     "marks": 2
   },
   {
@@ -434,7 +434,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algebra",
     "difficulty": "medium",
     "type": "text",
-    "label": "What is the mathematical term for the 'steepness' of a line?",
+    "label": "Answer the following concisely: What is the mathematical term for the 'steepness' of a line?",
     "correctAnswer": "Slope",
     "explanation": "The correct term is Slope.",
     "marks": 2
@@ -452,16 +452,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Range"
       },
       {
-        "label": "Mode",
-        "value": "Mode"
+        "label": "Median",
+        "value": "Median"
       },
       {
         "label": "Mean",
         "value": "Mean"
       },
       {
-        "label": "Median",
-        "value": "Median"
+        "label": "Mode",
+        "value": "Mode"
       }
     ],
     "correctAnswer": "Median",
@@ -474,7 +474,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Statistics",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is the middle value in a sorted list of numbers.', the correct answer is Median.",
+    "label": "True or False: The middle value in a sorted list of numbers is the Mean.",
     "options": [
       {
         "label": "True",
@@ -485,8 +485,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Median is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Median.",
     "marks": 2
   },
   {
@@ -495,7 +495,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Statistics",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What is the middle value in a sorted list of numbers?",
+    "label": "Answer the following concisely: What is the middle value in a sorted list of numbers?",
     "correctAnswer": "Median",
     "explanation": "The correct term is Median.",
     "marks": 2
@@ -506,19 +506,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trigonometry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? Which trigonometric function is defined as opposite over adjacent?",
+    "label": "Consider the following: Which trigonometric function is defined as opposite over adjacent?",
     "options": [
       {
         "label": "Tangent",
         "value": "Tangent"
       },
       {
-        "label": "Secant",
-        "value": "Secant"
-      },
-      {
         "label": "Sine",
         "value": "Sine"
+      },
+      {
+        "label": "Secant",
+        "value": "Secant"
       },
       {
         "label": "Cosine",
@@ -535,7 +535,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trigonometry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which trigonometric function is defined as opposite over adjacent.', the correct answer is Tangent.",
+    "label": "True or False: The trigonometric function defined as opposite over adjacent is Tangent.",
     "options": [
       {
         "label": "True",
@@ -556,7 +556,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trigonometry",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: Which trigonometric function is defined as opposite over adjacent?",
+    "label": "Which trigonometric function is defined as opposite over adjacent?",
     "correctAnswer": "Tangent",
     "explanation": "The correct term is Tangent.",
     "marks": 2
@@ -567,19 +567,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Number Theory",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is a number divisible only by 1 and itself called?",
+    "label": "Which of these best answers the following? What is a number divisible only by 1 and itself called?",
     "options": [
       {
-        "label": "Even Number",
-        "value": "Even Number"
+        "label": "Rational Number",
+        "value": "Rational Number"
       },
       {
         "label": "Prime Number",
         "value": "Prime Number"
       },
       {
-        "label": "Rational Number",
-        "value": "Rational Number"
+        "label": "Even Number",
+        "value": "Even Number"
       },
       {
         "label": "Composite Number",
@@ -596,7 +596,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Number Theory",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is a number divisible only by 1 and itself called.', the correct answer is Prime Number.",
+    "label": "True or False: A number divisible only by 1 and itself is called a Prime Number.",
     "options": [
       {
         "label": "True",
@@ -617,7 +617,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Number Theory",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What is a number divisible only by 1 and itself called?",
+    "label": "Answer the following concisely: What is a number divisible only by 1 and itself called?",
     "correctAnswer": "Prime Number",
     "explanation": "The correct term is Prime Number.",
     "marks": 2
@@ -628,23 +628,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Calculus",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What mathematical tool is used to find the rate of change of a function?",
+    "label": "Which of these best answers the following? What mathematical tool is used to find the rate of change of a function?",
     "options": [
-      {
-        "label": "Limit",
-        "value": "Limit"
-      },
       {
         "label": "Matrix",
         "value": "Matrix"
+      },
+      {
+        "label": "Derivative",
+        "value": "Derivative"
       },
       {
         "label": "Integral",
         "value": "Integral"
       },
       {
-        "label": "Derivative",
-        "value": "Derivative"
+        "label": "Limit",
+        "value": "Limit"
       }
     ],
     "correctAnswer": "Derivative",
@@ -657,7 +657,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Calculus",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Matrix is the answer to the following question - What mathematical tool is used to find the rate of change of a function.",
+    "label": "True or False: The mathematical tool used to find the rate of change of a function is the Derivative.",
     "options": [
       {
         "label": "True",
@@ -668,8 +668,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Derivative.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Derivative is correct.",
     "marks": 3
   },
   {
@@ -692,20 +692,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What is the process of finding the area under a curve called?",
     "options": [
       {
-        "label": "Integration",
-        "value": "Integration"
-      },
-      {
         "label": "Differentiation",
         "value": "Differentiation"
       },
       {
-        "label": "Extrapolation",
-        "value": "Extrapolation"
+        "label": "Integration",
+        "value": "Integration"
       },
       {
         "label": "Interpolation",
         "value": "Interpolation"
+      },
+      {
+        "label": "Extrapolation",
+        "value": "Extrapolation"
       }
     ],
     "correctAnswer": "Integration",
@@ -718,7 +718,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Calculus",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What is the process of finding the area under a curve called.', the correct answer is Extrapolation.",
+    "label": "True or False: The process of finding the area under a curve is called Interpolation.",
     "options": [
       {
         "label": "True",
@@ -753,20 +753,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is a rectangular array of numbers arranged in rows and columns?",
     "options": [
       {
-        "label": "Vector",
-        "value": "Vector"
-      },
-      {
         "label": "Scalar",
         "value": "Scalar"
       },
       {
-        "label": "Matrix",
-        "value": "Matrix"
+        "label": "Vector",
+        "value": "Vector"
       },
       {
         "label": "Determinant",
         "value": "Determinant"
+      },
+      {
+        "label": "Matrix",
+        "value": "Matrix"
       }
     ],
     "correctAnswer": "Matrix",
@@ -779,7 +779,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Linear Algebra",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Determinant is the answer to the following question - What is a rectangular array of numbers arranged in rows and columns.",
+    "label": "True or False: A rectangular array of numbers arranged in rows and columns is a Scalar.",
     "options": [
       {
         "label": "True",
@@ -800,7 +800,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Linear Algebra",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is a rectangular array of numbers arranged in rows and columns?",
+    "label": "What is a rectangular array of numbers arranged in rows and columns?",
     "correctAnswer": "Matrix",
     "explanation": "The correct term is Matrix.",
     "marks": 3
@@ -811,8 +811,12 @@ export const questionBank: BankQuestion[] = [
     "topic": "Complex Numbers",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the square root of -1 represented by?",
+    "label": "Consider the following: What is the square root of -1 represented by?",
     "options": [
+      {
+        "label": "Pi",
+        "value": "Pi"
+      },
       {
         "label": "Golden Ratio (Phi)",
         "value": "Golden Ratio (Phi)"
@@ -820,10 +824,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Imaginary unit (i)",
         "value": "Imaginary unit (i)"
-      },
-      {
-        "label": "Pi",
-        "value": "Pi"
       },
       {
         "label": "Euler's number (e)",
@@ -840,7 +840,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Complex Numbers",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Pi is the correct term for: What is the square root of -1 represented by.",
+    "label": "True or False: The square root of -1 is represented by the Euler's number (e).",
     "options": [
       {
         "label": "True",
@@ -861,7 +861,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Complex Numbers",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What is the square root of -1 represented by?",
+    "label": "What is the square root of -1 represented by?",
     "correctAnswer": "Imaginary unit (i)",
     "explanation": "The correct term is Imaginary unit (i).",
     "marks": 3
@@ -875,20 +875,20 @@ export const questionBank: BankQuestion[] = [
     "label": "In which sequence is each number the sum of the two preceding ones?",
     "options": [
       {
-        "label": "Arithmetic Sequence",
-        "value": "Arithmetic Sequence"
-      },
-      {
         "label": "Fibonacci Sequence",
         "value": "Fibonacci Sequence"
       },
       {
-        "label": "Harmonic Sequence",
-        "value": "Harmonic Sequence"
-      },
-      {
         "label": "Geometric Sequence",
         "value": "Geometric Sequence"
+      },
+      {
+        "label": "Arithmetic Sequence",
+        "value": "Arithmetic Sequence"
+      },
+      {
+        "label": "Harmonic Sequence",
+        "value": "Harmonic Sequence"
       }
     ],
     "correctAnswer": "Fibonacci Sequence",
@@ -901,7 +901,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Sequences",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Arithmetic Sequence is the correct term for: In which sequence is each number the sum of the two preceding ones.",
+    "label": "True or False: The sequence where each number is the sum of the two preceding ones is the Fibonacci Sequence.",
     "options": [
       {
         "label": "True",
@@ -912,8 +912,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Fibonacci Sequence.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Fibonacci Sequence is correct.",
     "marks": 3
   },
   {
@@ -922,7 +922,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Sequences",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: In which sequence is each number the sum of the two preceding ones?",
+    "label": "In which sequence is each number the sum of the two preceding ones?",
     "correctAnswer": "Fibonacci Sequence",
     "explanation": "The correct term is Fibonacci Sequence.",
     "marks": 3
@@ -933,7 +933,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the force that pulls objects toward the center of the Earth?",
+    "label": "Which of these best answers the following? What is the force that pulls objects toward the center of the Earth?",
     "options": [
       {
         "label": "Magnetism",
@@ -944,12 +944,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Gravity"
       },
       {
-        "label": "Friction",
-        "value": "Friction"
-      },
-      {
         "label": "Inertia",
         "value": "Inertia"
+      },
+      {
+        "label": "Friction",
+        "value": "Friction"
       }
     ],
     "correctAnswer": "Gravity",
@@ -962,7 +962,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Friction is the correct term for: What is the force that pulls objects toward the center of the Earth.",
+    "label": "True or False: The force that pulls objects toward the center of the Earth is Gravity.",
     "options": [
       {
         "label": "True",
@@ -973,8 +973,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Gravity.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Gravity is correct.",
     "marks": 1
   },
   {
@@ -983,7 +983,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What is the force that pulls objects toward the center of the Earth?",
+    "label": "Provide the exact term: What is the force that pulls objects toward the center of the Earth?",
     "correctAnswer": "Gravity",
     "explanation": "The correct term is Gravity.",
     "marks": 1
@@ -994,11 +994,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the basic unit of life?",
+    "label": "Which of these best answers the following? What is the basic unit of life?",
     "options": [
       {
         "label": "Atom",
         "value": "Atom"
+      },
+      {
+        "label": "Cell",
+        "value": "Cell"
       },
       {
         "label": "Organ",
@@ -1007,10 +1011,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Molecule",
         "value": "Molecule"
-      },
-      {
-        "label": "Cell",
-        "value": "Cell"
       }
     ],
     "correctAnswer": "Cell",
@@ -1023,7 +1023,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Cell is the correct term for: What is the basic unit of life.",
+    "label": "True or False: The basic unit of life is the Cell.",
     "options": [
       {
         "label": "True",
@@ -1044,7 +1044,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "text",
-    "label": "What is the basic unit of life?",
+    "label": "Provide the exact term: What is the basic unit of life?",
     "correctAnswer": "Cell",
     "explanation": "The correct term is Cell.",
     "marks": 1
@@ -1055,15 +1055,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the chemical symbol for water?",
+    "label": "What is the chemical symbol for water?",
     "options": [
       {
         "label": "CO2",
         "value": "CO2"
-      },
-      {
-        "label": "O2",
-        "value": "O2"
       },
       {
         "label": "NaCl",
@@ -1072,6 +1068,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "H2O",
         "value": "H2O"
+      },
+      {
+        "label": "O2",
+        "value": "O2"
       }
     ],
     "correctAnswer": "H2O",
@@ -1084,7 +1084,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is the chemical symbol for water.', the correct answer is H2O.",
+    "label": "True or False: The chemical symbol for water is NaCl.",
     "options": [
       {
         "label": "True",
@@ -1095,8 +1095,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, H2O is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is H2O.",
     "marks": 1
   },
   {
@@ -1105,7 +1105,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "easy",
     "type": "text",
-    "label": "What is the chemical symbol for water?",
+    "label": "Provide the exact term: What is the chemical symbol for water?",
     "correctAnswer": "H2O",
     "explanation": "The correct term is H2O.",
     "marks": 1
@@ -1119,20 +1119,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What is the closest planet to the Sun?",
     "options": [
       {
-        "label": "Mercury",
-        "value": "Mercury"
+        "label": "Venus",
+        "value": "Venus"
       },
       {
         "label": "Mars",
         "value": "Mars"
       },
       {
-        "label": "Venus",
-        "value": "Venus"
-      },
-      {
         "label": "Earth",
         "value": "Earth"
+      },
+      {
+        "label": "Mercury",
+        "value": "Mercury"
       }
     ],
     "correctAnswer": "Mercury",
@@ -1145,7 +1145,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Astronomy",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is the closest planet to the Sun.', the correct answer is Mercury.",
+    "label": "True or False: The closest planet to the Sun is Earth.",
     "options": [
       {
         "label": "True",
@@ -1156,8 +1156,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Mercury is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Mercury.",
     "marks": 1
   },
   {
@@ -1177,19 +1177,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "radio",
-    "label": "What gas do plants primarily absorb from the atmosphere?",
+    "label": "Consider the following: What gas do plants primarily absorb from the atmosphere?",
     "options": [
       {
         "label": "Nitrogen",
         "value": "Nitrogen"
       },
       {
-        "label": "Hydrogen",
-        "value": "Hydrogen"
-      },
-      {
         "label": "Oxygen",
         "value": "Oxygen"
+      },
+      {
+        "label": "Hydrogen",
+        "value": "Hydrogen"
       },
       {
         "label": "Carbon Dioxide",
@@ -1206,7 +1206,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Nitrogen is the answer to the following question - What gas do plants primarily absorb from the atmosphere.",
+    "label": "True or False: Plants primarily absorb Carbon Dioxide from the atmosphere.",
     "options": [
       {
         "label": "True",
@@ -1217,8 +1217,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Carbon Dioxide.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Carbon Dioxide is correct.",
     "marks": 1
   },
   {
@@ -1227,7 +1227,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What gas do plants primarily absorb from the atmosphere?",
+    "label": "Answer the following concisely: What gas do plants primarily absorb from the atmosphere?",
     "correctAnswer": "Carbon Dioxide",
     "explanation": "The correct term is Carbon Dioxide.",
     "marks": 1
@@ -1238,23 +1238,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the rate of change of velocity called?",
+    "label": "Consider the following: What is the rate of change of velocity called?",
     "options": [
+      {
+        "label": "Acceleration",
+        "value": "Acceleration"
+      },
       {
         "label": "Momentum",
         "value": "Momentum"
-      },
-      {
-        "label": "Speed",
-        "value": "Speed"
       },
       {
         "label": "Force",
         "value": "Force"
       },
       {
-        "label": "Acceleration",
-        "value": "Acceleration"
+        "label": "Speed",
+        "value": "Speed"
       }
     ],
     "correctAnswer": "Acceleration",
@@ -1267,7 +1267,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Speed is the correct term for: What is the rate of change of velocity called.",
+    "label": "True or False: The rate of change of velocity is called Acceleration.",
     "options": [
       {
         "label": "True",
@@ -1278,8 +1278,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Acceleration.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Acceleration is correct.",
     "marks": 2
   },
   {
@@ -1288,7 +1288,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What is the rate of change of velocity called?",
+    "label": "What is the rate of change of velocity called?",
     "correctAnswer": "Acceleration",
     "explanation": "The correct term is Acceleration.",
     "marks": 2
@@ -1302,10 +1302,6 @@ export const questionBank: BankQuestion[] = [
     "label": "What is the process by which plants make their own food?",
     "options": [
       {
-        "label": "Fermentation",
-        "value": "Fermentation"
-      },
-      {
         "label": "Photosynthesis",
         "value": "Photosynthesis"
       },
@@ -1316,6 +1312,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Digestion",
         "value": "Digestion"
+      },
+      {
+        "label": "Fermentation",
+        "value": "Fermentation"
       }
     ],
     "correctAnswer": "Photosynthesis",
@@ -1328,7 +1328,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Fermentation is the correct term for: What is the process by which plants make their own food.",
+    "label": "True or False: The process by which plants make their own food is called Photosynthesis.",
     "options": [
       {
         "label": "True",
@@ -1339,8 +1339,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Photosynthesis.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Photosynthesis is correct.",
     "marks": 2
   },
   {
@@ -1360,16 +1360,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What is the center of an atom called?",
+    "label": "Which of these best answers the following? What is the center of an atom called?",
     "options": [
-      {
-        "label": "Proton",
-        "value": "Proton"
-      },
-      {
-        "label": "Nucleus",
-        "value": "Nucleus"
-      },
       {
         "label": "Neutron",
         "value": "Neutron"
@@ -1377,6 +1369,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Electron Cloud",
         "value": "Electron Cloud"
+      },
+      {
+        "label": "Proton",
+        "value": "Proton"
+      },
+      {
+        "label": "Nucleus",
+        "value": "Nucleus"
       }
     ],
     "correctAnswer": "Nucleus",
@@ -1389,7 +1389,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Nucleus is the correct term for: What is the center of an atom called.",
+    "label": "True or False: The center of an atom is called the Nucleus.",
     "options": [
       {
         "label": "True",
@@ -1421,23 +1421,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Genetics",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What molecule carries genetic instructions in living organisms?",
+    "label": "What molecule carries genetic instructions in living organisms?",
     "options": [
       {
-        "label": "Carbohydrate",
-        "value": "Carbohydrate"
-      },
-      {
-        "label": "Protein",
-        "value": "Protein"
+        "label": "RNA",
+        "value": "RNA"
       },
       {
         "label": "DNA",
         "value": "DNA"
       },
       {
-        "label": "RNA",
-        "value": "RNA"
+        "label": "Protein",
+        "value": "Protein"
+      },
+      {
+        "label": "Carbohydrate",
+        "value": "Carbohydrate"
       }
     ],
     "correctAnswer": "DNA",
@@ -1450,7 +1450,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Genetics",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? DNA is the correct term for: What molecule carries genetic instructions in living organisms.",
+    "label": "True or False: The molecule that carries genetic instructions in living organisms is RNA.",
     "options": [
       {
         "label": "True",
@@ -1461,8 +1461,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, DNA is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is DNA.",
     "marks": 2
   },
   {
@@ -1485,20 +1485,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What is the outermost layer of the Earth called?",
     "options": [
       {
-        "label": "Outer Core",
-        "value": "Outer Core"
-      },
-      {
-        "label": "Crust",
-        "value": "Crust"
+        "label": "Inner Core",
+        "value": "Inner Core"
       },
       {
         "label": "Mantle",
         "value": "Mantle"
       },
       {
-        "label": "Inner Core",
-        "value": "Inner Core"
+        "label": "Outer Core",
+        "value": "Outer Core"
+      },
+      {
+        "label": "Crust",
+        "value": "Crust"
       }
     ],
     "correctAnswer": "Crust",
@@ -1511,7 +1511,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Earth Science",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is the outermost layer of the Earth called.', the correct answer is Mantle.",
+    "label": "True or False: The outermost layer of the Earth is called the Outer Core.",
     "options": [
       {
         "label": "True",
@@ -1532,7 +1532,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Earth Science",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What is the outermost layer of the Earth called?",
+    "label": "Answer the following concisely: What is the outermost layer of the Earth called?",
     "correctAnswer": "Crust",
     "explanation": "The correct term is Crust.",
     "marks": 2
@@ -1543,23 +1543,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What principle states that energy cannot be created or destroyed?",
+    "label": "What principle states that energy cannot be created or destroyed?",
     "options": [
       {
-        "label": "Relativity",
-        "value": "Relativity"
+        "label": "Heisenberg Uncertainty",
+        "value": "Heisenberg Uncertainty"
       },
       {
         "label": "Pauli Exclusion",
         "value": "Pauli Exclusion"
       },
       {
-        "label": "Conservation of Energy",
-        "value": "Conservation of Energy"
+        "label": "Relativity",
+        "value": "Relativity"
       },
       {
-        "label": "Heisenberg Uncertainty",
-        "value": "Heisenberg Uncertainty"
+        "label": "Conservation of Energy",
+        "value": "Conservation of Energy"
       }
     ],
     "correctAnswer": "Conservation of Energy",
@@ -1572,7 +1572,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Pauli Exclusion is the correct term for: What principle states that energy cannot be created or destroyed.",
+    "label": "True or False: The principle stating that energy cannot be created or destroyed is the Law of Relativity.",
     "options": [
       {
         "label": "True",
@@ -1604,23 +1604,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What is a substance that speeds up a chemical reaction without being consumed?",
+    "label": "Consider the following: What is a substance that speeds up a chemical reaction without being consumed?",
     "options": [
       {
         "label": "Catalyst",
         "value": "Catalyst"
       },
       {
-        "label": "Inhibitor",
-        "value": "Inhibitor"
+        "label": "Product",
+        "value": "Product"
       },
       {
         "label": "Reactant",
         "value": "Reactant"
       },
       {
-        "label": "Product",
-        "value": "Product"
+        "label": "Inhibitor",
+        "value": "Inhibitor"
       }
     ],
     "correctAnswer": "Catalyst",
@@ -1633,7 +1633,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Chemistry",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Catalyst is the answer to the following question - What is a substance that speeds up a chemical reaction without being consumed.",
+    "label": "True or False: A substance that speeds up a chemical reaction without being consumed is a Inhibitor.",
     "options": [
       {
         "label": "True",
@@ -1644,8 +1644,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Catalyst is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Catalyst.",
     "marks": 3
   },
   {
@@ -1665,8 +1665,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What organelle is known as the powerhouse of the cell?",
+    "label": "What organelle is known as the powerhouse of the cell?",
     "options": [
+      {
+        "label": "Ribosome",
+        "value": "Ribosome"
+      },
+      {
+        "label": "Chloroplast",
+        "value": "Chloroplast"
+      },
       {
         "label": "Mitochondria",
         "value": "Mitochondria"
@@ -1674,14 +1682,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Nucleus",
         "value": "Nucleus"
-      },
-      {
-        "label": "Chloroplast",
-        "value": "Chloroplast"
-      },
-      {
-        "label": "Ribosome",
-        "value": "Ribosome"
       }
     ],
     "correctAnswer": "Mitochondria",
@@ -1694,7 +1694,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Mitochondria is the correct term for: What organelle is known as the powerhouse of the cell.",
+    "label": "True or False: The organelle known as the powerhouse of the cell is the Ribosome.",
     "options": [
       {
         "label": "True",
@@ -1705,8 +1705,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Mitochondria is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Mitochondria.",
     "marks": 3
   },
   {
@@ -1715,7 +1715,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Biology",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What organelle is known as the powerhouse of the cell?",
+    "label": "Provide the exact term: What organelle is known as the powerhouse of the cell?",
     "correctAnswer": "Mitochondria",
     "explanation": "The correct term is Mitochondria.",
     "marks": 3
@@ -1729,20 +1729,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What fundamental force is responsible for radioactive decay?",
     "options": [
       {
-        "label": "Electromagnetism",
-        "value": "Electromagnetism"
+        "label": "Gravity",
+        "value": "Gravity"
       },
       {
         "label": "Strong Nuclear Force",
         "value": "Strong Nuclear Force"
       },
       {
-        "label": "Gravity",
-        "value": "Gravity"
-      },
-      {
         "label": "Weak Nuclear Force",
         "value": "Weak Nuclear Force"
+      },
+      {
+        "label": "Electromagnetism",
+        "value": "Electromagnetism"
       }
     ],
     "correctAnswer": "Weak Nuclear Force",
@@ -1755,7 +1755,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What fundamental force is responsible for radioactive decay.', the correct answer is Weak Nuclear Force.",
+    "label": "True or False: The fundamental force responsible for radioactive decay is the Strong Nuclear Force.",
     "options": [
       {
         "label": "True",
@@ -1766,8 +1766,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Weak Nuclear Force is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Weak Nuclear Force.",
     "marks": 3
   },
   {
@@ -1776,7 +1776,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Physics",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What fundamental force is responsible for radioactive decay?",
+    "label": "What fundamental force is responsible for radioactive decay?",
     "correctAnswer": "Weak Nuclear Force",
     "explanation": "The correct term is Weak Nuclear Force.",
     "marks": 3
@@ -1790,10 +1790,6 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What is the process of copying DNA into RNA called?",
     "options": [
       {
-        "label": "Translation",
-        "value": "Translation"
-      },
-      {
         "label": "Replication",
         "value": "Replication"
       },
@@ -1804,6 +1800,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Mutation",
         "value": "Mutation"
+      },
+      {
+        "label": "Translation",
+        "value": "Translation"
       }
     ],
     "correctAnswer": "Transcription",
@@ -1816,7 +1816,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Genetics",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Replication is the answer to the following question - What is the process of copying DNA into RNA called.",
+    "label": "True or False: The process of copying DNA into RNA is called Transcription.",
     "options": [
       {
         "label": "True",
@@ -1827,8 +1827,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Transcription.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Transcription is correct.",
     "marks": 3
   },
   {
@@ -1837,7 +1837,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Genetics",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the process of copying DNA into RNA called?",
+    "label": "Answer the following concisely: What is the process of copying DNA into RNA called?",
     "correctAnswer": "Transcription",
     "explanation": "The correct term is Transcription.",
     "marks": 3
@@ -1848,19 +1848,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "radio",
-    "label": "What part of speech describes a noun?",
+    "label": "Consider the following: What part of speech describes a noun?",
     "options": [
       {
         "label": "Preposition",
         "value": "Preposition"
       },
       {
-        "label": "Verb",
-        "value": "Verb"
-      },
-      {
         "label": "Adjective",
         "value": "Adjective"
+      },
+      {
+        "label": "Verb",
+        "value": "Verb"
       },
       {
         "label": "Adverb",
@@ -1877,7 +1877,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What part of speech describes a noun.', the correct answer is Verb.",
+    "label": "True or False: An Verb is a part of speech that describes a noun.",
     "options": [
       {
         "label": "True",
@@ -1898,7 +1898,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What part of speech describes a noun?",
+    "label": "What part of speech describes a noun?",
     "correctAnswer": "Adjective",
     "explanation": "The correct term is Adjective.",
     "marks": 1
@@ -1916,16 +1916,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Verb"
       },
       {
-        "label": "Noun",
-        "value": "Noun"
+        "label": "Conjunction",
+        "value": "Conjunction"
       },
       {
         "label": "Pronoun",
         "value": "Pronoun"
       },
       {
-        "label": "Conjunction",
-        "value": "Conjunction"
+        "label": "Noun",
+        "value": "Noun"
       }
     ],
     "correctAnswer": "Verb",
@@ -1938,7 +1938,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Verb is the correct term for: What part of speech represents an action or state of being.",
+    "label": "True or False: A Verb represents an action or a state of being.",
     "options": [
       {
         "label": "True",
@@ -1959,7 +1959,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "text",
-    "label": "What part of speech represents an action or state of being?",
+    "label": "Provide the exact term: What part of speech represents an action or state of being?",
     "correctAnswer": "Verb",
     "explanation": "The correct term is Verb.",
     "marks": 1
@@ -1970,11 +1970,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Punctuation",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What punctuation mark is used to indicate a question?",
+    "label": "Consider the following: What punctuation mark is used to indicate a question?",
     "options": [
       {
-        "label": "Comma",
-        "value": "Comma"
+        "label": "Period",
+        "value": "Period"
       },
       {
         "label": "Question Mark",
@@ -1985,8 +1985,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Exclamation Point"
       },
       {
-        "label": "Period",
-        "value": "Period"
+        "label": "Comma",
+        "value": "Comma"
       }
     ],
     "correctAnswer": "Question Mark",
@@ -1999,7 +1999,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Punctuation",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Question Mark is the correct term for: What punctuation mark is used to indicate a question.",
+    "label": "True or False: A Question Mark is used to indicate a question.",
     "options": [
       {
         "label": "True",
@@ -2038,16 +2038,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Synonym"
       },
       {
-        "label": "Homophone",
-        "value": "Homophone"
-      },
-      {
         "label": "Acronym",
         "value": "Acronym"
       },
       {
         "label": "Antonym",
         "value": "Antonym"
+      },
+      {
+        "label": "Homophone",
+        "value": "Homophone"
       }
     ],
     "correctAnswer": "Antonym",
@@ -2060,7 +2060,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Vocabulary",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Synonym is the answer to the following question - What is a word that has the opposite meaning of another word.",
+    "label": "True or False: A word that has the opposite meaning of another word is an Acronym.",
     "options": [
       {
         "label": "True",
@@ -2081,7 +2081,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Vocabulary",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is a word that has the opposite meaning of another word?",
+    "label": "What is a word that has the opposite meaning of another word?",
     "correctAnswer": "Antonym",
     "explanation": "The correct term is Antonym.",
     "marks": 1
@@ -2092,11 +2092,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What part of speech is used in place of a noun?",
+    "label": "Consider the following: What part of speech is used in place of a noun?",
     "options": [
       {
         "label": "Article",
         "value": "Article"
+      },
+      {
+        "label": "Adjective",
+        "value": "Adjective"
       },
       {
         "label": "Pronoun",
@@ -2105,10 +2109,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Adverb",
         "value": "Adverb"
-      },
-      {
-        "label": "Adjective",
-        "value": "Adjective"
       }
     ],
     "correctAnswer": "Pronoun",
@@ -2121,7 +2121,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Pronoun is the correct term for: What part of speech is used in place of a noun.",
+    "label": "True or False: A Pronoun is used in place of a noun.",
     "options": [
       {
         "label": "True",
@@ -2142,7 +2142,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What part of speech is used in place of a noun?",
+    "label": "What part of speech is used in place of a noun?",
     "correctAnswer": "Pronoun",
     "explanation": "The correct term is Pronoun.",
     "marks": 1
@@ -2153,23 +2153,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is a word that modifies a verb, adjective, or another adverb?",
+    "label": "Consider the following: What is a word that modifies a verb, adjective, or another adverb?",
     "options": [
-      {
-        "label": "Adverb",
-        "value": "Adverb"
-      },
       {
         "label": "Conjunction",
         "value": "Conjunction"
+      },
+      {
+        "label": "Interjection",
+        "value": "Interjection"
       },
       {
         "label": "Preposition",
         "value": "Preposition"
       },
       {
-        "label": "Interjection",
-        "value": "Interjection"
+        "label": "Adverb",
+        "value": "Adverb"
       }
     ],
     "correctAnswer": "Adverb",
@@ -2182,7 +2182,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Conjunction is the answer to the following question - What is a word that modifies a verb, adjective, or another adverb.",
+    "label": "True or False: An Adverb is a word that modifies a verb, adjective, or another adverb.",
     "options": [
       {
         "label": "True",
@@ -2193,8 +2193,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Adverb.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Adverb is correct.",
     "marks": 2
   },
   {
@@ -2214,23 +2214,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is the main character of a story called?",
+    "label": "Which of these best answers the following? What is the main character of a story called?",
     "options": [
-      {
-        "label": "Foil",
-        "value": "Foil"
-      },
-      {
-        "label": "Protagonist",
-        "value": "Protagonist"
-      },
       {
         "label": "Antagonist",
         "value": "Antagonist"
       },
       {
+        "label": "Foil",
+        "value": "Foil"
+      },
+      {
         "label": "Narrator",
         "value": "Narrator"
+      },
+      {
+        "label": "Protagonist",
+        "value": "Protagonist"
       }
     ],
     "correctAnswer": "Protagonist",
@@ -2243,7 +2243,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is the main character of a story called.', the correct answer is Antagonist.",
+    "label": "True or False: The main character of a story is called the Narrator.",
     "options": [
       {
         "label": "True",
@@ -2264,7 +2264,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What is the main character of a story called?",
+    "label": "What is the main character of a story called?",
     "correctAnswer": "Protagonist",
     "explanation": "The correct term is Protagonist.",
     "marks": 2
@@ -2278,20 +2278,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What is a comparison between two unlike things using 'like' or 'as'?",
     "options": [
       {
-        "label": "Simile",
-        "value": "Simile"
+        "label": "Personification",
+        "value": "Personification"
       },
       {
-        "label": "Metaphor",
-        "value": "Metaphor"
+        "label": "Simile",
+        "value": "Simile"
       },
       {
         "label": "Hyperbole",
         "value": "Hyperbole"
       },
       {
-        "label": "Personification",
-        "value": "Personification"
+        "label": "Metaphor",
+        "value": "Metaphor"
       }
     ],
     "correctAnswer": "Simile",
@@ -2304,7 +2304,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Poetry",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Hyperbole is the answer to the following question - What is a comparison between two unlike things using 'like' or 'as'.",
+    "label": "True or False: A comparison between two unlike things using 'like' or 'as' is called a Hyperbole.",
     "options": [
       {
         "label": "True",
@@ -2325,7 +2325,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Poetry",
     "difficulty": "medium",
     "type": "text",
-    "label": "What is a comparison between two unlike things using 'like' or 'as'?",
+    "label": "Answer the following concisely: What is a comparison between two unlike things using 'like' or 'as'?",
     "correctAnswer": "Simile",
     "explanation": "The correct term is Simile.",
     "marks": 2
@@ -2365,7 +2365,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What joins words, phrases, or clauses together.', the correct answer is Interjection.",
+    "label": "True or False: A Conjunction is used to join words, phrases, or clauses together.",
     "options": [
       {
         "label": "True",
@@ -2376,8 +2376,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Conjunction.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Conjunction is correct.",
     "marks": 2
   },
   {
@@ -2386,7 +2386,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What joins words, phrases, or clauses together?",
+    "label": "Answer the following concisely: What joins words, phrases, or clauses together?",
     "correctAnswer": "Conjunction",
     "explanation": "The correct term is Conjunction.",
     "marks": 2
@@ -2404,16 +2404,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Synonyms"
       },
       {
-        "label": "Homophones",
-        "value": "Homophones"
-      },
-      {
         "label": "Antonyms",
         "value": "Antonyms"
       },
       {
         "label": "Homonyms",
         "value": "Homonyms"
+      },
+      {
+        "label": "Homophones",
+        "value": "Homophones"
       }
     ],
     "correctAnswer": "Homophones",
@@ -2426,7 +2426,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Vocabulary",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What are words that sound the same but have different meanings and spellings.', the correct answer is Homophones.",
+    "label": "True or False: Words that sound the same but have different meanings and spellings are called Synonyms.",
     "options": [
       {
         "label": "True",
@@ -2437,8 +2437,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Homophones is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Homophones.",
     "marks": 2
   },
   {
@@ -2458,7 +2458,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What is a direct comparison between two unlike things without using 'like' or 'as'?",
+    "label": "What is a direct comparison between two unlike things without using 'like' or 'as'?",
     "options": [
       {
         "label": "Metaphor",
@@ -2469,12 +2469,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Simile"
       },
       {
-        "label": "Allusion",
-        "value": "Allusion"
-      },
-      {
         "label": "Irony",
         "value": "Irony"
+      },
+      {
+        "label": "Allusion",
+        "value": "Allusion"
       }
     ],
     "correctAnswer": "Metaphor",
@@ -2487,7 +2487,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Metaphor is the correct term for: What is a direct comparison between two unlike things without using 'like' or 'as'.",
+    "label": "True or False: A direct comparison between two unlike things without using 'like' or 'as' is a Simile.",
     "options": [
       {
         "label": "True",
@@ -2498,8 +2498,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Metaphor is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Metaphor.",
     "marks": 3
   },
   {
@@ -2508,7 +2508,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What is a direct comparison between two unlike things without using 'like' or 'as'?",
+    "label": "Provide the exact term: What is a direct comparison between two unlike things without using 'like' or 'as'?",
     "correctAnswer": "Metaphor",
     "explanation": "The correct term is Metaphor.",
     "marks": 3
@@ -2519,11 +2519,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Poetry",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the repetition of initial consonant sounds in neighboring words?",
+    "label": "What is the repetition of initial consonant sounds in neighboring words?",
     "options": [
       {
         "label": "Consonance",
         "value": "Consonance"
+      },
+      {
+        "label": "Onomatopoeia",
+        "value": "Onomatopoeia"
       },
       {
         "label": "Alliteration",
@@ -2532,10 +2536,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Assonance",
         "value": "Assonance"
-      },
-      {
-        "label": "Onomatopoeia",
-        "value": "Onomatopoeia"
       }
     ],
     "correctAnswer": "Alliteration",
@@ -2548,7 +2548,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Poetry",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Assonance is the answer to the following question - What is the repetition of initial consonant sounds in neighboring words.",
+    "label": "True or False: The repetition of initial consonant sounds in neighboring words is called Consonance.",
     "options": [
       {
         "label": "True",
@@ -2569,7 +2569,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Poetry",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What is the repetition of initial consonant sounds in neighboring words?",
+    "label": "What is the repetition of initial consonant sounds in neighboring words?",
     "correctAnswer": "Alliteration",
     "explanation": "The correct term is Alliteration.",
     "marks": 3
@@ -2580,23 +2580,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the term for a character who contrasts with another character?",
+    "label": "What is the term for a character who contrasts with another character?",
     "options": [
+      {
+        "label": "Archetype",
+        "value": "Archetype"
+      },
       {
         "label": "Foil",
         "value": "Foil"
-      },
-      {
-        "label": "Protagonist",
-        "value": "Protagonist"
       },
       {
         "label": "Antagonist",
         "value": "Antagonist"
       },
       {
-        "label": "Archetype",
-        "value": "Archetype"
+        "label": "Protagonist",
+        "value": "Protagonist"
       }
     ],
     "correctAnswer": "Foil",
@@ -2609,7 +2609,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Foil is the correct term for: What is the term for a character who contrasts with another character.",
+    "label": "True or False: A character who contrasts with another character is called a Antagonist.",
     "options": [
       {
         "label": "True",
@@ -2620,8 +2620,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Foil is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Foil.",
     "marks": 3
   },
   {
@@ -2630,7 +2630,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Literature",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the term for a character who contrasts with another character?",
+    "label": "What is the term for a character who contrasts with another character?",
     "correctAnswer": "Foil",
     "explanation": "The correct term is Foil.",
     "marks": 3
@@ -2641,23 +2641,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What type of clause can stand alone as a complete sentence?",
+    "label": "What type of clause can stand alone as a complete sentence?",
     "options": [
-      {
-        "label": "Dependent Clause",
-        "value": "Dependent Clause"
-      },
       {
         "label": "Subordinate Clause",
         "value": "Subordinate Clause"
       },
       {
-        "label": "Independent Clause",
-        "value": "Independent Clause"
+        "label": "Dependent Clause",
+        "value": "Dependent Clause"
       },
       {
         "label": "Relative Clause",
         "value": "Relative Clause"
+      },
+      {
+        "label": "Independent Clause",
+        "value": "Independent Clause"
       }
     ],
     "correctAnswer": "Independent Clause",
@@ -2670,7 +2670,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Relative Clause is the answer to the following question - What type of clause can stand alone as a complete sentence.",
+    "label": "True or False: An Subordinate Clause can stand alone as a complete sentence.",
     "options": [
       {
         "label": "True",
@@ -2691,7 +2691,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Grammar",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What type of clause can stand alone as a complete sentence?",
+    "label": "What type of clause can stand alone as a complete sentence?",
     "correctAnswer": "Independent Clause",
     "explanation": "The correct term is Independent Clause.",
     "marks": 3
@@ -2702,7 +2702,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rhetoric",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What is the use of exaggeration for emphasis or rhetorical effect?",
+    "label": "Which of these best answers the following? What is the use of exaggeration for emphasis or rhetorical effect?",
     "options": [
       {
         "label": "Oxymoron",
@@ -2713,12 +2713,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Hyperbole"
       },
       {
-        "label": "Understatement",
-        "value": "Understatement"
-      },
-      {
         "label": "Paradox",
         "value": "Paradox"
+      },
+      {
+        "label": "Understatement",
+        "value": "Understatement"
       }
     ],
     "correctAnswer": "Hyperbole",
@@ -2731,7 +2731,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rhetoric",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What is the use of exaggeration for emphasis or rhetorical effect.', the correct answer is Paradox.",
+    "label": "True or False: The use of exaggeration for emphasis or rhetorical effect is called Hyperbole.",
     "options": [
       {
         "label": "True",
@@ -2742,8 +2742,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Hyperbole.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Hyperbole is correct.",
     "marks": 3
   },
   {
@@ -2752,7 +2752,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rhetoric",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the use of exaggeration for emphasis or rhetorical effect?",
+    "label": "What is the use of exaggeration for emphasis or rhetorical effect?",
     "correctAnswer": "Hyperbole",
     "explanation": "The correct term is Hyperbole.",
     "marks": 3
@@ -2766,6 +2766,10 @@ export const questionBank: BankQuestion[] = [
     "label": "Who was the first President of the United States?",
     "options": [
       {
+        "label": "Abraham Lincoln",
+        "value": "Abraham Lincoln"
+      },
+      {
         "label": "John Adams",
         "value": "John Adams"
       },
@@ -2776,10 +2780,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "George Washington",
         "value": "George Washington"
-      },
-      {
-        "label": "Abraham Lincoln",
-        "value": "Abraham Lincoln"
       }
     ],
     "correctAnswer": "George Washington",
@@ -2792,7 +2792,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'Who was the first President of the United States.', the correct answer is Thomas Jefferson.",
+    "label": "True or False: The first President of the United States was George Washington.",
     "options": [
       {
         "label": "True",
@@ -2803,8 +2803,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is George Washington.",
+    "correctAnswer": "true",
+    "explanation": "Yes, George Washington is correct.",
     "marks": 1
   },
   {
@@ -2813,7 +2813,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: Who was the first President of the United States?",
+    "label": "Who was the first President of the United States?",
     "correctAnswer": "George Washington",
     "explanation": "The correct term is George Washington.",
     "marks": 1
@@ -2824,16 +2824,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "In which ancient civilization were the Pyramids built?",
+    "label": "Which of these best answers the following? In which ancient civilization were the Pyramids built?",
     "options": [
-      {
-        "label": "Greece",
-        "value": "Greece"
-      },
-      {
-        "label": "Mesopotamia",
-        "value": "Mesopotamia"
-      },
       {
         "label": "Egypt",
         "value": "Egypt"
@@ -2841,6 +2833,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Rome",
         "value": "Rome"
+      },
+      {
+        "label": "Mesopotamia",
+        "value": "Mesopotamia"
+      },
+      {
+        "label": "Greece",
+        "value": "Greece"
       }
     ],
     "correctAnswer": "Egypt",
@@ -2853,7 +2853,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Greece is the answer to the following question - In which ancient civilization were the Pyramids built.",
+    "label": "True or False: The Pyramids were built in ancient Rome.",
     "options": [
       {
         "label": "True",
@@ -2874,7 +2874,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: In which ancient civilization were the Pyramids built?",
+    "label": "Answer the following concisely: In which ancient civilization were the Pyramids built?",
     "correctAnswer": "Egypt",
     "explanation": "The correct term is Egypt.",
     "marks": 1
@@ -2885,12 +2885,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What document starts with 'We the People'?",
+    "label": "Which of these best answers the following? What document starts with 'We the People'?",
     "options": [
-      {
-        "label": "Magna Carta",
-        "value": "Magna Carta"
-      },
       {
         "label": "Bill of Rights",
         "value": "Bill of Rights"
@@ -2902,6 +2898,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "The Constitution",
         "value": "The Constitution"
+      },
+      {
+        "label": "Magna Carta",
+        "value": "Magna Carta"
       }
     ],
     "correctAnswer": "The Constitution",
@@ -2914,7 +2914,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Magna Carta is the correct term for: What document starts with 'We the People'.",
+    "label": "True or False: The document that starts with 'We the People' is The Constitution.",
     "options": [
       {
         "label": "True",
@@ -2925,8 +2925,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is The Constitution.",
+    "correctAnswer": "true",
+    "explanation": "Yes, The Constitution is correct.",
     "marks": 1
   },
   {
@@ -2935,7 +2935,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What document starts with 'We the People'?",
+    "label": "What document starts with 'We the People'?",
     "correctAnswer": "The Constitution",
     "explanation": "The correct term is The Constitution.",
     "marks": 1
@@ -2946,23 +2946,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which famous wall was built to protect China from invasions?",
+    "label": "Which of these best answers the following? Which famous wall was built to protect China from invasions?",
     "options": [
+      {
+        "label": "Western Wall",
+        "value": "Western Wall"
+      },
       {
         "label": "Berlin Wall",
         "value": "Berlin Wall"
-      },
-      {
-        "label": "Hadrian's Wall",
-        "value": "Hadrian's Wall"
       },
       {
         "label": "Great Wall of China",
         "value": "Great Wall of China"
       },
       {
-        "label": "Western Wall",
-        "value": "Western Wall"
+        "label": "Hadrian's Wall",
+        "value": "Hadrian's Wall"
       }
     ],
     "correctAnswer": "Great Wall of China",
@@ -2975,7 +2975,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Great Wall of China is the correct term for: Which famous wall was built to protect China from invasions.",
+    "label": "True or False: The Great Wall of China was built to protect China from invasions.",
     "options": [
       {
         "label": "True",
@@ -2996,7 +2996,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: Which famous wall was built to protect China from invasions?",
+    "label": "Which famous wall was built to protect China from invasions?",
     "correctAnswer": "Great Wall of China",
     "explanation": "The correct term is Great Wall of China.",
     "marks": 1
@@ -3010,6 +3010,10 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? Who wrote the Declaration of Independence?",
     "options": [
       {
+        "label": "James Madison",
+        "value": "James Madison"
+      },
+      {
         "label": "Benjamin Franklin",
         "value": "Benjamin Franklin"
       },
@@ -3020,10 +3024,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "George Washington",
         "value": "George Washington"
-      },
-      {
-        "label": "James Madison",
-        "value": "James Madison"
       }
     ],
     "correctAnswer": "Thomas Jefferson",
@@ -3036,7 +3036,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: George Washington is the answer to the following question - Who wrote the Declaration of Independence.",
+    "label": "True or False: The Declaration of Independence was written by George Washington.",
     "options": [
       {
         "label": "True",
@@ -3057,7 +3057,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: Who wrote the Declaration of Independence?",
+    "label": "Answer the following concisely: Who wrote the Declaration of Independence?",
     "correctAnswer": "Thomas Jefferson",
     "explanation": "The correct term is Thomas Jefferson.",
     "marks": 1
@@ -3068,16 +3068,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What event triggered the start of World War I?",
+    "label": "Consider the following: What event triggered the start of World War I?",
     "options": [
-      {
-        "label": "Assassination of Archduke Franz Ferdinand",
-        "value": "Assassination of Archduke Franz Ferdinand"
-      },
-      {
-        "label": "Invasion of Poland",
-        "value": "Invasion of Poland"
-      },
       {
         "label": "Sinking of the Lusitania",
         "value": "Sinking of the Lusitania"
@@ -3085,6 +3077,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Bombing of Pearl Harbor",
         "value": "Bombing of Pearl Harbor"
+      },
+      {
+        "label": "Assassination of Archduke Franz Ferdinand",
+        "value": "Assassination of Archduke Franz Ferdinand"
+      },
+      {
+        "label": "Invasion of Poland",
+        "value": "Invasion of Poland"
       }
     ],
     "correctAnswer": "Assassination of Archduke Franz Ferdinand",
@@ -3097,7 +3097,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What event triggered the start of World War I.', the correct answer is Assassination of Archduke Franz Ferdinand.",
+    "label": "True or False: World War I was triggered by the Assassination of Archduke Franz Ferdinand.",
     "options": [
       {
         "label": "True",
@@ -3118,7 +3118,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What event triggered the start of World War I?",
+    "label": "Answer the following concisely: What event triggered the start of World War I?",
     "correctAnswer": "Assassination of Archduke Franz Ferdinand",
     "explanation": "The correct term is Assassination of Archduke Franz Ferdinand.",
     "marks": 2
@@ -3129,15 +3129,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? Which war was fought between the North and South regions of the US?",
+    "label": "Consider the following: Which war was fought between the North and South regions of the US?",
     "options": [
-      {
-        "label": "Spanish-American War",
-        "value": "Spanish-American War"
-      },
       {
         "label": "War of 1812",
         "value": "War of 1812"
+      },
+      {
+        "label": "Spanish-American War",
+        "value": "Spanish-American War"
       },
       {
         "label": "American Civil War",
@@ -3158,7 +3158,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? American Civil War is the correct term for: Which war was fought between the North and South regions of the US.",
+    "label": "True or False: The War of 1812 was fought between the North and South regions of the US.",
     "options": [
       {
         "label": "True",
@@ -3169,8 +3169,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, American Civil War is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is American Civil War.",
     "marks": 2
   },
   {
@@ -3179,7 +3179,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: Which war was fought between the North and South regions of the US?",
+    "label": "Which war was fought between the North and South regions of the US?",
     "correctAnswer": "American Civil War",
     "explanation": "The correct term is American Civil War.",
     "marks": 2
@@ -3190,23 +3190,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Who was the famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony?",
+    "label": "Consider the following: Who was the famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony?",
     "options": [
-      {
-        "label": "Boudicca",
-        "value": "Boudicca"
-      },
-      {
-        "label": "Nefertiti",
-        "value": "Nefertiti"
-      },
       {
         "label": "Hatshepsut",
         "value": "Hatshepsut"
       },
       {
+        "label": "Boudicca",
+        "value": "Boudicca"
+      },
+      {
         "label": "Cleopatra",
         "value": "Cleopatra"
+      },
+      {
+        "label": "Nefertiti",
+        "value": "Nefertiti"
       }
     ],
     "correctAnswer": "Cleopatra",
@@ -3219,7 +3219,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Boudicca is the correct term for: Who was the famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony.",
+    "label": "True or False: The famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony was Boudicca.",
     "options": [
       {
         "label": "True",
@@ -3240,7 +3240,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: Who was the famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony?",
+    "label": "Answer the following concisely: Who was the famous Queen of Ancient Egypt known for her relationships with Julius Caesar and Mark Antony?",
     "correctAnswer": "Cleopatra",
     "explanation": "The correct term is Cleopatra.",
     "marks": 2
@@ -3254,16 +3254,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What was the period of cultural and artistic rebirth in Europe called?",
     "options": [
       {
-        "label": "The Middle Ages",
-        "value": "The Middle Ages"
-      },
-      {
         "label": "The Renaissance",
         "value": "The Renaissance"
       },
       {
         "label": "The Industrial Revolution",
         "value": "The Industrial Revolution"
+      },
+      {
+        "label": "The Middle Ages",
+        "value": "The Middle Ages"
       },
       {
         "label": "The Enlightenment",
@@ -3280,7 +3280,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "European History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: The Enlightenment is the answer to the following question - What was the period of cultural and artistic rebirth in Europe called.",
+    "label": "True or False: The period of cultural and artistic rebirth in Europe was called The Industrial Revolution.",
     "options": [
       {
         "label": "True",
@@ -3312,11 +3312,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? Which president issued the Emancipation Proclamation?",
+    "label": "Which president issued the Emancipation Proclamation?",
     "options": [
       {
-        "label": "Abraham Lincoln",
-        "value": "Abraham Lincoln"
+        "label": "Theodore Roosevelt",
+        "value": "Theodore Roosevelt"
       },
       {
         "label": "George Washington",
@@ -3327,8 +3327,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Andrew Jackson"
       },
       {
-        "label": "Theodore Roosevelt",
-        "value": "Theodore Roosevelt"
+        "label": "Abraham Lincoln",
+        "value": "Abraham Lincoln"
       }
     ],
     "correctAnswer": "Abraham Lincoln",
@@ -3341,7 +3341,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Abraham Lincoln is the correct term for: Which president issued the Emancipation Proclamation.",
+    "label": "True or False: The Emancipation Proclamation was issued by Abraham Lincoln.",
     "options": [
       {
         "label": "True",
@@ -3362,7 +3362,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: Which president issued the Emancipation Proclamation?",
+    "label": "Answer the following concisely: Which president issued the Emancipation Proclamation?",
     "correctAnswer": "Abraham Lincoln",
     "explanation": "The correct term is Abraham Lincoln.",
     "marks": 2
@@ -3373,8 +3373,12 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What treaty officially ended World War I?",
+    "label": "Consider the following: What treaty officially ended World War I?",
     "options": [
+      {
+        "label": "Treaty of Paris",
+        "value": "Treaty of Paris"
+      },
       {
         "label": "Treaty of Versailles",
         "value": "Treaty of Versailles"
@@ -3386,10 +3390,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Treaty of Tordesillas",
         "value": "Treaty of Tordesillas"
-      },
-      {
-        "label": "Treaty of Paris",
-        "value": "Treaty of Paris"
       }
     ],
     "correctAnswer": "Treaty of Versailles",
@@ -3402,7 +3402,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Treaty of Ghent is the answer to the following question - What treaty officially ended World War I.",
+    "label": "True or False: The Treaty of Tordesillas officially ended World War I.",
     "options": [
       {
         "label": "True",
@@ -3423,7 +3423,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What treaty officially ended World War I?",
+    "label": "Answer the following concisely: What treaty officially ended World War I?",
     "correctAnswer": "Treaty of Versailles",
     "explanation": "The correct term is Treaty of Versailles.",
     "marks": 3
@@ -3434,19 +3434,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Ancient History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Who was the Macedonian king who created one of the largest empires in ancient history?",
+    "label": "Consider the following: Who was the Macedonian king who created one of the largest empires in ancient history?",
     "options": [
       {
         "label": "Genghis Khan",
         "value": "Genghis Khan"
       },
       {
-        "label": "Alexander the Great",
-        "value": "Alexander the Great"
-      },
-      {
         "label": "Julius Caesar",
         "value": "Julius Caesar"
+      },
+      {
+        "label": "Alexander the Great",
+        "value": "Alexander the Great"
       },
       {
         "label": "Cyrus the Great",
@@ -3463,7 +3463,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Ancient History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'Who was the Macedonian king who created one of the largest empires in ancient history.', the correct answer is Genghis Khan.",
+    "label": "True or False: The Macedonian king who created one of the largest empires in ancient history was Alexander the Great.",
     "options": [
       {
         "label": "True",
@@ -3474,8 +3474,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Alexander the Great.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Alexander the Great is correct.",
     "marks": 3
   },
   {
@@ -3484,7 +3484,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Ancient History",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: Who was the Macedonian king who created one of the largest empires in ancient history?",
+    "label": "Answer the following concisely: Who was the Macedonian king who created one of the largest empires in ancient history?",
     "correctAnswer": "Alexander the Great",
     "explanation": "The correct term is Alexander the Great.",
     "marks": 3
@@ -3495,8 +3495,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "European History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which revolution began with the storming of the Bastille in 1789?",
+    "label": "Consider the following: Which revolution began with the storming of the Bastille in 1789?",
     "options": [
+      {
+        "label": "Russian Revolution",
+        "value": "Russian Revolution"
+      },
+      {
+        "label": "French Revolution",
+        "value": "French Revolution"
+      },
       {
         "label": "American Revolution",
         "value": "American Revolution"
@@ -3504,14 +3512,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Industrial Revolution",
         "value": "Industrial Revolution"
-      },
-      {
-        "label": "French Revolution",
-        "value": "French Revolution"
-      },
-      {
-        "label": "Russian Revolution",
-        "value": "Russian Revolution"
       }
     ],
     "correctAnswer": "French Revolution",
@@ -3524,7 +3524,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "European History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'Which revolution began with the storming of the Bastille in 1789.', the correct answer is Russian Revolution.",
+    "label": "True or False: The Industrial Revolution began with the storming of the Bastille in 1789.",
     "options": [
       {
         "label": "True",
@@ -3545,7 +3545,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "European History",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: Which revolution began with the storming of the Bastille in 1789?",
+    "label": "Answer the following concisely: Which revolution began with the storming of the Bastille in 1789?",
     "correctAnswer": "French Revolution",
     "explanation": "The correct term is French Revolution.",
     "marks": 3
@@ -3556,23 +3556,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What was the secret US project to develop the atomic bomb called?",
+    "label": "Consider the following: What was the secret US project to develop the atomic bomb called?",
     "options": [
-      {
-        "label": "Project Gemini",
-        "value": "Project Gemini"
-      },
-      {
-        "label": "Project Mercury",
-        "value": "Project Mercury"
-      },
       {
         "label": "Apollo Project",
         "value": "Apollo Project"
       },
       {
+        "label": "Project Gemini",
+        "value": "Project Gemini"
+      },
+      {
         "label": "Manhattan Project",
         "value": "Manhattan Project"
+      },
+      {
+        "label": "Project Mercury",
+        "value": "Project Mercury"
       }
     ],
     "correctAnswer": "Manhattan Project",
@@ -3585,7 +3585,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Manhattan Project is the correct term for: What was the secret US project to develop the atomic bomb called.",
+    "label": "True or False: The secret US project to develop the atomic bomb was called the Manhattan Project.",
     "options": [
       {
         "label": "True",
@@ -3606,7 +3606,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "US History",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What was the secret US project to develop the atomic bomb called?",
+    "label": "Answer the following concisely: What was the secret US project to develop the atomic bomb called?",
     "correctAnswer": "Manhattan Project",
     "explanation": "The correct term is Manhattan Project.",
     "marks": 3
@@ -3617,23 +3617,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? Which ancient civilization developed in the region between the Tigris and Euphrates rivers?",
+    "label": "Which ancient civilization developed in the region between the Tigris and Euphrates rivers?",
     "options": [
-      {
-        "label": "Egypt",
-        "value": "Egypt"
-      },
       {
         "label": "Indus Valley",
         "value": "Indus Valley"
       },
       {
-        "label": "Mesoamerica",
-        "value": "Mesoamerica"
-      },
-      {
         "label": "Mesopotamia",
         "value": "Mesopotamia"
+      },
+      {
+        "label": "Egypt",
+        "value": "Egypt"
+      },
+      {
+        "label": "Mesoamerica",
+        "value": "Mesoamerica"
       }
     ],
     "correctAnswer": "Mesopotamia",
@@ -3646,7 +3646,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Egypt is the correct term for: Which ancient civilization developed in the region between the Tigris and Euphrates rivers.",
+    "label": "True or False: The ancient civilization that developed between the Tigris and Euphrates rivers was Indus Valley.",
     "options": [
       {
         "label": "True",
@@ -3667,7 +3667,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "World History",
     "difficulty": "hard",
     "type": "text",
-    "label": "Which ancient civilization developed in the region between the Tigris and Euphrates rivers?",
+    "label": "Answer the following concisely: Which ancient civilization developed in the region between the Tigris and Euphrates rivers?",
     "correctAnswer": "Mesopotamia",
     "explanation": "The correct term is Mesopotamia.",
     "marks": 3
@@ -3685,16 +3685,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Europe"
       },
       {
-        "label": "North America",
-        "value": "North America"
+        "label": "Asia",
+        "value": "Asia"
       },
       {
         "label": "Africa",
         "value": "Africa"
       },
       {
-        "label": "Asia",
-        "value": "Asia"
+        "label": "North America",
+        "value": "North America"
       }
     ],
     "correctAnswer": "Asia",
@@ -3707,7 +3707,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Continents",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? North America is the correct term for: What is the largest continent by land area.",
+    "label": "True or False: The largest continent by land area is Europe.",
     "options": [
       {
         "label": "True",
@@ -3728,7 +3728,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Continents",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What is the largest continent by land area?",
+    "label": "What is the largest continent by land area?",
     "correctAnswer": "Asia",
     "explanation": "The correct term is Asia.",
     "marks": 1
@@ -3739,23 +3739,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Oceans",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the largest ocean on Earth?",
+    "label": "What is the largest ocean on Earth?",
     "options": [
+      {
+        "label": "Atlantic Ocean",
+        "value": "Atlantic Ocean"
+      },
       {
         "label": "Pacific Ocean",
         "value": "Pacific Ocean"
-      },
-      {
-        "label": "Arctic Ocean",
-        "value": "Arctic Ocean"
       },
       {
         "label": "Indian Ocean",
         "value": "Indian Ocean"
       },
       {
-        "label": "Atlantic Ocean",
-        "value": "Atlantic Ocean"
+        "label": "Arctic Ocean",
+        "value": "Arctic Ocean"
       }
     ],
     "correctAnswer": "Pacific Ocean",
@@ -3768,7 +3768,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Oceans",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Arctic Ocean is the answer to the following question - What is the largest ocean on Earth.",
+    "label": "True or False: The largest ocean on Earth is the Pacific Ocean.",
     "options": [
       {
         "label": "True",
@@ -3779,8 +3779,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Pacific Ocean.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Pacific Ocean is correct.",
     "marks": 1
   },
   {
@@ -3789,7 +3789,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Oceans",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is the largest ocean on Earth?",
+    "label": "What is the largest ocean on Earth?",
     "correctAnswer": "Pacific Ocean",
     "explanation": "The correct term is Pacific Ocean.",
     "marks": 1
@@ -3803,16 +3803,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? Which country has the largest land area?",
     "options": [
       {
+        "label": "United States",
+        "value": "United States"
+      },
+      {
         "label": "Russia",
         "value": "Russia"
       },
       {
         "label": "China",
         "value": "China"
-      },
-      {
-        "label": "United States",
-        "value": "United States"
       },
       {
         "label": "Canada",
@@ -3829,7 +3829,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Russia is the answer to the following question - Which country has the largest land area.",
+    "label": "True or False: The country with the largest land area is Russia.",
     "options": [
       {
         "label": "True",
@@ -3861,23 +3861,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rivers",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the longest river in the world?",
+    "label": "Which of these best answers the following? What is the longest river in the world?",
     "options": [
-      {
-        "label": "Nile River",
-        "value": "Nile River"
-      },
       {
         "label": "Amazon River",
         "value": "Amazon River"
+      },
+      {
+        "label": "Yangtze River",
+        "value": "Yangtze River"
       },
       {
         "label": "Mississippi River",
         "value": "Mississippi River"
       },
       {
-        "label": "Yangtze River",
-        "value": "Yangtze River"
+        "label": "Nile River",
+        "value": "Nile River"
       }
     ],
     "correctAnswer": "Nile River",
@@ -3890,7 +3890,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rivers",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Nile River is the answer to the following question - What is the longest river in the world.",
+    "label": "True or False: The longest river in the world is the Mississippi River.",
     "options": [
       {
         "label": "True",
@@ -3901,8 +3901,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Nile River is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Nile River.",
     "marks": 1
   },
   {
@@ -3911,7 +3911,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rivers",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is the longest river in the world?",
+    "label": "Answer the following concisely: What is the longest river in the world?",
     "correctAnswer": "Nile River",
     "explanation": "The correct term is Nile River.",
     "marks": 1
@@ -3922,19 +3922,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Mountains",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What is the highest mountain above sea level?",
+    "label": "What is the highest mountain above sea level?",
     "options": [
       {
-        "label": "Kangchenjunga",
-        "value": "Kangchenjunga"
+        "label": "K2",
+        "value": "K2"
       },
       {
         "label": "Mount Kilimanjaro",
         "value": "Mount Kilimanjaro"
       },
       {
-        "label": "K2",
-        "value": "K2"
+        "label": "Kangchenjunga",
+        "value": "Kangchenjunga"
       },
       {
         "label": "Mount Everest",
@@ -3951,7 +3951,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Mountains",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Mount Everest is the correct term for: What is the highest mountain above sea level.",
+    "label": "True or False: The highest mountain above sea level is Kangchenjunga.",
     "options": [
       {
         "label": "True",
@@ -3962,8 +3962,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Mount Everest is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Mount Everest.",
     "marks": 1
   },
   {
@@ -3983,12 +3983,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the capital city of Australia?",
+    "label": "Consider the following: What is the capital city of Australia?",
     "options": [
-      {
-        "label": "Melbourne",
-        "value": "Melbourne"
-      },
       {
         "label": "Perth",
         "value": "Perth"
@@ -4000,6 +3996,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Canberra",
         "value": "Canberra"
+      },
+      {
+        "label": "Melbourne",
+        "value": "Melbourne"
       }
     ],
     "correctAnswer": "Canberra",
@@ -4012,7 +4012,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is the capital city of Australia.', the correct answer is Canberra.",
+    "label": "True or False: The capital city of Australia is Canberra.",
     "options": [
       {
         "label": "True",
@@ -4044,7 +4044,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Deserts",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What is the largest hot desert in the world?",
+    "label": "Which of these best answers the following? What is the largest hot desert in the world?",
     "options": [
       {
         "label": "Arabian Desert",
@@ -4073,7 +4073,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Deserts",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Arabian Desert is the answer to the following question - What is the largest hot desert in the world.",
+    "label": "True or False: The largest hot desert in the world is the Sahara Desert.",
     "options": [
       {
         "label": "True",
@@ -4084,8 +4084,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Sahara Desert.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Sahara Desert is correct.",
     "marks": 2
   },
   {
@@ -4108,8 +4108,8 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: Which country is shaped like a boot?",
     "options": [
       {
-        "label": "Spain",
-        "value": "Spain"
+        "label": "Portugal",
+        "value": "Portugal"
       },
       {
         "label": "Italy",
@@ -4120,8 +4120,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Greece"
       },
       {
-        "label": "Portugal",
-        "value": "Portugal"
+        "label": "Spain",
+        "value": "Spain"
       }
     ],
     "correctAnswer": "Italy",
@@ -4134,7 +4134,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Greece is the answer to the following question - Which country is shaped like a boot.",
+    "label": "True or False: The country shaped like a boot is Italy.",
     "options": [
       {
         "label": "True",
@@ -4145,8 +4145,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Italy.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Italy is correct.",
     "marks": 2
   },
   {
@@ -4166,19 +4166,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rivers",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: Which river flows through the Grand Canyon?",
+    "label": "Which of these best answers the following? Which river flows through the Grand Canyon?",
     "options": [
       {
-        "label": "Columbia River",
-        "value": "Columbia River"
+        "label": "Rio Grande",
+        "value": "Rio Grande"
       },
       {
         "label": "Mississippi River",
         "value": "Mississippi River"
       },
       {
-        "label": "Rio Grande",
-        "value": "Rio Grande"
+        "label": "Columbia River",
+        "value": "Columbia River"
       },
       {
         "label": "Colorado River",
@@ -4195,7 +4195,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Rivers",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Colorado River is the answer to the following question - Which river flows through the Grand Canyon.",
+    "label": "True or False: The Colorado River flows through the Grand Canyon.",
     "options": [
       {
         "label": "True",
@@ -4227,19 +4227,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is the capital city of Canada?",
+    "label": "Consider the following: What is the capital city of Canada?",
     "options": [
       {
         "label": "Vancouver",
         "value": "Vancouver"
       },
       {
-        "label": "Montreal",
-        "value": "Montreal"
-      },
-      {
         "label": "Ottawa",
         "value": "Ottawa"
+      },
+      {
+        "label": "Montreal",
+        "value": "Montreal"
       },
       {
         "label": "Toronto",
@@ -4256,7 +4256,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Ottawa is the correct term for: What is the capital city of Canada.",
+    "label": "True or False: The capital city of Canada is Vancouver.",
     "options": [
       {
         "label": "True",
@@ -4267,8 +4267,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Ottawa is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Ottawa.",
     "marks": 2
   },
   {
@@ -4277,7 +4277,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "medium",
     "type": "text",
-    "label": "What is the capital city of Canada?",
+    "label": "Answer the following concisely: What is the capital city of Canada?",
     "correctAnswer": "Ottawa",
     "explanation": "The correct term is Ottawa.",
     "marks": 2
@@ -4291,12 +4291,12 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: Which country has the most islands?",
     "options": [
       {
-        "label": "Indonesia",
-        "value": "Indonesia"
-      },
-      {
         "label": "Philippines",
         "value": "Philippines"
+      },
+      {
+        "label": "Indonesia",
+        "value": "Indonesia"
       },
       {
         "label": "Sweden",
@@ -4317,7 +4317,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Sweden is the answer to the following question - Which country has the most islands.",
+    "label": "True or False: The country with the most islands is Sweden.",
     "options": [
       {
         "label": "True",
@@ -4349,11 +4349,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Seas",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: Which sea is located between Jordan to the east and Israel to the west?",
+    "label": "Which sea is located between Jordan to the east and Israel to the west?",
     "options": [
       {
         "label": "Black Sea",
         "value": "Black Sea"
+      },
+      {
+        "label": "Dead Sea",
+        "value": "Dead Sea"
       },
       {
         "label": "Mediterranean Sea",
@@ -4362,10 +4366,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Red Sea",
         "value": "Red Sea"
-      },
-      {
-        "label": "Dead Sea",
-        "value": "Dead Sea"
       }
     ],
     "correctAnswer": "Dead Sea",
@@ -4378,7 +4378,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Seas",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Mediterranean Sea is the answer to the following question - Which sea is located between Jordan to the east and Israel to the west.",
+    "label": "True or False: The Dead Sea is located between Jordan to the east and Israel to the west.",
     "options": [
       {
         "label": "True",
@@ -4389,8 +4389,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Dead Sea.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Dead Sea is correct.",
     "marks": 3
   },
   {
@@ -4399,7 +4399,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Seas",
     "difficulty": "hard",
     "type": "text",
-    "label": "Which sea is located between Jordan to the east and Israel to the west?",
+    "label": "Provide the exact term: Which sea is located between Jordan to the east and Israel to the west?",
     "correctAnswer": "Dead Sea",
     "explanation": "The correct term is Dead Sea.",
     "marks": 3
@@ -4410,8 +4410,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What is the highest capital city in the world?",
+    "label": "Consider the following: What is the highest capital city in the world?",
     "options": [
+      {
+        "label": "Kathmandu",
+        "value": "Kathmandu"
+      },
+      {
+        "label": "Quito",
+        "value": "Quito"
+      },
       {
         "label": "La Paz",
         "value": "La Paz"
@@ -4419,14 +4427,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Bogota",
         "value": "Bogota"
-      },
-      {
-        "label": "Quito",
-        "value": "Quito"
-      },
-      {
-        "label": "Kathmandu",
-        "value": "Kathmandu"
       }
     ],
     "correctAnswer": "La Paz",
@@ -4439,7 +4439,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What is the highest capital city in the world.', the correct answer is La Paz.",
+    "label": "True or False: The highest capital city in the world is Quito.",
     "options": [
       {
         "label": "True",
@@ -4450,8 +4450,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, La Paz is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is La Paz.",
     "marks": 3
   },
   {
@@ -4460,7 +4460,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Capitals",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the highest capital city in the world?",
+    "label": "What is the highest capital city in the world?",
     "correctAnswer": "La Paz",
     "explanation": "The correct term is La Paz.",
     "marks": 3
@@ -4471,16 +4471,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Lakes",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What is the largest freshwater lake by volume?",
+    "label": "Which of these best answers the following? What is the largest freshwater lake by volume?",
     "options": [
-      {
-        "label": "Lake Baikal",
-        "value": "Lake Baikal"
-      },
-      {
-        "label": "Lake Victoria",
-        "value": "Lake Victoria"
-      },
       {
         "label": "Caspian Sea",
         "value": "Caspian Sea"
@@ -4488,6 +4480,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Lake Superior",
         "value": "Lake Superior"
+      },
+      {
+        "label": "Lake Baikal",
+        "value": "Lake Baikal"
+      },
+      {
+        "label": "Lake Victoria",
+        "value": "Lake Victoria"
       }
     ],
     "correctAnswer": "Lake Baikal",
@@ -4500,7 +4500,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Lakes",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Lake Victoria is the answer to the following question - What is the largest freshwater lake by volume.",
+    "label": "True or False: The largest freshwater lake by volume is Lake Superior.",
     "options": [
       {
         "label": "True",
@@ -4521,7 +4521,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Lakes",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What is the largest freshwater lake by volume?",
+    "label": "Provide the exact term: What is the largest freshwater lake by volume?",
     "correctAnswer": "Lake Baikal",
     "explanation": "The correct term is Lake Baikal.",
     "marks": 3
@@ -4532,23 +4532,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which country is landlocked by only one other country?",
+    "label": "Consider the following: Which country is landlocked by only one other country?",
     "options": [
-      {
-        "label": "Monaco",
-        "value": "Monaco"
-      },
       {
         "label": "San Marino",
         "value": "San Marino"
       },
       {
-        "label": "Lesotho",
-        "value": "Lesotho"
+        "label": "Monaco",
+        "value": "Monaco"
       },
       {
         "label": "Vatican City",
         "value": "Vatican City"
+      },
+      {
+        "label": "Lesotho",
+        "value": "Lesotho"
       }
     ],
     "correctAnswer": "Lesotho",
@@ -4561,7 +4561,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'Which country is landlocked by only one other country.', the correct answer is Lesotho.",
+    "label": "True or False: A country that is landlocked by only one other country is Lesotho.",
     "options": [
       {
         "label": "True",
@@ -4582,7 +4582,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Countries",
     "difficulty": "hard",
     "type": "text",
-    "label": "Which country is landlocked by only one other country?",
+    "label": "Provide the exact term: Which country is landlocked by only one other country?",
     "correctAnswer": "Lesotho",
     "explanation": "The correct term is Lesotho.",
     "marks": 3
@@ -4593,11 +4593,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What does CPU stand for?",
+    "label": "What does CPU stand for?",
     "options": [
       {
         "label": "Central Processing Unit",
         "value": "Central Processing Unit"
+      },
+      {
+        "label": "Computer Personal Unit",
+        "value": "Computer Personal Unit"
       },
       {
         "label": "Central Processor Unit",
@@ -4606,10 +4610,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Central Program Unit",
         "value": "Central Program Unit"
-      },
-      {
-        "label": "Computer Personal Unit",
-        "value": "Computer Personal Unit"
       }
     ],
     "correctAnswer": "Central Processing Unit",
@@ -4622,7 +4622,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Central Processing Unit is the answer to the following question - What does CPU stand for.",
+    "label": "True or False: CPU stands for Computer Personal Unit.",
     "options": [
       {
         "label": "True",
@@ -4633,8 +4633,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Central Processing Unit is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Central Processing Unit.",
     "marks": 1
   },
   {
@@ -4657,20 +4657,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What is a sequence of instructions used to solve a problem?",
     "options": [
       {
-        "label": "Syntax",
-        "value": "Syntax"
-      },
-      {
-        "label": "Algorithm",
-        "value": "Algorithm"
+        "label": "Loop",
+        "value": "Loop"
       },
       {
         "label": "Variable",
         "value": "Variable"
       },
       {
-        "label": "Loop",
-        "value": "Loop"
+        "label": "Syntax",
+        "value": "Syntax"
+      },
+      {
+        "label": "Algorithm",
+        "value": "Algorithm"
       }
     ],
     "correctAnswer": "Algorithm",
@@ -4683,7 +4683,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Programming",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is a sequence of instructions used to solve a problem.', the correct answer is Algorithm.",
+    "label": "True or False: A sequence of instructions used to solve a problem is an Algorithm.",
     "options": [
       {
         "label": "True",
@@ -4704,7 +4704,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Programming",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is a sequence of instructions used to solve a problem?",
+    "label": "Answer the following concisely: What is a sequence of instructions used to solve a problem?",
     "correctAnswer": "Algorithm",
     "explanation": "The correct term is Algorithm.",
     "marks": 1
@@ -4718,20 +4718,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? Which component stores data permanently even when powered off?",
     "options": [
       {
-        "label": "Hard Drive",
-        "value": "Hard Drive"
+        "label": "Register",
+        "value": "Register"
       },
       {
         "label": "RAM",
         "value": "RAM"
       },
       {
-        "label": "Cache",
-        "value": "Cache"
+        "label": "Hard Drive",
+        "value": "Hard Drive"
       },
       {
-        "label": "Register",
-        "value": "Register"
+        "label": "Cache",
+        "value": "Cache"
       }
     ],
     "correctAnswer": "Hard Drive",
@@ -4744,7 +4744,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Cache is the correct term for: Which component stores data permanently even when powered off.",
+    "label": "True or False: The component that stores data permanently even when powered off is the Register.",
     "options": [
       {
         "label": "True",
@@ -4765,7 +4765,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: Which component stores data permanently even when powered off?",
+    "label": "Which component stores data permanently even when powered off?",
     "correctAnswer": "Hard Drive",
     "explanation": "The correct term is Hard Drive.",
     "marks": 1
@@ -4779,8 +4779,8 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is the main circuit board of a computer called?",
     "options": [
       {
-        "label": "Graphics Card",
-        "value": "Graphics Card"
+        "label": "Motherboard",
+        "value": "Motherboard"
       },
       {
         "label": "Power Supply",
@@ -4791,8 +4791,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Processor"
       },
       {
-        "label": "Motherboard",
-        "value": "Motherboard"
+        "label": "Graphics Card",
+        "value": "Graphics Card"
       }
     ],
     "correctAnswer": "Motherboard",
@@ -4805,7 +4805,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is the main circuit board of a computer called.', the correct answer is Motherboard.",
+    "label": "True or False: The main circuit board of a computer is called the Power Supply.",
     "options": [
       {
         "label": "True",
@@ -4816,8 +4816,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Motherboard is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Motherboard.",
     "marks": 1
   },
   {
@@ -4844,12 +4844,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Debugger"
       },
       {
-        "label": "Compiler",
-        "value": "Compiler"
-      },
-      {
         "label": "Assembler",
         "value": "Assembler"
+      },
+      {
+        "label": "Compiler",
+        "value": "Compiler"
       },
       {
         "label": "Interpreter",
@@ -4866,7 +4866,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Software",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Debugger is the correct term for: What program translates high-level code into machine code.",
+    "label": "True or False: A Compiler translates high-level code into machine code.",
     "options": [
       {
         "label": "True",
@@ -4877,8 +4877,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Compiler.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Compiler is correct.",
     "marks": 1
   },
   {
@@ -4887,7 +4887,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Software",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What program translates high-level code into machine code?",
+    "label": "What program translates high-level code into machine code?",
     "correctAnswer": "Compiler",
     "explanation": "The correct term is Compiler.",
     "marks": 1
@@ -4901,20 +4901,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? How many bits are in a byte?",
     "options": [
       {
-        "label": "4",
-        "value": "4"
-      },
-      {
-        "label": "32",
-        "value": "32"
-      },
-      {
         "label": "8",
         "value": "8"
       },
       {
         "label": "16",
         "value": "16"
+      },
+      {
+        "label": "32",
+        "value": "32"
+      },
+      {
+        "label": "4",
+        "value": "4"
       }
     ],
     "correctAnswer": "8",
@@ -4927,7 +4927,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Representation",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'How many bits are in a byte.', the correct answer is 8.",
+    "label": "True or False: There are 32 bits in a byte.",
     "options": [
       {
         "label": "True",
@@ -4938,8 +4938,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, 8 is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is 8.",
     "marks": 2
   },
   {
@@ -4948,7 +4948,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Representation",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: How many bits are in a byte?",
+    "label": "How many bits are in a byte?",
     "correctAnswer": "8",
     "explanation": "The correct term is 8.",
     "marks": 2
@@ -4962,20 +4962,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What paradigm is based on 'objects' containing data and methods?",
     "options": [
       {
-        "label": "Procedural Programming",
-        "value": "Procedural Programming"
-      },
-      {
-        "label": "Object-Oriented Programming",
-        "value": "Object-Oriented Programming"
-      },
-      {
         "label": "Functional Programming",
         "value": "Functional Programming"
       },
       {
         "label": "Logic Programming",
         "value": "Logic Programming"
+      },
+      {
+        "label": "Procedural Programming",
+        "value": "Procedural Programming"
+      },
+      {
+        "label": "Object-Oriented Programming",
+        "value": "Object-Oriented Programming"
       }
     ],
     "correctAnswer": "Object-Oriented Programming",
@@ -4988,7 +4988,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Programming",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Object-Oriented Programming is the answer to the following question - What paradigm is based on 'objects' containing data and methods.",
+    "label": "True or False: The programming paradigm based on 'objects' containing data and methods is Object-Oriented Programming.",
     "options": [
       {
         "label": "True",
@@ -5009,7 +5009,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Programming",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What paradigm is based on 'objects' containing data and methods?",
+    "label": "Answer the following concisely: What paradigm is based on 'objects' containing data and methods?",
     "correctAnswer": "Object-Oriented Programming",
     "explanation": "The correct term is Object-Oriented Programming.",
     "marks": 2
@@ -5020,23 +5020,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Networking",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What protocol is used to transfer web pages over the internet?",
+    "label": "What protocol is used to transfer web pages over the internet?",
     "options": [
       {
-        "label": "SMTP",
-        "value": "SMTP"
+        "label": "HTTP",
+        "value": "HTTP"
       },
       {
         "label": "SSH",
         "value": "SSH"
       },
       {
-        "label": "FTP",
-        "value": "FTP"
+        "label": "SMTP",
+        "value": "SMTP"
       },
       {
-        "label": "HTTP",
-        "value": "HTTP"
+        "label": "FTP",
+        "value": "FTP"
       }
     ],
     "correctAnswer": "HTTP",
@@ -5049,7 +5049,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Networking",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What protocol is used to transfer web pages over the internet.', the correct answer is HTTP.",
+    "label": "True or False: The protocol used to transfer web pages over the internet is SSH.",
     "options": [
       {
         "label": "True",
@@ -5060,8 +5060,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, HTTP is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is HTTP.",
     "marks": 2
   },
   {
@@ -5070,7 +5070,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Networking",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What protocol is used to transfer web pages over the internet?",
+    "label": "What protocol is used to transfer web pages over the internet?",
     "correctAnswer": "HTTP",
     "explanation": "The correct term is HTTP.",
     "marks": 2
@@ -5081,23 +5081,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Databases",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What language is primarily used to query relational databases?",
+    "label": "Which of these best answers the following? What language is primarily used to query relational databases?",
     "options": [
-      {
-        "label": "Java",
-        "value": "Java"
-      },
       {
         "label": "C++",
         "value": "C++"
+      },
+      {
+        "label": "SQL",
+        "value": "SQL"
       },
       {
         "label": "Python",
         "value": "Python"
       },
       {
-        "label": "SQL",
-        "value": "SQL"
+        "label": "Java",
+        "value": "Java"
       }
     ],
     "correctAnswer": "SQL",
@@ -5110,7 +5110,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Databases",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? SQL is the correct term for: What language is primarily used to query relational databases.",
+    "label": "True or False: The language primarily used to query relational databases is Java.",
     "options": [
       {
         "label": "True",
@@ -5121,8 +5121,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, SQL is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is SQL.",
     "marks": 2
   },
   {
@@ -5131,7 +5131,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Databases",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What language is primarily used to query relational databases?",
+    "label": "What language is primarily used to query relational databases?",
     "correctAnswer": "SQL",
     "explanation": "The correct term is SQL.",
     "marks": 2
@@ -5142,16 +5142,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "OS",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What acts as an intermediary between computer hardware and the user?",
+    "label": "Consider the following: What acts as an intermediary between computer hardware and the user?",
     "options": [
-      {
-        "label": "Device Driver",
-        "value": "Device Driver"
-      },
-      {
-        "label": "Firmware",
-        "value": "Firmware"
-      },
       {
         "label": "Application Software",
         "value": "Application Software"
@@ -5159,6 +5151,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Operating System",
         "value": "Operating System"
+      },
+      {
+        "label": "Firmware",
+        "value": "Firmware"
+      },
+      {
+        "label": "Device Driver",
+        "value": "Device Driver"
       }
     ],
     "correctAnswer": "Operating System",
@@ -5171,7 +5171,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OS",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Operating System is the correct term for: What acts as an intermediary between computer hardware and the user.",
+    "label": "True or False: The Application Software acts as an intermediary between computer hardware and the user.",
     "options": [
       {
         "label": "True",
@@ -5182,8 +5182,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Operating System is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Operating System.",
     "marks": 2
   },
   {
@@ -5206,12 +5206,12 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What is the time complexity of a binary search?",
     "options": [
       {
-        "label": "O(1)",
-        "value": "O(1)"
-      },
-      {
         "label": "O(log n)",
         "value": "O(log n)"
+      },
+      {
+        "label": "O(1)",
+        "value": "O(1)"
       },
       {
         "label": "O(n)",
@@ -5232,7 +5232,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algorithms",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? O(1) is the correct term for: What is the time complexity of a binary search.",
+    "label": "True or False: The time complexity of a binary search is O(n^2).",
     "options": [
       {
         "label": "True",
@@ -5253,7 +5253,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Algorithms",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the time complexity of a binary search?",
+    "label": "Answer the following concisely: What is the time complexity of a binary search?",
     "correctAnswer": "O(log n)",
     "explanation": "The correct term is O(log n).",
     "marks": 3
@@ -5264,8 +5264,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "Theory",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What theoretical machine can simulate any computer algorithm?",
+    "label": "What theoretical machine can simulate any computer algorithm?",
     "options": [
+      {
+        "label": "Von Neumann Architecture",
+        "value": "Von Neumann Architecture"
+      },
+      {
+        "label": "Turing Machine",
+        "value": "Turing Machine"
+      },
       {
         "label": "Quantum Computer",
         "value": "Quantum Computer"
@@ -5273,14 +5281,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Finite State Machine",
         "value": "Finite State Machine"
-      },
-      {
-        "label": "Turing Machine",
-        "value": "Turing Machine"
-      },
-      {
-        "label": "Von Neumann Architecture",
-        "value": "Von Neumann Architecture"
       }
     ],
     "correctAnswer": "Turing Machine",
@@ -5293,7 +5293,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Theory",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What theoretical machine can simulate any computer algorithm.', the correct answer is Turing Machine.",
+    "label": "True or False: A Quantum Computer is a theoretical machine that can simulate any computer algorithm.",
     "options": [
       {
         "label": "True",
@@ -5304,8 +5304,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Turing Machine is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Turing Machine.",
     "marks": 3
   },
   {
@@ -5314,7 +5314,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Theory",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What theoretical machine can simulate any computer algorithm?",
+    "label": "Provide the exact term: What theoretical machine can simulate any computer algorithm?",
     "correctAnswer": "Turing Machine",
     "explanation": "The correct term is Turing Machine.",
     "marks": 3
@@ -5325,8 +5325,12 @@ export const questionBank: BankQuestion[] = [
     "topic": "Networking",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? In the OSI model, which layer ensures reliable data transfer?",
+    "label": "In the OSI model, which layer ensures reliable data transfer?",
     "options": [
+      {
+        "label": "Transport Layer",
+        "value": "Transport Layer"
+      },
       {
         "label": "Network Layer",
         "value": "Network Layer"
@@ -5334,10 +5338,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Physical Layer",
         "value": "Physical Layer"
-      },
-      {
-        "label": "Transport Layer",
-        "value": "Transport Layer"
       },
       {
         "label": "Data Link Layer",
@@ -5354,7 +5354,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Networking",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Network Layer is the correct term for: In the OSI model, which layer ensures reliable data transfer.",
+    "label": "True or False: In the OSI model, the Transport Layer ensures reliable data transfer.",
     "options": [
       {
         "label": "True",
@@ -5365,8 +5365,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Transport Layer.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Transport Layer is correct.",
     "marks": 3
   },
   {
@@ -5386,23 +5386,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What cryptographic method uses two different keys (public and private)?",
+    "label": "Consider the following: What cryptographic method uses two different keys (public and private)?",
     "options": [
       {
         "label": "Asymmetric Encryption",
         "value": "Asymmetric Encryption"
       },
       {
-        "label": "Symmetric Encryption",
-        "value": "Symmetric Encryption"
+        "label": "Hashing",
+        "value": "Hashing"
       },
       {
         "label": "Salting",
         "value": "Salting"
       },
       {
-        "label": "Hashing",
-        "value": "Hashing"
+        "label": "Symmetric Encryption",
+        "value": "Symmetric Encryption"
       }
     ],
     "correctAnswer": "Asymmetric Encryption",
@@ -5415,7 +5415,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Asymmetric Encryption is the answer to the following question - What cryptographic method uses two different keys (public and private).",
+    "label": "True or False: The cryptographic method that uses two different keys (public and private) is Salting.",
     "options": [
       {
         "label": "True",
@@ -5426,8 +5426,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Asymmetric Encryption is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Asymmetric Encryption.",
     "marks": 3
   },
   {
@@ -5436,7 +5436,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What cryptographic method uses two different keys (public and private)?",
+    "label": "What cryptographic method uses two different keys (public and private)?",
     "correctAnswer": "Asymmetric Encryption",
     "explanation": "The correct term is Asymmetric Encryption.",
     "marks": 3
@@ -5447,19 +5447,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What memory type acts as a buffer between the CPU and main memory?",
+    "label": "Consider the following: What memory type acts as a buffer between the CPU and main memory?",
     "options": [
       {
         "label": "Cache",
         "value": "Cache"
       },
       {
-        "label": "ROM",
-        "value": "ROM"
-      },
-      {
         "label": "Virtual Memory",
         "value": "Virtual Memory"
+      },
+      {
+        "label": "ROM",
+        "value": "ROM"
       },
       {
         "label": "Registers",
@@ -5476,7 +5476,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? ROM is the correct term for: What memory type acts as a buffer between the CPU and main memory.",
+    "label": "True or False: The memory type that acts as a buffer between the CPU and main memory is Registers.",
     "options": [
       {
         "label": "True",
@@ -5497,7 +5497,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What memory type acts as a buffer between the CPU and main memory?",
+    "label": "What memory type acts as a buffer between the CPU and main memory?",
     "correctAnswer": "Cache",
     "explanation": "The correct term is Cache.",
     "marks": 3
@@ -5508,23 +5508,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What does DBMS stand for?",
+    "label": "What does DBMS stand for?",
     "options": [
-      {
-        "label": "Data Base Manipulation System",
-        "value": "Data Base Manipulation System"
-      },
       {
         "label": "Database Manipulation System",
         "value": "Database Manipulation System"
       },
       {
-        "label": "Data Bank Management System",
-        "value": "Data Bank Management System"
-      },
-      {
         "label": "Database Management System",
         "value": "Database Management System"
+      },
+      {
+        "label": "Data Base Manipulation System",
+        "value": "Data Base Manipulation System"
+      },
+      {
+        "label": "Data Bank Management System",
+        "value": "Data Bank Management System"
       }
     ],
     "correctAnswer": "Database Management System",
@@ -5537,7 +5537,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What does DBMS stand for.', the correct answer is Database Management System.",
+    "label": "True or False: DBMS stands for Data Bank Management System.",
     "options": [
       {
         "label": "True",
@@ -5548,8 +5548,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Database Management System is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Database Management System.",
     "marks": 1
   },
   {
@@ -5558,7 +5558,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What does DBMS stand for?",
+    "label": "Provide the exact term: What does DBMS stand for?",
     "correctAnswer": "Database Management System",
     "explanation": "The correct term is Database Management System.",
     "marks": 1
@@ -5569,23 +5569,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: Which SQL clause is used to filter records?",
+    "label": "Which of these best answers the following? Which SQL clause is used to filter records?",
     "options": [
       {
-        "label": "SELECT",
-        "value": "SELECT"
+        "label": "WHERE",
+        "value": "WHERE"
       },
       {
         "label": "HAVING",
         "value": "HAVING"
       },
       {
-        "label": "FILTER",
-        "value": "FILTER"
+        "label": "SELECT",
+        "value": "SELECT"
       },
       {
-        "label": "WHERE",
-        "value": "WHERE"
+        "label": "FILTER",
+        "value": "FILTER"
       }
     ],
     "correctAnswer": "WHERE",
@@ -5598,7 +5598,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? SELECT is the correct term for: Which SQL clause is used to filter records.",
+    "label": "True or False: The SQL clause used to filter records is SELECT.",
     "options": [
       {
         "label": "True",
@@ -5619,7 +5619,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: Which SQL clause is used to filter records?",
+    "label": "Which SQL clause is used to filter records?",
     "correctAnswer": "WHERE",
     "explanation": "The correct term is WHERE.",
     "marks": 1
@@ -5630,23 +5630,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "easy",
     "type": "radio",
-    "label": "What uniquely identifies each record in a table?",
+    "label": "Which of these best answers the following? What uniquely identifies each record in a table?",
     "options": [
       {
-        "label": "Unique Key",
-        "value": "Unique Key"
+        "label": "Foreign Key",
+        "value": "Foreign Key"
       },
       {
         "label": "Index",
         "value": "Index"
       },
       {
-        "label": "Primary Key",
-        "value": "Primary Key"
+        "label": "Unique Key",
+        "value": "Unique Key"
       },
       {
-        "label": "Foreign Key",
-        "value": "Foreign Key"
+        "label": "Primary Key",
+        "value": "Primary Key"
       }
     ],
     "correctAnswer": "Primary Key",
@@ -5659,7 +5659,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Foreign Key is the answer to the following question - What uniquely identifies each record in a table.",
+    "label": "True or False: A Unique Key uniquely identifies each record in a table.",
     "options": [
       {
         "label": "True",
@@ -5694,20 +5694,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What type of key links two tables together?",
     "options": [
       {
-        "label": "Candidate Key",
-        "value": "Candidate Key"
+        "label": "Super Key",
+        "value": "Super Key"
       },
       {
-        "label": "Foreign Key",
-        "value": "Foreign Key"
+        "label": "Candidate Key",
+        "value": "Candidate Key"
       },
       {
         "label": "Primary Key",
         "value": "Primary Key"
       },
       {
-        "label": "Super Key",
-        "value": "Super Key"
+        "label": "Foreign Key",
+        "value": "Foreign Key"
       }
     ],
     "correctAnswer": "Foreign Key",
@@ -5720,7 +5720,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Super Key is the correct term for: What type of key links two tables together.",
+    "label": "True or False: A Foreign Key links two tables together.",
     "options": [
       {
         "label": "True",
@@ -5731,8 +5731,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Foreign Key.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Foreign Key is correct.",
     "marks": 1
   },
   {
@@ -5752,23 +5752,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which SQL statement is used to extract data from a database?",
+    "label": "Consider the following: Which SQL statement is used to extract data from a database?",
     "options": [
-      {
-        "label": "PULL",
-        "value": "PULL"
-      },
       {
         "label": "EXTRACT",
         "value": "EXTRACT"
       },
       {
-        "label": "GET",
-        "value": "GET"
+        "label": "PULL",
+        "value": "PULL"
       },
       {
         "label": "SELECT",
         "value": "SELECT"
+      },
+      {
+        "label": "GET",
+        "value": "GET"
       }
     ],
     "correctAnswer": "SELECT",
@@ -5781,7 +5781,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'Which SQL statement is used to extract data from a database.', the correct answer is SELECT.",
+    "label": "True or False: The SQL statement used to extract data from a database is SELECT.",
     "options": [
       {
         "label": "True",
@@ -5813,11 +5813,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Properties",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: Which acronym describes the properties of reliable database transactions?",
+    "label": "Which of these best answers the following? Which acronym describes the properties of reliable database transactions?",
     "options": [
       {
-        "label": "CRUD",
-        "value": "CRUD"
+        "label": "ACID",
+        "value": "ACID"
       },
       {
         "label": "BASE",
@@ -5828,8 +5828,8 @@ export const questionBank: BankQuestion[] = [
         "value": "SOLID"
       },
       {
-        "label": "ACID",
-        "value": "ACID"
+        "label": "CRUD",
+        "value": "CRUD"
       }
     ],
     "correctAnswer": "ACID",
@@ -5842,7 +5842,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Properties",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which acronym describes the properties of reliable database transactions.', the correct answer is ACID.",
+    "label": "True or False: The acronym describing the properties of reliable database transactions is SOLID.",
     "options": [
       {
         "label": "True",
@@ -5853,8 +5853,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, ACID is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is ACID.",
     "marks": 2
   },
   {
@@ -5863,7 +5863,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Properties",
     "difficulty": "medium",
     "type": "text",
-    "label": "Which acronym describes the properties of reliable database transactions?",
+    "label": "Answer the following concisely: Which acronym describes the properties of reliable database transactions?",
     "correctAnswer": "ACID",
     "explanation": "The correct term is ACID.",
     "marks": 2
@@ -5903,7 +5903,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Design",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Indexing is the correct term for: What is the process of organizing data to reduce redundancy.",
+    "label": "True or False: The process of organizing data to reduce redundancy is called Indexing.",
     "options": [
       {
         "label": "True",
@@ -5924,7 +5924,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Design",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What is the process of organizing data to reduce redundancy?",
+    "label": "Answer the following concisely: What is the process of organizing data to reduce redundancy?",
     "correctAnswer": "Normalization",
     "explanation": "The correct term is Normalization.",
     "marks": 2
@@ -5935,8 +5935,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: Which SQL clause is used to sort the result set?",
+    "label": "Which of these best answers the following? Which SQL clause is used to sort the result set?",
     "options": [
+      {
+        "label": "SORT BY",
+        "value": "SORT BY"
+      },
+      {
+        "label": "ALIGN BY",
+        "value": "ALIGN BY"
+      },
       {
         "label": "GROUP BY",
         "value": "GROUP BY"
@@ -5944,14 +5952,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "ORDER BY",
         "value": "ORDER BY"
-      },
-      {
-        "label": "ALIGN BY",
-        "value": "ALIGN BY"
-      },
-      {
-        "label": "SORT BY",
-        "value": "SORT BY"
       }
     ],
     "correctAnswer": "ORDER BY",
@@ -5964,7 +5964,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? ORDER BY is the correct term for: Which SQL clause is used to sort the result set.",
+    "label": "True or False: The SQL clause used to sort the result set is ALIGN BY.",
     "options": [
       {
         "label": "True",
@@ -5975,8 +5975,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, ORDER BY is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is ORDER BY.",
     "marks": 2
   },
   {
@@ -5996,16 +5996,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What database object improves the speed of data retrieval operations?",
+    "label": "Consider the following: What database object improves the speed of data retrieval operations?",
     "options": [
-      {
-        "label": "Trigger",
-        "value": "Trigger"
-      },
-      {
-        "label": "View",
-        "value": "View"
-      },
       {
         "label": "Index",
         "value": "Index"
@@ -6013,6 +6005,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Stored Procedure",
         "value": "Stored Procedure"
+      },
+      {
+        "label": "Trigger",
+        "value": "Trigger"
+      },
+      {
+        "label": "View",
+        "value": "View"
       }
     ],
     "correctAnswer": "Index",
@@ -6025,7 +6025,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Index is the correct term for: What database object improves the speed of data retrieval operations.",
+    "label": "True or False: An Index improves the speed of data retrieval operations.",
     "options": [
       {
         "label": "True",
@@ -6064,16 +6064,16 @@ export const questionBank: BankQuestion[] = [
         "value": "RDBMS"
       },
       {
-        "label": "Network",
-        "value": "Network"
+        "label": "Hierarchical",
+        "value": "Hierarchical"
       },
       {
         "label": "NoSQL",
         "value": "NoSQL"
       },
       {
-        "label": "Hierarchical",
-        "value": "Hierarchical"
+        "label": "Network",
+        "value": "Network"
       }
     ],
     "correctAnswer": "NoSQL",
@@ -6086,7 +6086,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "NoSQL",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What type of database uses documents, key-value pairs, or graphs instead of tables.', the correct answer is NoSQL.",
+    "label": "True or False: A Hierarchical database uses documents, key-value pairs, or graphs instead of tables.",
     "options": [
       {
         "label": "True",
@@ -6097,8 +6097,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, NoSQL is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is NoSQL.",
     "marks": 2
   },
   {
@@ -6121,10 +6121,6 @@ export const questionBank: BankQuestion[] = [
     "label": "Which normal form requires the removal of transitive dependencies?",
     "options": [
       {
-        "label": "First Normal Form (1NF)",
-        "value": "First Normal Form (1NF)"
-      },
-      {
         "label": "Boyce-Codd Normal Form (BCNF)",
         "value": "Boyce-Codd Normal Form (BCNF)"
       },
@@ -6135,6 +6131,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Third Normal Form (3NF)",
         "value": "Third Normal Form (3NF)"
+      },
+      {
+        "label": "First Normal Form (1NF)",
+        "value": "First Normal Form (1NF)"
       }
     ],
     "correctAnswer": "Third Normal Form (3NF)",
@@ -6147,7 +6147,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Normalization",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Third Normal Form (3NF) is the correct term for: Which normal form requires the removal of transitive dependencies.",
+    "label": "True or False: The Third Normal Form (3NF) requires the removal of transitive dependencies.",
     "options": [
       {
         "label": "True",
@@ -6168,7 +6168,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Normalization",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: Which normal form requires the removal of transitive dependencies?",
+    "label": "Which normal form requires the removal of transitive dependencies?",
     "correctAnswer": "Third Normal Form (3NF)",
     "explanation": "The correct term is Third Normal Form (3NF).",
     "marks": 3
@@ -6208,7 +6208,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Deadlock is the correct term for: What issue occurs when two transactions wait indefinitely for each other to release locks.",
+    "label": "True or False: A Livelock occurs when two transactions wait indefinitely for each other to release locks.",
     "options": [
       {
         "label": "True",
@@ -6219,8 +6219,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Deadlock is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Deadlock.",
     "marks": 3
   },
   {
@@ -6229,7 +6229,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What issue occurs when two transactions wait indefinitely for each other to release locks?",
+    "label": "Answer the following concisely: What issue occurs when two transactions wait indefinitely for each other to release locks?",
     "correctAnswer": "Deadlock",
     "explanation": "The correct term is Deadlock.",
     "marks": 3
@@ -6240,23 +6240,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What data structure is most commonly used for database indexes?",
+    "label": "What data structure is most commonly used for database indexes?",
     "options": [
+      {
+        "label": "B-Tree",
+        "value": "B-Tree"
+      },
       {
         "label": "Hash Table",
         "value": "Hash Table"
-      },
-      {
-        "label": "Binary Search Tree",
-        "value": "Binary Search Tree"
       },
       {
         "label": "Linked List",
         "value": "Linked List"
       },
       {
-        "label": "B-Tree",
-        "value": "B-Tree"
+        "label": "Binary Search Tree",
+        "value": "Binary Search Tree"
       }
     ],
     "correctAnswer": "B-Tree",
@@ -6269,7 +6269,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What data structure is most commonly used for database indexes.', the correct answer is B-Tree.",
+    "label": "True or False: The data structure most commonly used for database indexes is a Binary Search Tree.",
     "options": [
       {
         "label": "True",
@@ -6280,8 +6280,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, B-Tree is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is B-Tree.",
     "marks": 3
   },
   {
@@ -6290,7 +6290,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Architecture",
     "difficulty": "hard",
     "type": "text",
-    "label": "What data structure is most commonly used for database indexes?",
+    "label": "Provide the exact term: What data structure is most commonly used for database indexes?",
     "correctAnswer": "B-Tree",
     "explanation": "The correct term is B-Tree.",
     "marks": 3
@@ -6308,16 +6308,16 @@ export const questionBank: BankQuestion[] = [
         "value": "JOIN"
       },
       {
-        "label": "MERGE",
-        "value": "MERGE"
-      },
-      {
         "label": "UNION",
         "value": "UNION"
       },
       {
         "label": "COMBINE",
         "value": "COMBINE"
+      },
+      {
+        "label": "MERGE",
+        "value": "MERGE"
       }
     ],
     "correctAnswer": "JOIN",
@@ -6330,7 +6330,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "SQL",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? COMBINE is the correct term for: Which SQL operation combines rows from two tables based on a related column.",
+    "label": "True or False: A MERGE operation combines rows from two tables based on a related column.",
     "options": [
       {
         "label": "True",
@@ -6365,20 +6365,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is a virtual table based on the result-set of an SQL statement?",
     "options": [
       {
-        "label": "Schema",
-        "value": "Schema"
-      },
-      {
-        "label": "Table",
-        "value": "Table"
+        "label": "View",
+        "value": "View"
       },
       {
         "label": "Cursor",
         "value": "Cursor"
       },
       {
-        "label": "View",
-        "value": "View"
+        "label": "Schema",
+        "value": "Schema"
+      },
+      {
+        "label": "Table",
+        "value": "Table"
       }
     ],
     "correctAnswer": "View",
@@ -6391,7 +6391,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What is a virtual table based on the result-set of an SQL statement.', the correct answer is View.",
+    "label": "True or False: A virtual table based on the result-set of an SQL statement is called a View.",
     "options": [
       {
         "label": "True",
@@ -6423,7 +6423,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What translates Java bytecode into machine code at runtime?",
+    "label": "Consider the following: What translates Java bytecode into machine code at runtime?",
     "options": [
       {
         "label": "Java Development Kit (JDK)",
@@ -6452,7 +6452,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Java Compiler is the answer to the following question - What translates Java bytecode into machine code at runtime.",
+    "label": "True or False: The Java Runtime Environment (JRE) translates Java bytecode into machine code at runtime.",
     "options": [
       {
         "label": "True",
@@ -6484,23 +6484,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? Which keyword is used to define a class in Java?",
+    "label": "Which keyword is used to define a class in Java?",
     "options": [
       {
-        "label": "class",
-        "value": "class"
+        "label": "struct",
+        "value": "struct"
       },
       {
         "label": "object",
         "value": "object"
       },
       {
-        "label": "define",
-        "value": "define"
+        "label": "class",
+        "value": "class"
       },
       {
-        "label": "struct",
-        "value": "struct"
+        "label": "define",
+        "value": "define"
       }
     ],
     "correctAnswer": "class",
@@ -6513,7 +6513,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? class is the correct term for: Which keyword is used to define a class in Java.",
+    "label": "True or False: The keyword used to define a class in Java is class.",
     "options": [
       {
         "label": "True",
@@ -6534,7 +6534,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: Which keyword is used to define a class in Java?",
+    "label": "Which keyword is used to define a class in Java?",
     "correctAnswer": "class",
     "explanation": "The correct term is class.",
     "marks": 1
@@ -6545,23 +6545,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the blueprint from which individual objects are created?",
+    "label": "What is the blueprint from which individual objects are created?",
     "options": [
-      {
-        "label": "Variable",
-        "value": "Variable"
-      },
       {
         "label": "Class",
         "value": "Class"
       },
       {
-        "label": "Method",
-        "value": "Method"
+        "label": "Variable",
+        "value": "Variable"
       },
       {
         "label": "Interface",
         "value": "Interface"
+      },
+      {
+        "label": "Method",
+        "value": "Method"
       }
     ],
     "correctAnswer": "Class",
@@ -6574,7 +6574,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is the blueprint from which individual objects are created.', the correct answer is Class.",
+    "label": "True or False: A Class is the blueprint from which individual objects are created.",
     "options": [
       {
         "label": "True",
@@ -6609,20 +6609,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: Which keyword is used to create an instance of a class?",
     "options": [
       {
-        "label": "new",
-        "value": "new"
-      },
-      {
-        "label": "create",
-        "value": "create"
-      },
-      {
         "label": "instance",
         "value": "instance"
       },
       {
         "label": "make",
         "value": "make"
+      },
+      {
+        "label": "create",
+        "value": "create"
+      },
+      {
+        "label": "new",
+        "value": "new"
       }
     ],
     "correctAnswer": "new",
@@ -6635,7 +6635,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? new is the correct term for: Which keyword is used to create an instance of a class.",
+    "label": "True or False: The keyword new is used to create an instance of a class.",
     "options": [
       {
         "label": "True",
@@ -6656,7 +6656,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "text",
-    "label": "Which keyword is used to create an instance of a class?",
+    "label": "Provide the exact term: Which keyword is used to create an instance of a class?",
     "correctAnswer": "new",
     "explanation": "The correct term is new.",
     "marks": 1
@@ -6670,16 +6670,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: Which method acts as the entry point for a Java application?",
     "options": [
       {
-        "label": "main",
-        "value": "main"
-      },
-      {
         "label": "init",
         "value": "init"
       },
       {
         "label": "run",
         "value": "run"
+      },
+      {
+        "label": "main",
+        "value": "main"
       },
       {
         "label": "start",
@@ -6696,7 +6696,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: main is the answer to the following question - Which method acts as the entry point for a Java application.",
+    "label": "True or False: The run method acts as the entry point for a Java application.",
     "options": [
       {
         "label": "True",
@@ -6707,8 +6707,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, main is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is main.",
     "marks": 1
   },
   {
@@ -6717,7 +6717,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: Which method acts as the entry point for a Java application?",
+    "label": "Provide the exact term: Which method acts as the entry point for a Java application?",
     "correctAnswer": "main",
     "explanation": "The correct term is main.",
     "marks": 1
@@ -6728,23 +6728,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What mechanism allows a class to inherit fields and methods from another class?",
+    "label": "What mechanism allows a class to inherit fields and methods from another class?",
     "options": [
       {
-        "label": "Polymorphism",
-        "value": "Polymorphism"
+        "label": "Inheritance",
+        "value": "Inheritance"
       },
       {
         "label": "Encapsulation",
         "value": "Encapsulation"
       },
       {
-        "label": "Abstraction",
-        "value": "Abstraction"
+        "label": "Polymorphism",
+        "value": "Polymorphism"
       },
       {
-        "label": "Inheritance",
-        "value": "Inheritance"
+        "label": "Abstraction",
+        "value": "Abstraction"
       }
     ],
     "correctAnswer": "Inheritance",
@@ -6757,7 +6757,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Inheritance is the answer to the following question - What mechanism allows a class to inherit fields and methods from another class.",
+    "label": "True or False: The mechanism that allows a class to inherit fields and methods from another class is Encapsulation.",
     "options": [
       {
         "label": "True",
@@ -6768,8 +6768,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Inheritance is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Inheritance.",
     "marks": 2
   },
   {
@@ -6789,16 +6789,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? Which keyword refers to the current object instance?",
+    "label": "Which keyword refers to the current object instance?",
     "options": [
-      {
-        "label": "self",
-        "value": "self"
-      },
-      {
-        "label": "current",
-        "value": "current"
-      },
       {
         "label": "super",
         "value": "super"
@@ -6806,6 +6798,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "this",
         "value": "this"
+      },
+      {
+        "label": "self",
+        "value": "self"
+      },
+      {
+        "label": "current",
+        "value": "current"
       }
     ],
     "correctAnswer": "this",
@@ -6818,7 +6818,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: super is the answer to the following question - Which keyword refers to the current object instance.",
+    "label": "True or False: The keyword this refers to the current object instance.",
     "options": [
       {
         "label": "True",
@@ -6829,8 +6829,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is this.",
+    "correctAnswer": "true",
+    "explanation": "Yes, this is correct.",
     "marks": 2
   },
   {
@@ -6839,7 +6839,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "text",
-    "label": "Which keyword refers to the current object instance?",
+    "label": "Provide the exact term: Which keyword refers to the current object instance?",
     "correctAnswer": "this",
     "explanation": "The correct term is this.",
     "marks": 2
@@ -6850,23 +6850,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What concept describes bundling data and methods into a single unit and hiding internal state?",
+    "label": "Which of these best answers the following? What concept describes bundling data and methods into a single unit and hiding internal state?",
     "options": [
+      {
+        "label": "Polymorphism",
+        "value": "Polymorphism"
+      },
       {
         "label": "Abstraction",
         "value": "Abstraction"
-      },
-      {
-        "label": "Inheritance",
-        "value": "Inheritance"
       },
       {
         "label": "Encapsulation",
         "value": "Encapsulation"
       },
       {
-        "label": "Polymorphism",
-        "value": "Polymorphism"
+        "label": "Inheritance",
+        "value": "Inheritance"
       }
     ],
     "correctAnswer": "Encapsulation",
@@ -6879,7 +6879,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Encapsulation is the answer to the following question - What concept describes bundling data and methods into a single unit and hiding internal state.",
+    "label": "True or False: The concept describing bundling data and methods into a single unit is Encapsulation.",
     "options": [
       {
         "label": "True",
@@ -6900,7 +6900,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "medium",
     "type": "text",
-    "label": "What concept describes bundling data and methods into a single unit and hiding internal state?",
+    "label": "Answer the following concisely: What concept describes bundling data and methods into a single unit and hiding internal state?",
     "correctAnswer": "Encapsulation",
     "explanation": "The correct term is Encapsulation.",
     "marks": 2
@@ -6914,16 +6914,16 @@ export const questionBank: BankQuestion[] = [
     "label": "What automatically reclaims memory by deleting unreferenced objects?",
     "options": [
       {
-        "label": "Finalizer",
-        "value": "Finalizer"
+        "label": "Memory Manager",
+        "value": "Memory Manager"
       },
       {
         "label": "Destructor",
         "value": "Destructor"
       },
       {
-        "label": "Memory Manager",
-        "value": "Memory Manager"
+        "label": "Finalizer",
+        "value": "Finalizer"
       },
       {
         "label": "Garbage Collector",
@@ -6940,7 +6940,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Garbage Collector is the correct term for: What automatically reclaims memory by deleting unreferenced objects.",
+    "label": "True or False: The Garbage Collector automatically reclaims memory by deleting unreferenced objects.",
     "options": [
       {
         "label": "True",
@@ -6961,7 +6961,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "medium",
     "type": "text",
-    "label": "What automatically reclaims memory by deleting unreferenced objects?",
+    "label": "Answer the following concisely: What automatically reclaims memory by deleting unreferenced objects?",
     "correctAnswer": "Garbage Collector",
     "explanation": "The correct term is Garbage Collector.",
     "marks": 2
@@ -6975,8 +6975,8 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? Which keyword prevents a variable from being modified after initialization?",
     "options": [
       {
-        "label": "final",
-        "value": "final"
+        "label": "const",
+        "value": "const"
       },
       {
         "label": "static",
@@ -6987,8 +6987,8 @@ export const questionBank: BankQuestion[] = [
         "value": "sealed"
       },
       {
-        "label": "const",
-        "value": "const"
+        "label": "final",
+        "value": "final"
       }
     ],
     "correctAnswer": "final",
@@ -7001,7 +7001,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which keyword prevents a variable from being modified after initialization.', the correct answer is const.",
+    "label": "True or False: The keyword static prevents a variable from being modified after initialization.",
     "options": [
       {
         "label": "True",
@@ -7022,7 +7022,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "text",
-    "label": "Which keyword prevents a variable from being modified after initialization?",
+    "label": "Provide the exact term: Which keyword prevents a variable from being modified after initialization?",
     "correctAnswer": "final",
     "explanation": "The correct term is final.",
     "marks": 2
@@ -7033,7 +7033,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What type of class cannot be instantiated directly and may contain unimplemented methods?",
+    "label": "What type of class cannot be instantiated directly and may contain unimplemented methods?",
     "options": [
       {
         "label": "Abstract Class",
@@ -7044,12 +7044,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Static Class"
       },
       {
-        "label": "Final Class",
-        "value": "Final Class"
-      },
-      {
         "label": "Inner Class",
         "value": "Inner Class"
+      },
+      {
+        "label": "Final Class",
+        "value": "Final Class"
       }
     ],
     "correctAnswer": "Abstract Class",
@@ -7062,7 +7062,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What type of class cannot be instantiated directly and may contain unimplemented methods.', the correct answer is Inner Class.",
+    "label": "True or False: An Abstract Class cannot be instantiated directly and may contain unimplemented methods.",
     "options": [
       {
         "label": "True",
@@ -7073,8 +7073,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Abstract Class.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Abstract Class is correct.",
     "marks": 3
   },
   {
@@ -7094,23 +7094,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: Which keyword is used to prevent thread interference and memory consistency errors?",
+    "label": "Which of these best answers the following? Which keyword is used to prevent thread interference and memory consistency errors?",
     "options": [
-      {
-        "label": "synchronized",
-        "value": "synchronized"
-      },
       {
         "label": "volatile",
         "value": "volatile"
       },
       {
-        "label": "strictfp",
-        "value": "strictfp"
+        "label": "synchronized",
+        "value": "synchronized"
       },
       {
         "label": "transient",
         "value": "transient"
+      },
+      {
+        "label": "strictfp",
+        "value": "strictfp"
       }
     ],
     "correctAnswer": "synchronized",
@@ -7123,7 +7123,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: synchronized is the answer to the following question - Which keyword is used to prevent thread interference and memory consistency errors.",
+    "label": "True or False: The keyword strictfp is used to prevent thread interference and memory consistency errors.",
     "options": [
       {
         "label": "True",
@@ -7134,8 +7134,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, synchronized is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is synchronized.",
     "marks": 3
   },
   {
@@ -7144,7 +7144,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: Which keyword is used to prevent thread interference and memory consistency errors?",
+    "label": "Provide the exact term: Which keyword is used to prevent thread interference and memory consistency errors?",
     "correctAnswer": "synchronized",
     "explanation": "The correct term is synchronized.",
     "marks": 3
@@ -7162,16 +7162,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Set"
       },
       {
-        "label": "Queue",
-        "value": "Queue"
-      },
-      {
         "label": "List",
         "value": "List"
       },
       {
         "label": "Map",
         "value": "Map"
+      },
+      {
+        "label": "Queue",
+        "value": "Queue"
       }
     ],
     "correctAnswer": "Set",
@@ -7184,7 +7184,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Collections",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Set is the answer to the following question - Which interface in the Java Collections Framework prohibits duplicate elements.",
+    "label": "True or False: The List interface in the Java Collections Framework prohibits duplicate elements.",
     "options": [
       {
         "label": "True",
@@ -7195,8 +7195,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Set is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Set.",
     "marks": 3
   },
   {
@@ -7205,7 +7205,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Collections",
     "difficulty": "hard",
     "type": "text",
-    "label": "Which interface in the Java Collections Framework prohibits duplicate elements?",
+    "label": "Provide the exact term: Which interface in the Java Collections Framework prohibits duplicate elements?",
     "correctAnswer": "Set",
     "explanation": "The correct term is Set.",
     "marks": 3
@@ -7216,16 +7216,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What Java 8 feature allows passing behaviors as parameters concisely?",
+    "label": "Consider the following: What Java 8 feature allows passing behaviors as parameters concisely?",
     "options": [
-      {
-        "label": "Method References",
-        "value": "Method References"
-      },
-      {
-        "label": "Streams",
-        "value": "Streams"
-      },
       {
         "label": "Lambda Expressions",
         "value": "Lambda Expressions"
@@ -7233,6 +7225,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Anonymous Classes",
         "value": "Anonymous Classes"
+      },
+      {
+        "label": "Method References",
+        "value": "Method References"
+      },
+      {
+        "label": "Streams",
+        "value": "Streams"
       }
     ],
     "correctAnswer": "Lambda Expressions",
@@ -7245,7 +7245,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Streams is the correct term for: What Java 8 feature allows passing behaviors as parameters concisely.",
+    "label": "True or False: The Java 8 feature allowing behaviors to be passed as parameters concisely is Anonymous Classes.",
     "options": [
       {
         "label": "True",
@@ -7277,15 +7277,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What allows an object to take on many forms, often achieved via method overriding?",
+    "label": "Consider the following: What allows an object to take on many forms, often achieved via method overriding?",
     "options": [
-      {
-        "label": "Polymorphism",
-        "value": "Polymorphism"
-      },
       {
         "label": "Encapsulation",
         "value": "Encapsulation"
+      },
+      {
+        "label": "Polymorphism",
+        "value": "Polymorphism"
       },
       {
         "label": "Abstraction",
@@ -7306,7 +7306,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What allows an object to take on many forms, often achieved via method overriding.', the correct answer is Polymorphism.",
+    "label": "True or False: The ability for an object to take on many forms is called Polymorphism.",
     "options": [
       {
         "label": "True",
@@ -7327,7 +7327,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "OOP",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What allows an object to take on many forms, often achieved via method overriding?",
+    "label": "Answer the following concisely: What allows an object to take on many forms, often achieved via method overriding?",
     "correctAnswer": "Polymorphism",
     "explanation": "The correct term is Polymorphism.",
     "marks": 3
@@ -7338,23 +7338,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which keyword is used to define a function in Python?",
+    "label": "Which of these best answers the following? Which keyword is used to define a function in Python?",
     "options": [
       {
-        "label": "func",
-        "value": "func"
-      },
-      {
-        "label": "define",
-        "value": "define"
+        "label": "function",
+        "value": "function"
       },
       {
         "label": "def",
         "value": "def"
       },
       {
-        "label": "function",
-        "value": "function"
+        "label": "define",
+        "value": "define"
+      },
+      {
+        "label": "func",
+        "value": "func"
       }
     ],
     "correctAnswer": "def",
@@ -7367,7 +7367,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? function is the correct term for: Which keyword is used to define a function in Python.",
+    "label": "True or False: The keyword used to define a function in Python is function.",
     "options": [
       {
         "label": "True",
@@ -7388,7 +7388,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "easy",
     "type": "text",
-    "label": "Which keyword is used to define a function in Python?",
+    "label": "Answer the following concisely: Which keyword is used to define a function in Python?",
     "correctAnswer": "def",
     "explanation": "The correct term is def.",
     "marks": 1
@@ -7399,16 +7399,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What character is used to start a single-line comment in Python?",
+    "label": "What character is used to start a single-line comment in Python?",
     "options": [
-      {
-        "label": "#",
-        "value": "#"
-      },
-      {
-        "label": "--",
-        "value": "--"
-      },
       {
         "label": "//",
         "value": "//"
@@ -7416,6 +7408,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "/*",
         "value": "/*"
+      },
+      {
+        "label": "#",
+        "value": "#"
+      },
+      {
+        "label": "--",
+        "value": "--"
       }
     ],
     "correctAnswer": "#",
@@ -7428,7 +7428,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What character is used to start a single-line comment in Python.', the correct answer is --.",
+    "label": "True or False: The -- character is used to start a single-line comment in Python.",
     "options": [
       {
         "label": "True",
@@ -7449,7 +7449,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "easy",
     "type": "text",
-    "label": "What character is used to start a single-line comment in Python?",
+    "label": "Provide the exact term: What character is used to start a single-line comment in Python?",
     "correctAnswer": "#",
     "explanation": "The correct term is #.",
     "marks": 1
@@ -7460,7 +7460,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What data type is an ordered, mutable sequence of items?",
+    "label": "What data type is an ordered, mutable sequence of items?",
     "options": [
       {
         "label": "List",
@@ -7489,7 +7489,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What data type is an ordered, mutable sequence of items.', the correct answer is List.",
+    "label": "True or False: A Tuple is an ordered, mutable sequence of items.",
     "options": [
       {
         "label": "True",
@@ -7500,8 +7500,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, List is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is List.",
     "marks": 1
   },
   {
@@ -7510,7 +7510,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What data type is an ordered, mutable sequence of items?",
+    "label": "What data type is an ordered, mutable sequence of items?",
     "correctAnswer": "List",
     "explanation": "The correct term is List.",
     "marks": 1
@@ -7521,23 +7521,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What data type stores key-value pairs?",
+    "label": "What data type stores key-value pairs?",
     "options": [
       {
-        "label": "Set",
-        "value": "Set"
+        "label": "Tuple",
+        "value": "Tuple"
       },
       {
         "label": "List",
         "value": "List"
       },
       {
-        "label": "Tuple",
-        "value": "Tuple"
-      },
-      {
         "label": "Dictionary",
         "value": "Dictionary"
+      },
+      {
+        "label": "Set",
+        "value": "Set"
       }
     ],
     "correctAnswer": "Dictionary",
@@ -7550,7 +7550,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Dictionary is the correct term for: What data type stores key-value pairs.",
+    "label": "True or False: A Set is used to store key-value pairs.",
     "options": [
       {
         "label": "True",
@@ -7561,8 +7561,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Dictionary is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Dictionary.",
     "marks": 1
   },
   {
@@ -7585,16 +7585,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: Instead of braces {}, what does Python use to define code blocks?",
     "options": [
       {
+        "label": "Brackets",
+        "value": "Brackets"
+      },
+      {
         "label": "Parentheses",
         "value": "Parentheses"
       },
       {
         "label": "Semicolons",
         "value": "Semicolons"
-      },
-      {
-        "label": "Brackets",
-        "value": "Brackets"
       },
       {
         "label": "Indentation",
@@ -7611,7 +7611,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Indentation is the answer to the following question - Instead of braces {}, what does Python use to define code blocks.",
+    "label": "True or False: Instead of braces {}, Python uses Brackets to define code blocks.",
     "options": [
       {
         "label": "True",
@@ -7622,8 +7622,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Indentation is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Indentation.",
     "marks": 1
   },
   {
@@ -7646,6 +7646,10 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What data type is an ordered, immutable sequence of items?",
     "options": [
       {
+        "label": "Set",
+        "value": "Set"
+      },
+      {
         "label": "List",
         "value": "List"
       },
@@ -7656,10 +7660,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Tuple",
         "value": "Tuple"
-      },
-      {
-        "label": "Set",
-        "value": "Set"
       }
     ],
     "correctAnswer": "Tuple",
@@ -7672,7 +7672,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Data Types",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Dictionary is the correct term for: What data type is an ordered, immutable sequence of items.",
+    "label": "True or False: A Tuple is an ordered, immutable sequence of items.",
     "options": [
       {
         "label": "True",
@@ -7683,8 +7683,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Tuple.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Tuple is correct.",
     "marks": 2
   },
   {
@@ -7707,6 +7707,10 @@ export const questionBank: BankQuestion[] = [
     "label": "What allows creating lists concisely by applying an expression to an iterable?",
     "options": [
       {
+        "label": "Generator",
+        "value": "Generator"
+      },
+      {
         "label": "Lambda",
         "value": "Lambda"
       },
@@ -7717,10 +7721,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "List Comprehension",
         "value": "List Comprehension"
-      },
-      {
-        "label": "Generator",
-        "value": "Generator"
       }
     ],
     "correctAnswer": "List Comprehension",
@@ -7733,7 +7733,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concepts",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Generator is the answer to the following question - What allows creating lists concisely by applying an expression to an iterable.",
+    "label": "True or False: List Comprehension allows creating lists concisely by applying an expression to an iterable.",
     "options": [
       {
         "label": "True",
@@ -7744,8 +7744,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is List Comprehension.",
+    "correctAnswer": "true",
+    "explanation": "Yes, List Comprehension is correct.",
     "marks": 2
   },
   {
@@ -7765,23 +7765,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which keyword is used to create small anonymous functions?",
+    "label": "Consider the following: Which keyword is used to create small anonymous functions?",
     "options": [
       {
-        "label": "inline",
-        "value": "inline"
-      },
-      {
-        "label": "anon",
-        "value": "anon"
+        "label": "macro",
+        "value": "macro"
       },
       {
         "label": "lambda",
         "value": "lambda"
       },
       {
-        "label": "macro",
-        "value": "macro"
+        "label": "anon",
+        "value": "anon"
+      },
+      {
+        "label": "inline",
+        "value": "inline"
       }
     ],
     "correctAnswer": "lambda",
@@ -7794,7 +7794,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Keywords",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which keyword is used to create small anonymous functions.', the correct answer is lambda.",
+    "label": "True or False: The keyword lambda is used to create small anonymous functions.",
     "options": [
       {
         "label": "True",
@@ -7826,23 +7826,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Methods",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What special method is used to initialize an object's attributes in a class?",
+    "label": "Consider the following: What special method is used to initialize an object's attributes in a class?",
     "options": [
       {
         "label": "__new__",
         "value": "__new__"
       },
       {
-        "label": "__start__",
-        "value": "__start__"
+        "label": "__construct__",
+        "value": "__construct__"
       },
       {
         "label": "__init__",
         "value": "__init__"
       },
       {
-        "label": "__construct__",
-        "value": "__construct__"
+        "label": "__start__",
+        "value": "__start__"
       }
     ],
     "correctAnswer": "__init__",
@@ -7855,7 +7855,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Methods",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? __init__ is the correct term for: What special method is used to initialize an object's attributes in a class.",
+    "label": "True or False: The __init__ method is used to initialize an object's attributes in a class.",
     "options": [
       {
         "label": "True",
@@ -7876,7 +7876,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Methods",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What special method is used to initialize an object's attributes in a class?",
+    "label": "What special method is used to initialize an object's attributes in a class?",
     "correctAnswer": "__init__",
     "explanation": "The correct term is __init__.",
     "marks": 2
@@ -7887,8 +7887,16 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which keyword refers to the instance of the class inside its methods?",
+    "label": "Consider the following: Which keyword refers to the instance of the class inside its methods?",
     "options": [
+      {
+        "label": "current",
+        "value": "current"
+      },
+      {
+        "label": "this",
+        "value": "this"
+      },
       {
         "label": "self",
         "value": "self"
@@ -7896,14 +7904,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "me",
         "value": "me"
-      },
-      {
-        "label": "this",
-        "value": "this"
-      },
-      {
-        "label": "current",
-        "value": "current"
       }
     ],
     "correctAnswer": "self",
@@ -7916,7 +7916,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Syntax",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which keyword refers to the instance of the class inside its methods.', the correct answer is current.",
+    "label": "True or False: The keyword self refers to the instance of the class inside its methods.",
     "options": [
       {
         "label": "True",
@@ -7927,8 +7927,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is self.",
+    "correctAnswer": "true",
+    "explanation": "Yes, self is correct.",
     "marks": 2
   },
   {
@@ -7948,23 +7948,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What modifies the behavior of a function or class without changing its source code?",
+    "label": "Which of these best answers the following? What modifies the behavior of a function or class without changing its source code?",
     "options": [
       {
-        "label": "Decorator",
-        "value": "Decorator"
-      },
-      {
-        "label": "Generator",
-        "value": "Generator"
+        "label": "Iterator",
+        "value": "Iterator"
       },
       {
         "label": "Closure",
         "value": "Closure"
       },
       {
-        "label": "Iterator",
-        "value": "Iterator"
+        "label": "Generator",
+        "value": "Generator"
+      },
+      {
+        "label": "Decorator",
+        "value": "Decorator"
       }
     ],
     "correctAnswer": "Decorator",
@@ -7977,7 +7977,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Generator is the correct term for: What modifies the behavior of a function or class without changing its source code.",
+    "label": "True or False: A Generator modifies the behavior of a function or class without changing its source code.",
     "options": [
       {
         "label": "True",
@@ -7998,7 +7998,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What modifies the behavior of a function or class without changing its source code?",
+    "label": "What modifies the behavior of a function or class without changing its source code?",
     "correctAnswer": "Decorator",
     "explanation": "The correct term is Decorator.",
     "marks": 3
@@ -8009,16 +8009,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What mechanism prevents multiple native threads from executing Python bytecodes at once?",
+    "label": "Consider the following: What mechanism prevents multiple native threads from executing Python bytecodes at once?",
     "options": [
-      {
-        "label": "Mutex",
-        "value": "Mutex"
-      },
-      {
-        "label": "Garbage Collector",
-        "value": "Garbage Collector"
-      },
       {
         "label": "Thread Pool",
         "value": "Thread Pool"
@@ -8026,6 +8018,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Global Interpreter Lock (GIL)",
         "value": "Global Interpreter Lock (GIL)"
+      },
+      {
+        "label": "Garbage Collector",
+        "value": "Garbage Collector"
+      },
+      {
+        "label": "Mutex",
+        "value": "Mutex"
       }
     ],
     "correctAnswer": "Global Interpreter Lock (GIL)",
@@ -8038,7 +8038,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What mechanism prevents multiple native threads from executing Python bytecodes at once.', the correct answer is Global Interpreter Lock (GIL).",
+    "label": "True or False: The Mutex prevents multiple native threads from executing Python bytecodes at once.",
     "options": [
       {
         "label": "True",
@@ -8049,8 +8049,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Global Interpreter Lock (GIL) is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Global Interpreter Lock (GIL).",
     "marks": 3
   },
   {
@@ -8059,7 +8059,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What mechanism prevents multiple native threads from executing Python bytecodes at once?",
+    "label": "Provide the exact term: What mechanism prevents multiple native threads from executing Python bytecodes at once?",
     "correctAnswer": "Global Interpreter Lock (GIL)",
     "explanation": "The correct term is Global Interpreter Lock (GIL).",
     "marks": 3
@@ -8070,7 +8070,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What type of function uses the 'yield' keyword to return an iterator?",
+    "label": "What type of function uses the 'yield' keyword to return an iterator?",
     "options": [
       {
         "label": "Closure",
@@ -8099,7 +8099,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Generator is the correct term for: What type of function uses the 'yield' keyword to return an iterator.",
+    "label": "True or False: A Decorator is a type of function that uses the 'yield' keyword to return an iterator.",
     "options": [
       {
         "label": "True",
@@ -8110,8 +8110,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Generator is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Generator.",
     "marks": 3
   },
   {
@@ -8120,7 +8120,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Features",
     "difficulty": "hard",
     "type": "text",
-    "label": "What type of function uses the 'yield' keyword to return an iterator?",
+    "label": "Answer the following concisely: What type of function uses the 'yield' keyword to return an iterator?",
     "correctAnswer": "Generator",
     "explanation": "The correct term is Generator.",
     "marks": 3
@@ -8134,20 +8134,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What principle assumes an object is valid if it supports the required methods, regardless of its class?",
     "options": [
       {
-        "label": "Static Typing",
-        "value": "Static Typing"
+        "label": "Duck Typing",
+        "value": "Duck Typing"
       },
       {
         "label": "Dynamic Typing",
         "value": "Dynamic Typing"
       },
       {
-        "label": "Duck Typing",
-        "value": "Duck Typing"
-      },
-      {
         "label": "Strong Typing",
         "value": "Strong Typing"
+      },
+      {
+        "label": "Static Typing",
+        "value": "Static Typing"
       }
     ],
     "correctAnswer": "Duck Typing",
@@ -8160,7 +8160,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Types",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What principle assumes an object is valid if it supports the required methods, regardless of its class.', the correct answer is Static Typing.",
+    "label": "True or False: The principle assuming an object is valid if it supports the required methods is known as Strong Typing.",
     "options": [
       {
         "label": "True",
@@ -8181,7 +8181,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Types",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What principle assumes an object is valid if it supports the required methods, regardless of its class?",
+    "label": "Answer the following concisely: What principle assumes an object is valid if it supports the required methods, regardless of its class?",
     "correctAnswer": "Duck Typing",
     "explanation": "The correct term is Duck Typing.",
     "marks": 3
@@ -8192,23 +8192,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Modules",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What statement is used to bring an external module into the current namespace?",
+    "label": "Consider the following: What statement is used to bring an external module into the current namespace?",
     "options": [
       {
-        "label": "using",
-        "value": "using"
+        "label": "import",
+        "value": "import"
       },
       {
         "label": "require",
         "value": "require"
       },
       {
-        "label": "include",
-        "value": "include"
+        "label": "using",
+        "value": "using"
       },
       {
-        "label": "import",
-        "value": "import"
+        "label": "include",
+        "value": "include"
       }
     ],
     "correctAnswer": "import",
@@ -8221,7 +8221,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Modules",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? using is the correct term for: What statement is used to bring an external module into the current namespace.",
+    "label": "True or False: The import statement is used to bring an external module into the current namespace.",
     "options": [
       {
         "label": "True",
@@ -8232,8 +8232,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is import.",
+    "correctAnswer": "true",
+    "explanation": "Yes, import is correct.",
     "marks": 3
   },
   {
@@ -8242,7 +8242,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Modules",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What statement is used to bring an external module into the current namespace?",
+    "label": "What statement is used to bring an external module into the current namespace?",
     "correctAnswer": "import",
     "explanation": "The correct term is import.",
     "marks": 3
@@ -8253,12 +8253,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What data structure stores elements in contiguous memory locations?",
+    "label": "What data structure stores elements in contiguous memory locations?",
     "options": [
-      {
-        "label": "Tree",
-        "value": "Tree"
-      },
       {
         "label": "Array",
         "value": "Array"
@@ -8266,6 +8262,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Graph",
         "value": "Graph"
+      },
+      {
+        "label": "Tree",
+        "value": "Tree"
       },
       {
         "label": "Linked List",
@@ -8282,7 +8282,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Graph is the correct term for: What data structure stores elements in contiguous memory locations.",
+    "label": "True or False: An Array is a data structure that stores elements in contiguous memory locations.",
     "options": [
       {
         "label": "True",
@@ -8293,8 +8293,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Array.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Array is correct.",
     "marks": 1
   },
   {
@@ -8303,7 +8303,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What data structure stores elements in contiguous memory locations?",
+    "label": "What data structure stores elements in contiguous memory locations?",
     "correctAnswer": "Array",
     "explanation": "The correct term is Array.",
     "marks": 1
@@ -8317,20 +8317,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What principle governs the order of operations in a Stack?",
     "options": [
       {
-        "label": "FIFO (First In First Out)",
-        "value": "FIFO (First In First Out)"
+        "label": "LIFO (Last In First Out)",
+        "value": "LIFO (Last In First Out)"
       },
       {
         "label": "FILO (First In Last Out)",
         "value": "FILO (First In Last Out)"
       },
       {
-        "label": "LIFO (Last In First Out)",
-        "value": "LIFO (Last In First Out)"
-      },
-      {
         "label": "Random Access",
         "value": "Random Access"
+      },
+      {
+        "label": "FIFO (First In First Out)",
+        "value": "FIFO (First In First Out)"
       }
     ],
     "correctAnswer": "LIFO (Last In First Out)",
@@ -8343,7 +8343,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Stack",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: LIFO (Last In First Out) is the answer to the following question - What principle governs the order of operations in a Stack.",
+    "label": "True or False: The principle governing the order of operations in a Stack is FILO (First In Last Out).",
     "options": [
       {
         "label": "True",
@@ -8354,8 +8354,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, LIFO (Last In First Out) is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is LIFO (Last In First Out).",
     "marks": 1
   },
   {
@@ -8375,16 +8375,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Queue",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What principle governs the order of operations in a Queue?",
+    "label": "Which of these best answers the following? What principle governs the order of operations in a Queue?",
     "options": [
-      {
-        "label": "LILO (Last In Last Out)",
-        "value": "LILO (Last In Last Out)"
-      },
-      {
-        "label": "FIFO (First In First Out)",
-        "value": "FIFO (First In First Out)"
-      },
       {
         "label": "Random Access",
         "value": "Random Access"
@@ -8392,6 +8384,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "LIFO (Last In First Out)",
         "value": "LIFO (Last In First Out)"
+      },
+      {
+        "label": "FIFO (First In First Out)",
+        "value": "FIFO (First In First Out)"
+      },
+      {
+        "label": "LILO (Last In Last Out)",
+        "value": "LILO (Last In Last Out)"
       }
     ],
     "correctAnswer": "FIFO (First In First Out)",
@@ -8404,7 +8404,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Queue",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: FIFO (First In First Out) is the answer to the following question - What principle governs the order of operations in a Queue.",
+    "label": "True or False: The principle governing the order of operations in a Queue is FIFO (First In First Out).",
     "options": [
       {
         "label": "True",
@@ -8425,7 +8425,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Queue",
     "difficulty": "easy",
     "type": "text",
-    "label": "What principle governs the order of operations in a Queue?",
+    "label": "Provide the exact term: What principle governs the order of operations in a Queue?",
     "correctAnswer": "FIFO (First In First Out)",
     "explanation": "The correct term is FIFO (First In First Out).",
     "marks": 1
@@ -8436,19 +8436,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What data structure consists of nodes where each node points to the next?",
+    "label": "Consider the following: What data structure consists of nodes where each node points to the next?",
     "options": [
       {
         "label": "Linked List",
         "value": "Linked List"
       },
       {
-        "label": "Stack",
-        "value": "Stack"
-      },
-      {
         "label": "Queue",
         "value": "Queue"
+      },
+      {
+        "label": "Stack",
+        "value": "Stack"
       },
       {
         "label": "Array",
@@ -8465,7 +8465,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Linked List is the answer to the following question - What data structure consists of nodes where each node points to the next.",
+    "label": "True or False: A Linked List consists of nodes where each node points to the next.",
     "options": [
       {
         "label": "True",
@@ -8486,7 +8486,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What data structure consists of nodes where each node points to the next?",
+    "label": "Provide the exact term: What data structure consists of nodes where each node points to the next?",
     "correctAnswer": "Linked List",
     "explanation": "The correct term is Linked List.",
     "marks": 1
@@ -8497,7 +8497,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? In a tree, what is a node with no children called?",
+    "label": "In a tree, what is a node with no children called?",
     "options": [
       {
         "label": "Root",
@@ -8526,7 +8526,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Root is the correct term for: In a tree, what is a node with no children called.",
+    "label": "True or False: In a tree, a node with no children is called a Branch.",
     "options": [
       {
         "label": "True",
@@ -8547,7 +8547,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "easy",
     "type": "text",
-    "label": "In a tree, what is a node with no children called?",
+    "label": "Answer the following concisely: In a tree, what is a node with no children called?",
     "correctAnswer": "Leaf",
     "explanation": "The correct term is Leaf.",
     "marks": 1
@@ -8558,19 +8558,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hash",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What data structure maps keys to values using a hash function?",
+    "label": "What data structure maps keys to values using a hash function?",
     "options": [
       {
-        "label": "Graph",
-        "value": "Graph"
+        "label": "Heap",
+        "value": "Heap"
       },
       {
         "label": "Binary Tree",
         "value": "Binary Tree"
       },
       {
-        "label": "Heap",
-        "value": "Heap"
+        "label": "Graph",
+        "value": "Graph"
       },
       {
         "label": "Hash Table",
@@ -8587,7 +8587,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hash",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Hash Table is the correct term for: What data structure maps keys to values using a hash function.",
+    "label": "True or False: A Hash Table maps keys to values using a hash function.",
     "options": [
       {
         "label": "True",
@@ -8608,7 +8608,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hash",
     "difficulty": "medium",
     "type": "text",
-    "label": "What data structure maps keys to values using a hash function?",
+    "label": "Provide the exact term: What data structure maps keys to values using a hash function?",
     "correctAnswer": "Hash Table",
     "explanation": "The correct term is Hash Table.",
     "marks": 2
@@ -8619,19 +8619,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What type of tree guarantees that a left child is smaller and a right child is larger than the parent?",
+    "label": "Which of these best answers the following? What type of tree guarantees that a left child is smaller and a right child is larger than the parent?",
     "options": [
       {
         "label": "B-Tree",
         "value": "B-Tree"
       },
       {
-        "label": "Trie",
-        "value": "Trie"
-      },
-      {
         "label": "Heap",
         "value": "Heap"
+      },
+      {
+        "label": "Trie",
+        "value": "Trie"
       },
       {
         "label": "Binary Search Tree",
@@ -8648,7 +8648,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: B-Tree is the answer to the following question - What type of tree guarantees that a left child is smaller and a right child is larger than the parent.",
+    "label": "True or False: A Heap guarantees that a left child is smaller and a right child is larger than the parent.",
     "options": [
       {
         "label": "True",
@@ -8669,7 +8669,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What type of tree guarantees that a left child is smaller and a right child is larger than the parent?",
+    "label": "Answer the following concisely: What type of tree guarantees that a left child is smaller and a right child is larger than the parent?",
     "correctAnswer": "Binary Search Tree",
     "explanation": "The correct term is Binary Search Tree.",
     "marks": 2
@@ -8680,15 +8680,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What data structure consists of vertices (nodes) connected by edges?",
+    "label": "What data structure consists of vertices (nodes) connected by edges?",
     "options": [
-      {
-        "label": "Graph",
-        "value": "Graph"
-      },
       {
         "label": "Linked List",
         "value": "Linked List"
+      },
+      {
+        "label": "Graph",
+        "value": "Graph"
       },
       {
         "label": "Array",
@@ -8709,7 +8709,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Graph is the correct term for: What data structure consists of vertices (nodes) connected by edges.",
+    "label": "True or False: A Array consists of vertices connected by edges.",
     "options": [
       {
         "label": "True",
@@ -8720,8 +8720,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Graph is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Graph.",
     "marks": 2
   },
   {
@@ -8730,7 +8730,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What data structure consists of vertices (nodes) connected by edges?",
+    "label": "Answer the following concisely: What data structure consists of vertices (nodes) connected by edges?",
     "correctAnswer": "Graph",
     "explanation": "The correct term is Graph.",
     "marks": 2
@@ -8744,16 +8744,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What is a specialized tree-based data structure that satisfies the heap property?",
     "options": [
       {
-        "label": "AVL Tree",
-        "value": "AVL Tree"
+        "label": "Red-Black Tree",
+        "value": "Red-Black Tree"
       },
       {
         "label": "Heap",
         "value": "Heap"
       },
       {
-        "label": "Red-Black Tree",
-        "value": "Red-Black Tree"
+        "label": "AVL Tree",
+        "value": "AVL Tree"
       },
       {
         "label": "Binary Search Tree",
@@ -8770,7 +8770,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Heap is the correct term for: What is a specialized tree-based data structure that satisfies the heap property.",
+    "label": "True or False: A specialized tree-based data structure that satisfies the heap property is a Binary Search Tree.",
     "options": [
       {
         "label": "True",
@@ -8781,8 +8781,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Heap is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Heap.",
     "marks": 2
   },
   {
@@ -8791,7 +8791,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What is a specialized tree-based data structure that satisfies the heap property?",
+    "label": "Provide the exact term: What is a specialized tree-based data structure that satisfies the heap property?",
     "correctAnswer": "Heap",
     "explanation": "The correct term is Heap.",
     "marks": 2
@@ -8809,16 +8809,16 @@ export const questionBank: BankQuestion[] = [
         "value": "Skip List"
       },
       {
+        "label": "Circular Linked List",
+        "value": "Circular Linked List"
+      },
+      {
         "label": "Doubly Linked List",
         "value": "Doubly Linked List"
       },
       {
         "label": "Singly Linked List",
         "value": "Singly Linked List"
-      },
-      {
-        "label": "Circular Linked List",
-        "value": "Circular Linked List"
       }
     ],
     "correctAnswer": "Doubly Linked List",
@@ -8831,7 +8831,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Linked Lists",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Doubly Linked List is the correct term for: What type of linked list allows traversal in both forward and backward directions.",
+    "label": "True or False: A Doubly Linked List allows traversal in both forward and backward directions.",
     "options": [
       {
         "label": "True",
@@ -8852,7 +8852,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Linked Lists",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What type of linked list allows traversal in both forward and backward directions?",
+    "label": "What type of linked list allows traversal in both forward and backward directions?",
     "correctAnswer": "Doubly Linked List",
     "explanation": "The correct term is Doubly Linked List.",
     "marks": 2
@@ -8863,23 +8863,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which self-balancing binary search tree ensures the heights of two child subtrees differ by at most one?",
+    "label": "Consider the following: Which self-balancing binary search tree ensures the heights of two child subtrees differ by at most one?",
     "options": [
       {
         "label": "Splay Tree",
         "value": "Splay Tree"
       },
       {
-        "label": "Red-Black Tree",
-        "value": "Red-Black Tree"
+        "label": "B-Tree",
+        "value": "B-Tree"
       },
       {
         "label": "AVL Tree",
         "value": "AVL Tree"
       },
       {
-        "label": "B-Tree",
-        "value": "B-Tree"
+        "label": "Red-Black Tree",
+        "value": "Red-Black Tree"
       }
     ],
     "correctAnswer": "AVL Tree",
@@ -8892,7 +8892,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Splay Tree is the answer to the following question - Which self-balancing binary search tree ensures the heights of two child subtrees differ by at most one.",
+    "label": "True or False: An AVL Tree is a self-balancing binary search tree that ensures child subtree heights differ by at most one.",
     "options": [
       {
         "label": "True",
@@ -8903,8 +8903,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is AVL Tree.",
+    "correctAnswer": "true",
+    "explanation": "Yes, AVL Tree is correct.",
     "marks": 3
   },
   {
@@ -8913,7 +8913,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: Which self-balancing binary search tree ensures the heights of two child subtrees differ by at most one?",
+    "label": "Answer the following concisely: Which self-balancing binary search tree ensures the heights of two child subtrees differ by at most one?",
     "correctAnswer": "AVL Tree",
     "explanation": "The correct term is AVL Tree.",
     "marks": 3
@@ -8924,23 +8924,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What graph traversal algorithm uses a queue to explore nodes level by level?",
+    "label": "Which of these best answers the following? What graph traversal algorithm uses a queue to explore nodes level by level?",
     "options": [
       {
-        "label": "Breadth-First Search (BFS)",
-        "value": "Breadth-First Search (BFS)"
+        "label": "Dijkstra's Algorithm",
+        "value": "Dijkstra's Algorithm"
       },
       {
         "label": "Depth-First Search (DFS)",
         "value": "Depth-First Search (DFS)"
       },
       {
-        "label": "A* Search",
-        "value": "A* Search"
+        "label": "Breadth-First Search (BFS)",
+        "value": "Breadth-First Search (BFS)"
       },
       {
-        "label": "Dijkstra's Algorithm",
-        "value": "Dijkstra's Algorithm"
+        "label": "A* Search",
+        "value": "A* Search"
       }
     ],
     "correctAnswer": "Breadth-First Search (BFS)",
@@ -8953,7 +8953,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What graph traversal algorithm uses a queue to explore nodes level by level.', the correct answer is Breadth-First Search (BFS).",
+    "label": "True or False: The graph traversal algorithm that uses a queue to explore nodes level by level is A* Search.",
     "options": [
       {
         "label": "True",
@@ -8964,8 +8964,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Breadth-First Search (BFS) is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Breadth-First Search (BFS).",
     "marks": 3
   },
   {
@@ -8974,7 +8974,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What graph traversal algorithm uses a queue to explore nodes level by level?",
+    "label": "Answer the following concisely: What graph traversal algorithm uses a queue to explore nodes level by level?",
     "correctAnswer": "Breadth-First Search (BFS)",
     "explanation": "The correct term is Breadth-First Search (BFS).",
     "marks": 3
@@ -8985,11 +8985,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What tree-like data structure is used to efficiently store and search a dynamic set of strings?",
+    "label": "Consider the following: What tree-like data structure is used to efficiently store and search a dynamic set of strings?",
     "options": [
       {
         "label": "B-Tree",
         "value": "B-Tree"
+      },
+      {
+        "label": "Trie",
+        "value": "Trie"
       },
       {
         "label": "Hash Tree",
@@ -8998,10 +9002,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Heap",
         "value": "Heap"
-      },
-      {
-        "label": "Trie",
-        "value": "Trie"
       }
     ],
     "correctAnswer": "Trie",
@@ -9014,7 +9014,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Trie is the answer to the following question - What tree-like data structure is used to efficiently store and search a dynamic set of strings.",
+    "label": "True or False: A Heap is used to efficiently store and search a dynamic set of strings.",
     "options": [
       {
         "label": "True",
@@ -9025,8 +9025,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Trie is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Trie.",
     "marks": 3
   },
   {
@@ -9035,7 +9035,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Trees",
     "difficulty": "hard",
     "type": "text",
-    "label": "What tree-like data structure is used to efficiently store and search a dynamic set of strings?",
+    "label": "Provide the exact term: What tree-like data structure is used to efficiently store and search a dynamic set of strings?",
     "correctAnswer": "Trie",
     "explanation": "The correct term is Trie.",
     "marks": 3
@@ -9046,23 +9046,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which algorithm finds the shortest path between nodes in a graph with non-negative edge weights?",
+    "label": "Which of these best answers the following? Which algorithm finds the shortest path between nodes in a graph with non-negative edge weights?",
     "options": [
       {
         "label": "Dijkstra's Algorithm",
         "value": "Dijkstra's Algorithm"
       },
       {
-        "label": "Bellman-Ford Algorithm",
-        "value": "Bellman-Ford Algorithm"
+        "label": "Kruskal's Algorithm",
+        "value": "Kruskal's Algorithm"
       },
       {
         "label": "Floyd-Warshall Algorithm",
         "value": "Floyd-Warshall Algorithm"
       },
       {
-        "label": "Kruskal's Algorithm",
-        "value": "Kruskal's Algorithm"
+        "label": "Bellman-Ford Algorithm",
+        "value": "Bellman-Ford Algorithm"
       }
     ],
     "correctAnswer": "Dijkstra's Algorithm",
@@ -9075,7 +9075,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Graphs",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'Which algorithm finds the shortest path between nodes in a graph with non-negative edge weights.', the correct answer is Floyd-Warshall Algorithm.",
+    "label": "True or False: The algorithm that finds the shortest path between nodes in a graph with non-negative edge weights is Bellman-Ford Algorithm.",
     "options": [
       {
         "label": "True",
@@ -9107,8 +9107,12 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hashing",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What technique resolves hash collisions by searching for the next empty slot?",
+    "label": "What technique resolves hash collisions by searching for the next empty slot?",
     "options": [
+      {
+        "label": "Double Hashing",
+        "value": "Double Hashing"
+      },
       {
         "label": "Open Addressing",
         "value": "Open Addressing"
@@ -9116,10 +9120,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Chaining",
         "value": "Chaining"
-      },
-      {
-        "label": "Double Hashing",
-        "value": "Double Hashing"
       },
       {
         "label": "Quadratic Probing",
@@ -9136,7 +9136,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hashing",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What technique resolves hash collisions by searching for the next empty slot.', the correct answer is Double Hashing.",
+    "label": "True or False: The technique that resolves hash collisions by searching for the next empty slot is Double Hashing.",
     "options": [
       {
         "label": "True",
@@ -9157,7 +9157,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hashing",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What technique resolves hash collisions by searching for the next empty slot?",
+    "label": "What technique resolves hash collisions by searching for the next empty slot?",
     "correctAnswer": "Open Addressing",
     "explanation": "The correct term is Open Addressing.",
     "marks": 3
@@ -9168,23 +9168,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the core component of an operating system that manages system resources?",
+    "label": "Consider the following: What is the core component of an operating system that manages system resources?",
     "options": [
       {
-        "label": "Compiler",
-        "value": "Compiler"
+        "label": "GUI",
+        "value": "GUI"
       },
       {
         "label": "Shell",
         "value": "Shell"
       },
       {
-        "label": "GUI",
-        "value": "GUI"
-      },
-      {
         "label": "Kernel",
         "value": "Kernel"
+      },
+      {
+        "label": "Compiler",
+        "value": "Compiler"
       }
     ],
     "correctAnswer": "Kernel",
@@ -9197,7 +9197,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? GUI is the correct term for: What is the core component of an operating system that manages system resources.",
+    "label": "True or False: The core component of an operating system that manages system resources is the Kernel.",
     "options": [
       {
         "label": "True",
@@ -9208,8 +9208,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Kernel.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Kernel is correct.",
     "marks": 1
   },
   {
@@ -9218,7 +9218,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What is the core component of an operating system that manages system resources?",
+    "label": "What is the core component of an operating system that manages system resources?",
     "correctAnswer": "Kernel",
     "explanation": "The correct term is Kernel.",
     "marks": 1
@@ -9236,12 +9236,12 @@ export const questionBank: BankQuestion[] = [
         "value": "Thread"
       },
       {
-        "label": "Process",
-        "value": "Process"
-      },
-      {
         "label": "File",
         "value": "File"
+      },
+      {
+        "label": "Process",
+        "value": "Process"
       },
       {
         "label": "Instruction",
@@ -9258,7 +9258,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is a program in execution called.', the correct answer is Process.",
+    "label": "True or False: A program in execution is called a Instruction.",
     "options": [
       {
         "label": "True",
@@ -9269,8 +9269,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Process is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Process.",
     "marks": 1
   },
   {
@@ -9279,7 +9279,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "easy",
     "type": "text",
-    "label": "Provide the exact term: What is a program in execution called?",
+    "label": "What is a program in execution called?",
     "correctAnswer": "Process",
     "explanation": "The correct term is Process.",
     "marks": 1
@@ -9290,12 +9290,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What memory hierarchy level is the fastest but smallest?",
+    "label": "What memory hierarchy level is the fastest but smallest?",
     "options": [
-      {
-        "label": "Cache",
-        "value": "Cache"
-      },
       {
         "label": "Registers",
         "value": "Registers"
@@ -9307,6 +9303,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Hard Drive",
         "value": "Hard Drive"
+      },
+      {
+        "label": "Cache",
+        "value": "Cache"
       }
     ],
     "correctAnswer": "Registers",
@@ -9319,7 +9319,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Hard Drive is the correct term for: What memory hierarchy level is the fastest but smallest.",
+    "label": "True or False: The memory hierarchy level that is the fastest but smallest is the Registers.",
     "options": [
       {
         "label": "True",
@@ -9330,8 +9330,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Registers.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Registers is correct.",
     "marks": 1
   },
   {
@@ -9351,7 +9351,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Interface",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What provides a user interface to interact with the operating system?",
+    "label": "What provides a user interface to interact with the operating system?",
     "options": [
       {
         "label": "Driver",
@@ -9380,7 +9380,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Interface",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Kernel is the correct term for: What provides a user interface to interact with the operating system.",
+    "label": "True or False: A Kernel provides a user interface to interact with the operating system.",
     "options": [
       {
         "label": "True",
@@ -9412,7 +9412,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Storage",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What logical structure manages how data is stored and retrieved on a disk?",
+    "label": "Which of these best answers the following? What logical structure manages how data is stored and retrieved on a disk?",
     "options": [
       {
         "label": "Process Scheduler",
@@ -9423,12 +9423,12 @@ export const questionBank: BankQuestion[] = [
         "value": "File System"
       },
       {
-        "label": "Memory Manager",
-        "value": "Memory Manager"
-      },
-      {
         "label": "Device Driver",
         "value": "Device Driver"
+      },
+      {
+        "label": "Memory Manager",
+        "value": "Memory Manager"
       }
     ],
     "correctAnswer": "File System",
@@ -9441,7 +9441,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Storage",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: File System is the answer to the following question - What logical structure manages how data is stored and retrieved on a disk.",
+    "label": "True or False: A File System is the logical structure that manages how data is stored and retrieved on a disk.",
     "options": [
       {
         "label": "True",
@@ -9462,7 +9462,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Storage",
     "difficulty": "easy",
     "type": "text",
-    "label": "What logical structure manages how data is stored and retrieved on a disk?",
+    "label": "Provide the exact term: What logical structure manages how data is stored and retrieved on a disk?",
     "correctAnswer": "File System",
     "explanation": "The correct term is File System.",
     "marks": 1
@@ -9473,23 +9473,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "medium",
     "type": "radio",
-    "label": "What is the smallest sequence of programmed instructions managed independently by a scheduler?",
+    "label": "Consider the following: What is the smallest sequence of programmed instructions managed independently by a scheduler?",
     "options": [
-      {
-        "label": "Process",
-        "value": "Process"
-      },
       {
         "label": "Thread",
         "value": "Thread"
+      },
+      {
+        "label": "Task",
+        "value": "Task"
       },
       {
         "label": "Job",
         "value": "Job"
       },
       {
-        "label": "Task",
-        "value": "Task"
+        "label": "Process",
+        "value": "Process"
       }
     ],
     "correctAnswer": "Thread",
@@ -9502,7 +9502,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Process is the answer to the following question - What is the smallest sequence of programmed instructions managed independently by a scheduler.",
+    "label": "True or False: The smallest sequence of programmed instructions managed independently by a scheduler is a Process.",
     "options": [
       {
         "label": "True",
@@ -9523,7 +9523,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What is the smallest sequence of programmed instructions managed independently by a scheduler?",
+    "label": "Provide the exact term: What is the smallest sequence of programmed instructions managed independently by a scheduler?",
     "correctAnswer": "Thread",
     "explanation": "The correct term is Thread.",
     "marks": 2
@@ -9534,23 +9534,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What technique allows the execution of processes that are not completely in memory?",
+    "label": "What technique allows the execution of processes that are not completely in memory?",
     "options": [
-      {
-        "label": "Paging",
-        "value": "Paging"
-      },
       {
         "label": "Virtual Memory",
         "value": "Virtual Memory"
       },
       {
-        "label": "Caching",
-        "value": "Caching"
+        "label": "Paging",
+        "value": "Paging"
       },
       {
         "label": "Segmentation",
         "value": "Segmentation"
+      },
+      {
+        "label": "Caching",
+        "value": "Caching"
       }
     ],
     "correctAnswer": "Virtual Memory",
@@ -9563,7 +9563,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Virtual Memory is the answer to the following question - What technique allows the execution of processes that are not completely in memory.",
+    "label": "True or False: The technique allowing the execution of processes that are not completely in memory is Segmentation.",
     "options": [
       {
         "label": "True",
@@ -9574,8 +9574,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Virtual Memory is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Virtual Memory.",
     "marks": 2
   },
   {
@@ -9584,7 +9584,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What technique allows the execution of processes that are not completely in memory?",
+    "label": "What technique allows the execution of processes that are not completely in memory?",
     "correctAnswer": "Virtual Memory",
     "explanation": "The correct term is Virtual Memory.",
     "marks": 2
@@ -9595,11 +9595,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "CPU",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: What component decides which process runs next on the CPU?",
+    "label": "What component decides which process runs next on the CPU?",
     "options": [
       {
-        "label": "Dispatcher",
-        "value": "Dispatcher"
+        "label": "Memory Manager",
+        "value": "Memory Manager"
       },
       {
         "label": "Scheduler",
@@ -9610,8 +9610,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Interrupt Handler"
       },
       {
-        "label": "Memory Manager",
-        "value": "Memory Manager"
+        "label": "Dispatcher",
+        "value": "Dispatcher"
       }
     ],
     "correctAnswer": "Scheduler",
@@ -9624,7 +9624,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "CPU",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What component decides which process runs next on the CPU.', the correct answer is Scheduler.",
+    "label": "True or False: The Scheduler decides which process runs next on the CPU.",
     "options": [
       {
         "label": "True",
@@ -9656,12 +9656,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Synchronization",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What is a synchronization variable used to control access to a common resource?",
+    "label": "What is a synchronization variable used to control access to a common resource?",
     "options": [
-      {
-        "label": "Lock",
-        "value": "Lock"
-      },
       {
         "label": "Semaphore",
         "value": "Semaphore"
@@ -9669,6 +9665,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Mutex",
         "value": "Mutex"
+      },
+      {
+        "label": "Lock",
+        "value": "Lock"
       },
       {
         "label": "Monitor",
@@ -9685,7 +9685,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Synchronization",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Semaphore is the correct term for: What is a synchronization variable used to control access to a common resource.",
+    "label": "True or False: A synchronization variable used to control access to a common resource is a Lock.",
     "options": [
       {
         "label": "True",
@@ -9696,8 +9696,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Semaphore is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Semaphore.",
     "marks": 2
   },
   {
@@ -9706,7 +9706,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Synchronization",
     "difficulty": "medium",
     "type": "text",
-    "label": "What is a synchronization variable used to control access to a common resource?",
+    "label": "Provide the exact term: What is a synchronization variable used to control access to a common resource?",
     "correctAnswer": "Semaphore",
     "explanation": "The correct term is Semaphore.",
     "marks": 2
@@ -9717,19 +9717,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the saving of one process's state and loading of another's called?",
+    "label": "Consider the following: What is the saving of one process's state and loading of another's called?",
     "options": [
       {
         "label": "System Call",
         "value": "System Call"
       },
       {
-        "label": "Context Switch",
-        "value": "Context Switch"
-      },
-      {
         "label": "Trap",
         "value": "Trap"
+      },
+      {
+        "label": "Context Switch",
+        "value": "Context Switch"
       },
       {
         "label": "Interrupt",
@@ -9746,7 +9746,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Processes",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What is the saving of one process's state and loading of another's called.', the correct answer is Interrupt.",
+    "label": "True or False: The saving of one process's state and loading of another's is called a Context Switch.",
     "options": [
       {
         "label": "True",
@@ -9757,8 +9757,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Context Switch.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Context Switch is correct.",
     "marks": 2
   },
   {
@@ -9778,7 +9778,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "What situation occurs when multiple processes are blocked indefinitely waiting for each other?",
+    "label": "Consider the following: What situation occurs when multiple processes are blocked indefinitely waiting for each other?",
     "options": [
       {
         "label": "Starvation",
@@ -9807,7 +9807,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Concurrency",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What situation occurs when multiple processes are blocked indefinitely waiting for each other.', the correct answer is Deadlock.",
+    "label": "True or False: A Thrashing occurs when multiple processes are blocked indefinitely waiting for each other.",
     "options": [
       {
         "label": "True",
@@ -9818,8 +9818,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Deadlock is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Deadlock.",
     "marks": 3
   },
   {
@@ -9842,20 +9842,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What memory management scheme divides physical memory into fixed-sized blocks?",
     "options": [
       {
-        "label": "Segmentation",
-        "value": "Segmentation"
-      },
-      {
         "label": "Swapping",
         "value": "Swapping"
       },
       {
-        "label": "Fragmentation",
-        "value": "Fragmentation"
-      },
-      {
         "label": "Paging",
         "value": "Paging"
+      },
+      {
+        "label": "Segmentation",
+        "value": "Segmentation"
+      },
+      {
+        "label": "Fragmentation",
+        "value": "Fragmentation"
       }
     ],
     "correctAnswer": "Paging",
@@ -9868,7 +9868,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Memory",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Swapping is the answer to the following question - What memory management scheme divides physical memory into fixed-sized blocks.",
+    "label": "True or False: The memory management scheme dividing physical memory into fixed-sized blocks is Swapping.",
     "options": [
       {
         "label": "True",
@@ -9900,23 +9900,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Performance",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What condition occurs when a system spends more time paging than executing processes?",
+    "label": "What condition occurs when a system spends more time paging than executing processes?",
     "options": [
-      {
-        "label": "Deadlock",
-        "value": "Deadlock"
-      },
-      {
-        "label": "Starvation",
-        "value": "Starvation"
-      },
       {
         "label": "Thrashing",
         "value": "Thrashing"
       },
       {
+        "label": "Deadlock",
+        "value": "Deadlock"
+      },
+      {
         "label": "Fragmentation",
         "value": "Fragmentation"
+      },
+      {
+        "label": "Starvation",
+        "value": "Starvation"
       }
     ],
     "correctAnswer": "Thrashing",
@@ -9929,7 +9929,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Performance",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Starvation is the answer to the following question - What condition occurs when a system spends more time paging than executing processes.",
+    "label": "True or False: The condition where a system spends more time paging than executing processes is called Thrashing.",
     "options": [
       {
         "label": "True",
@@ -9940,8 +9940,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Thrashing.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Thrashing is correct.",
     "marks": 3
   },
   {
@@ -9950,7 +9950,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Performance",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What condition occurs when a system spends more time paging than executing processes?",
+    "label": "Answer the following concisely: What condition occurs when a system spends more time paging than executing processes?",
     "correctAnswer": "Thrashing",
     "explanation": "The correct term is Thrashing.",
     "marks": 3
@@ -9961,23 +9961,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "File System",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: In Unix-like systems, what data structure stores metadata about a file?",
+    "label": "In Unix-like systems, what data structure stores metadata about a file?",
     "options": [
-      {
-        "label": "File Allocation Table",
-        "value": "File Allocation Table"
-      },
       {
         "label": "Directory",
         "value": "Directory"
       },
       {
-        "label": "Superblock",
-        "value": "Superblock"
-      },
-      {
         "label": "Inode",
         "value": "Inode"
+      },
+      {
+        "label": "File Allocation Table",
+        "value": "File Allocation Table"
+      },
+      {
+        "label": "Superblock",
+        "value": "Superblock"
       }
     ],
     "correctAnswer": "Inode",
@@ -9990,7 +9990,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "File System",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Inode is the answer to the following question - In Unix-like systems, what data structure stores metadata about a file.",
+    "label": "True or False: In Unix-like systems, an Inode stores metadata about a file.",
     "options": [
       {
         "label": "True",
@@ -10022,23 +10022,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What mechanism allows hardware devices to signal the CPU that they require attention?",
+    "label": "What mechanism allows hardware devices to signal the CPU that they require attention?",
     "options": [
-      {
-        "label": "Trap",
-        "value": "Trap"
-      },
       {
         "label": "Interrupt",
         "value": "Interrupt"
       },
       {
-        "label": "System Call",
-        "value": "System Call"
-      },
-      {
         "label": "Polling",
         "value": "Polling"
+      },
+      {
+        "label": "Trap",
+        "value": "Trap"
+      },
+      {
+        "label": "System Call",
+        "value": "System Call"
       }
     ],
     "correctAnswer": "Interrupt",
@@ -10051,7 +10051,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What mechanism allows hardware devices to signal the CPU that they require attention.', the correct answer is Interrupt.",
+    "label": "True or False: An Polling allows hardware devices to signal the CPU that they require attention.",
     "options": [
       {
         "label": "True",
@@ -10062,8 +10062,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Interrupt is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Interrupt.",
     "marks": 3
   },
   {
@@ -10083,23 +10083,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What uniquely identifies a device on a TCP/IP network?",
+    "label": "Consider the following: What uniquely identifies a device on a TCP/IP network?",
     "options": [
       {
-        "label": "IP Address",
-        "value": "IP Address"
+        "label": "Port Number",
+        "value": "Port Number"
       },
       {
         "label": "Subnet Mask",
         "value": "Subnet Mask"
       },
       {
-        "label": "MAC Address",
-        "value": "MAC Address"
+        "label": "IP Address",
+        "value": "IP Address"
       },
       {
-        "label": "Port Number",
-        "value": "Port Number"
+        "label": "MAC Address",
+        "value": "MAC Address"
       }
     ],
     "correctAnswer": "IP Address",
@@ -10112,7 +10112,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: IP Address is the answer to the following question - What uniquely identifies a device on a TCP/IP network.",
+    "label": "True or False: An IP Address uniquely identifies a device on a TCP/IP network.",
     "options": [
       {
         "label": "True",
@@ -10133,7 +10133,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What uniquely identifies a device on a TCP/IP network?",
+    "label": "Provide the exact term: What uniquely identifies a device on a TCP/IP network?",
     "correctAnswer": "IP Address",
     "explanation": "The correct term is IP Address.",
     "marks": 1
@@ -10147,12 +10147,12 @@ export const questionBank: BankQuestion[] = [
     "label": "What protocol is used to secure web traffic?",
     "options": [
       {
-        "label": "HTTP",
-        "value": "HTTP"
-      },
-      {
         "label": "SMTP",
         "value": "SMTP"
+      },
+      {
+        "label": "HTTP",
+        "value": "HTTP"
       },
       {
         "label": "FTP",
@@ -10173,7 +10173,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? HTTPS is the correct term for: What protocol is used to secure web traffic.",
+    "label": "True or False: The protocol used to secure web traffic is HTTPS.",
     "options": [
       {
         "label": "True",
@@ -10205,11 +10205,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What device connects different networks and forwards data packets between them?",
+    "label": "What device connects different networks and forwards data packets between them?",
     "options": [
       {
-        "label": "Router",
-        "value": "Router"
+        "label": "Switch",
+        "value": "Switch"
       },
       {
         "label": "Modem",
@@ -10220,8 +10220,8 @@ export const questionBank: BankQuestion[] = [
         "value": "Hub"
       },
       {
-        "label": "Switch",
-        "value": "Switch"
+        "label": "Router",
+        "value": "Router"
       }
     ],
     "correctAnswer": "Router",
@@ -10234,7 +10234,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Hub is the answer to the following question - What device connects different networks and forwards data packets between them.",
+    "label": "True or False: A Modem connects different networks and forwards data packets between them.",
     "options": [
       {
         "label": "True",
@@ -10255,7 +10255,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "easy",
     "type": "text",
-    "label": "What device connects different networks and forwards data packets between them?",
+    "label": "Answer the following concisely: What device connects different networks and forwards data packets between them?",
     "correctAnswer": "Router",
     "explanation": "The correct term is Router.",
     "marks": 1
@@ -10266,23 +10266,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Consider the following: What translates human-readable domain names into IP addresses?",
+    "label": "Which of these best answers the following? What translates human-readable domain names into IP addresses?",
     "options": [
-      {
-        "label": "DNS",
-        "value": "DNS"
-      },
       {
         "label": "NAT",
         "value": "NAT"
+      },
+      {
+        "label": "DHCP",
+        "value": "DHCP"
       },
       {
         "label": "ARP",
         "value": "ARP"
       },
       {
-        "label": "DHCP",
-        "value": "DHCP"
+        "label": "DNS",
+        "value": "DNS"
       }
     ],
     "correctAnswer": "DNS",
@@ -10295,7 +10295,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: DNS is the answer to the following question - What translates human-readable domain names into IP addresses.",
+    "label": "True or False: The ARP translates human-readable domain names into IP addresses.",
     "options": [
       {
         "label": "True",
@@ -10306,8 +10306,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, DNS is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is DNS.",
     "marks": 1
   },
   {
@@ -10327,23 +10327,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? Which protocol is used for sending email?",
+    "label": "Which protocol is used for sending email?",
     "options": [
-      {
-        "label": "FTP",
-        "value": "FTP"
-      },
       {
         "label": "SMTP",
         "value": "SMTP"
+      },
+      {
+        "label": "POP3",
+        "value": "POP3"
       },
       {
         "label": "IMAP",
         "value": "IMAP"
       },
       {
-        "label": "POP3",
-        "value": "POP3"
+        "label": "FTP",
+        "value": "FTP"
       }
     ],
     "correctAnswer": "SMTP",
@@ -10356,7 +10356,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: POP3 is the answer to the following question - Which protocol is used for sending email.",
+    "label": "True or False: The IMAP protocol is used for sending email.",
     "options": [
       {
         "label": "True",
@@ -10388,11 +10388,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What unique physical address is assigned to a network interface controller?",
+    "label": "Consider the following: What unique physical address is assigned to a network interface controller?",
     "options": [
       {
-        "label": "MAC Address",
-        "value": "MAC Address"
+        "label": "Port Number",
+        "value": "Port Number"
       },
       {
         "label": "IPv6 Address",
@@ -10403,8 +10403,8 @@ export const questionBank: BankQuestion[] = [
         "value": "IP Address"
       },
       {
-        "label": "Port Number",
-        "value": "Port Number"
+        "label": "MAC Address",
+        "value": "MAC Address"
       }
     ],
     "correctAnswer": "MAC Address",
@@ -10417,7 +10417,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What unique physical address is assigned to a network interface controller.', the correct answer is MAC Address.",
+    "label": "True or False: A Port Number is the unique physical address assigned to a network interface controller.",
     "options": [
       {
         "label": "True",
@@ -10428,8 +10428,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, MAC Address is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is MAC Address.",
     "marks": 2
   },
   {
@@ -10438,7 +10438,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Hardware",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What unique physical address is assigned to a network interface controller?",
+    "label": "Provide the exact term: What unique physical address is assigned to a network interface controller?",
     "correctAnswer": "MAC Address",
     "explanation": "The correct term is MAC Address.",
     "marks": 2
@@ -10449,19 +10449,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Models",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: How many layers are in the OSI model?",
+    "label": "Which of these best answers the following? How many layers are in the OSI model?",
     "options": [
       {
         "label": "6",
         "value": "6"
       },
       {
-        "label": "5",
-        "value": "5"
-      },
-      {
         "label": "7",
         "value": "7"
+      },
+      {
+        "label": "5",
+        "value": "5"
       },
       {
         "label": "4",
@@ -10478,7 +10478,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Models",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'How many layers are in the OSI model.', the correct answer is 4.",
+    "label": "True or False: There are 7 layers in the OSI model.",
     "options": [
       {
         "label": "True",
@@ -10489,8 +10489,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is 7.",
+    "correctAnswer": "true",
+    "explanation": "Yes, 7 is correct.",
     "marks": 2
   },
   {
@@ -10499,7 +10499,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Models",
     "difficulty": "medium",
     "type": "text",
-    "label": "How many layers are in the OSI model?",
+    "label": "Provide the exact term: How many layers are in the OSI model?",
     "correctAnswer": "7",
     "explanation": "The correct term is 7.",
     "marks": 2
@@ -10513,20 +10513,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? Which protocol automatically assigns IP addresses to devices on a network?",
     "options": [
       {
-        "label": "ARP",
-        "value": "ARP"
-      },
-      {
         "label": "ICMP",
         "value": "ICMP"
       },
       {
-        "label": "DNS",
-        "value": "DNS"
-      },
-      {
         "label": "DHCP",
         "value": "DHCP"
+      },
+      {
+        "label": "ARP",
+        "value": "ARP"
+      },
+      {
+        "label": "DNS",
+        "value": "DNS"
       }
     ],
     "correctAnswer": "DHCP",
@@ -10539,7 +10539,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: DHCP is the answer to the following question - Which protocol automatically assigns IP addresses to devices on a network.",
+    "label": "True or False: The ICMP protocol automatically assigns IP addresses to devices on a network.",
     "options": [
       {
         "label": "True",
@@ -10550,8 +10550,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, DHCP is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is DHCP.",
     "marks": 2
   },
   {
@@ -10560,7 +10560,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "medium",
     "type": "text",
-    "label": "Which protocol automatically assigns IP addresses to devices on a network?",
+    "label": "Provide the exact term: Which protocol automatically assigns IP addresses to devices on a network?",
     "correctAnswer": "DHCP",
     "explanation": "The correct term is DHCP.",
     "marks": 2
@@ -10571,23 +10571,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "TCP/IP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Consider the following: Which transport layer protocol provides reliable, ordered, and error-checked delivery?",
+    "label": "Which transport layer protocol provides reliable, ordered, and error-checked delivery?",
     "options": [
       {
-        "label": "IP",
-        "value": "IP"
+        "label": "TCP",
+        "value": "TCP"
       },
       {
         "label": "UDP",
         "value": "UDP"
       },
       {
-        "label": "ICMP",
-        "value": "ICMP"
+        "label": "IP",
+        "value": "IP"
       },
       {
-        "label": "TCP",
-        "value": "TCP"
+        "label": "ICMP",
+        "value": "ICMP"
       }
     ],
     "correctAnswer": "TCP",
@@ -10600,7 +10600,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "TCP/IP",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'Which transport layer protocol provides reliable, ordered, and error-checked delivery.', the correct answer is UDP.",
+    "label": "True or False: The transport layer protocol providing reliable, ordered, and error-checked delivery is TCP.",
     "options": [
       {
         "label": "True",
@@ -10611,8 +10611,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is TCP.",
+    "correctAnswer": "true",
+    "explanation": "Yes, TCP is correct.",
     "marks": 2
   },
   {
@@ -10632,23 +10632,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Which of these best answers the following? What network security system monitors and controls incoming and outgoing network traffic?",
+    "label": "Consider the following: What network security system monitors and controls incoming and outgoing network traffic?",
     "options": [
-      {
-        "label": "VPN",
-        "value": "VPN"
-      },
-      {
-        "label": "Firewall",
-        "value": "Firewall"
-      },
       {
         "label": "Proxy",
         "value": "Proxy"
       },
       {
+        "label": "VPN",
+        "value": "VPN"
+      },
+      {
         "label": "Router",
         "value": "Router"
+      },
+      {
+        "label": "Firewall",
+        "value": "Firewall"
       }
     ],
     "correctAnswer": "Firewall",
@@ -10661,7 +10661,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True/False: When asked 'What network security system monitors and controls incoming and outgoing network traffic.', the correct answer is Firewall.",
+    "label": "True or False: A Firewall is a network security system that monitors and controls incoming and outgoing network traffic.",
     "options": [
       {
         "label": "True",
@@ -10682,7 +10682,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What network security system monitors and controls incoming and outgoing network traffic?",
+    "label": "What network security system monitors and controls incoming and outgoing network traffic?",
     "correctAnswer": "Firewall",
     "explanation": "The correct term is Firewall.",
     "marks": 2
@@ -10693,23 +10693,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Models",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? Which OSI layer is responsible for end-to-end communication and error recovery?",
+    "label": "Which OSI layer is responsible for end-to-end communication and error recovery?",
     "options": [
-      {
-        "label": "Session Layer",
-        "value": "Session Layer"
-      },
-      {
-        "label": "Data Link Layer",
-        "value": "Data Link Layer"
-      },
       {
         "label": "Network Layer",
         "value": "Network Layer"
       },
       {
+        "label": "Session Layer",
+        "value": "Session Layer"
+      },
+      {
         "label": "Transport Layer",
         "value": "Transport Layer"
+      },
+      {
+        "label": "Data Link Layer",
+        "value": "Data Link Layer"
       }
     ],
     "correctAnswer": "Transport Layer",
@@ -10722,7 +10722,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Models",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'Which OSI layer is responsible for end-to-end communication and error recovery.', the correct answer is Transport Layer.",
+    "label": "True or False: The OSI layer responsible for end-to-end communication and error recovery is the Session Layer.",
     "options": [
       {
         "label": "True",
@@ -10733,8 +10733,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Transport Layer is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Transport Layer.",
     "marks": 3
   },
   {
@@ -10754,7 +10754,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which protocol resolves IP addresses to MAC addresses?",
+    "label": "Which of these best answers the following? Which protocol resolves IP addresses to MAC addresses?",
     "options": [
       {
         "label": "ARP",
@@ -10765,12 +10765,12 @@ export const questionBank: BankQuestion[] = [
         "value": "DHCP"
       },
       {
-        "label": "RARP",
-        "value": "RARP"
-      },
-      {
         "label": "DNS",
         "value": "DNS"
+      },
+      {
+        "label": "RARP",
+        "value": "RARP"
       }
     ],
     "correctAnswer": "ARP",
@@ -10783,7 +10783,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? DNS is the correct term for: Which protocol resolves IP addresses to MAC addresses.",
+    "label": "True or False: The ARP protocol resolves IP addresses to MAC addresses.",
     "options": [
       {
         "label": "True",
@@ -10794,8 +10794,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is ARP.",
+    "correctAnswer": "true",
+    "explanation": "Yes, ARP is correct.",
     "marks": 3
   },
   {
@@ -10804,7 +10804,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "text",
-    "label": "Which protocol resolves IP addresses to MAC addresses?",
+    "label": "Provide the exact term: Which protocol resolves IP addresses to MAC addresses?",
     "correctAnswer": "ARP",
     "explanation": "The correct term is ARP.",
     "marks": 3
@@ -10815,11 +10815,11 @@ export const questionBank: BankQuestion[] = [
     "topic": "Routing",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What maps multiple private IP addresses to a single public IP address?",
+    "label": "Which of these best answers the following? What maps multiple private IP addresses to a single public IP address?",
     "options": [
       {
-        "label": "NAT",
-        "value": "NAT"
+        "label": "DHCP",
+        "value": "DHCP"
       },
       {
         "label": "DNS",
@@ -10830,8 +10830,8 @@ export const questionBank: BankQuestion[] = [
         "value": "VLAN"
       },
       {
-        "label": "DHCP",
-        "value": "DHCP"
+        "label": "NAT",
+        "value": "NAT"
       }
     ],
     "correctAnswer": "NAT",
@@ -10844,7 +10844,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Routing",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What maps multiple private IP addresses to a single public IP address.', the correct answer is DNS.",
+    "label": "True or False: NAT maps multiple private IP addresses to a single public IP address.",
     "options": [
       {
         "label": "True",
@@ -10855,8 +10855,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is NAT.",
+    "correctAnswer": "true",
+    "explanation": "Yes, NAT is correct.",
     "marks": 3
   },
   {
@@ -10865,7 +10865,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Routing",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: What maps multiple private IP addresses to a single public IP address?",
+    "label": "Provide the exact term: What maps multiple private IP addresses to a single public IP address?",
     "correctAnswer": "NAT",
     "explanation": "The correct term is NAT.",
     "marks": 3
@@ -10876,23 +10876,23 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which transport layer protocol provides connectionless, unacknowledged communication?",
+    "label": "Which of these best answers the following? Which transport layer protocol provides connectionless, unacknowledged communication?",
     "options": [
       {
-        "label": "UDP",
-        "value": "UDP"
+        "label": "IP",
+        "value": "IP"
       },
       {
         "label": "TCP",
         "value": "TCP"
       },
       {
-        "label": "ICMP",
-        "value": "ICMP"
+        "label": "UDP",
+        "value": "UDP"
       },
       {
-        "label": "IP",
-        "value": "IP"
+        "label": "ICMP",
+        "value": "ICMP"
       }
     ],
     "correctAnswer": "UDP",
@@ -10905,7 +10905,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: UDP is the answer to the following question - Which transport layer protocol provides connectionless, unacknowledged communication.",
+    "label": "True or False: The transport layer protocol providing connectionless, unacknowledged communication is UDP.",
     "options": [
       {
         "label": "True",
@@ -10926,7 +10926,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protocols",
     "difficulty": "hard",
     "type": "text",
-    "label": "Answer the following concisely: Which transport layer protocol provides connectionless, unacknowledged communication?",
+    "label": "Which transport layer protocol provides connectionless, unacknowledged communication?",
     "correctAnswer": "UDP",
     "explanation": "The correct term is UDP.",
     "marks": 3
@@ -10937,7 +10937,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Which of these best answers the following? What creates a private, encrypted connection over a public network?",
+    "label": "What creates a private, encrypted connection over a public network?",
     "options": [
       {
         "label": "Firewall",
@@ -10948,12 +10948,12 @@ export const questionBank: BankQuestion[] = [
         "value": "VPN"
       },
       {
-        "label": "Proxy",
-        "value": "Proxy"
-      },
-      {
         "label": "VLAN",
         "value": "VLAN"
+      },
+      {
+        "label": "Proxy",
+        "value": "Proxy"
       }
     ],
     "correctAnswer": "VPN",
@@ -10966,7 +10966,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? Firewall is the correct term for: What creates a private, encrypted connection over a public network.",
+    "label": "True or False: A VPN creates a private, encrypted connection over a public network.",
     "options": [
       {
         "label": "True",
@@ -10977,8 +10977,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is VPN.",
+    "correctAnswer": "true",
+    "explanation": "Yes, VPN is correct.",
     "marks": 3
   },
   {
@@ -10987,7 +10987,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Security",
     "difficulty": "hard",
     "type": "text",
-    "label": "What creates a private, encrypted connection over a public network?",
+    "label": "Answer the following concisely: What creates a private, encrypted connection over a public network?",
     "correctAnswer": "VPN",
     "explanation": "The correct term is VPN.",
     "marks": 3
@@ -10998,8 +10998,12 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What malicious software is designed to disrupt, damage, or gain unauthorized access to a system?",
+    "label": "What malicious software is designed to disrupt, damage, or gain unauthorized access to a system?",
     "options": [
+      {
+        "label": "Adware",
+        "value": "Adware"
+      },
       {
         "label": "Antivirus",
         "value": "Antivirus"
@@ -11011,10 +11015,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Malware",
         "value": "Malware"
-      },
-      {
-        "label": "Adware",
-        "value": "Adware"
       }
     ],
     "correctAnswer": "Malware",
@@ -11027,7 +11027,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What malicious software is designed to disrupt, damage, or gain unauthorized access to a system.', the correct answer is Antivirus.",
+    "label": "True or False: Malicious software designed to disrupt, damage, or gain unauthorized access to a system is called Malware.",
     "options": [
       {
         "label": "True",
@@ -11038,8 +11038,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Malware.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Malware is correct.",
     "marks": 1
   },
   {
@@ -11062,16 +11062,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What attack involves sending fraudulent emails to trick individuals into revealing sensitive information?",
     "options": [
       {
-        "label": "Phishing",
-        "value": "Phishing"
-      },
-      {
         "label": "Spoofing",
         "value": "Spoofing"
       },
       {
         "label": "Spamming",
         "value": "Spamming"
+      },
+      {
+        "label": "Phishing",
+        "value": "Phishing"
       },
       {
         "label": "Sniffing",
@@ -11088,7 +11088,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True or False: Sniffing is the answer to the following question - What attack involves sending fraudulent emails to trick individuals into revealing sensitive information.",
+    "label": "True or False: An attack involving sending fraudulent emails to trick individuals into revealing sensitive information is Phishing.",
     "options": [
       {
         "label": "True",
@@ -11099,8 +11099,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Phishing.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Phishing is correct.",
     "marks": 1
   },
   {
@@ -11109,7 +11109,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "easy",
     "type": "text",
-    "label": "Answer the following concisely: What attack involves sending fraudulent emails to trick individuals into revealing sensitive information?",
+    "label": "Provide the exact term: What attack involves sending fraudulent emails to trick individuals into revealing sensitive information?",
     "correctAnswer": "Phishing",
     "explanation": "The correct term is Phishing.",
     "marks": 1
@@ -11120,19 +11120,19 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protection",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What is a secret string of characters used to authenticate a user?",
+    "label": "Consider the following: What is a secret string of characters used to authenticate a user?",
     "options": [
       {
         "label": "Password",
         "value": "Password"
       },
       {
-        "label": "Key",
-        "value": "Key"
-      },
-      {
         "label": "Token",
         "value": "Token"
+      },
+      {
+        "label": "Key",
+        "value": "Key"
       },
       {
         "label": "Certificate",
@@ -11149,7 +11149,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protection",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What is a secret string of characters used to authenticate a user.', the correct answer is Key.",
+    "label": "True or False: A secret string of characters used to authenticate a user is a Password.",
     "options": [
       {
         "label": "True",
@@ -11160,8 +11160,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Password.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Password is correct.",
     "marks": 1
   },
   {
@@ -11181,16 +11181,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Which of these best answers the following? What is the process of converting readable text into unreadable ciphertext?",
+    "label": "Consider the following: What is the process of converting readable text into unreadable ciphertext?",
     "options": [
-      {
-        "label": "Encryption",
-        "value": "Encryption"
-      },
-      {
-        "label": "Encoding",
-        "value": "Encoding"
-      },
       {
         "label": "Decryption",
         "value": "Decryption"
@@ -11198,6 +11190,14 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Hashing",
         "value": "Hashing"
+      },
+      {
+        "label": "Encryption",
+        "value": "Encryption"
+      },
+      {
+        "label": "Encoding",
+        "value": "Encoding"
       }
     ],
     "correctAnswer": "Encryption",
@@ -11210,7 +11210,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "radio",
-    "label": "Is the following statement true or false? Hashing is the correct term for: What is the process of converting readable text into unreadable ciphertext.",
+    "label": "True or False: The process of converting readable text into unreadable ciphertext is Encryption.",
     "options": [
       {
         "label": "True",
@@ -11221,8 +11221,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Encryption.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Encryption is correct.",
     "marks": 1
   },
   {
@@ -11231,7 +11231,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Basics",
     "difficulty": "easy",
     "type": "text",
-    "label": "What is the process of converting readable text into unreadable ciphertext?",
+    "label": "Provide the exact term: What is the process of converting readable text into unreadable ciphertext?",
     "correctAnswer": "Encryption",
     "explanation": "The correct term is Encryption.",
     "marks": 1
@@ -11245,20 +11245,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What software is designed to detect and destroy computer viruses?",
     "options": [
       {
-        "label": "Firewall",
-        "value": "Firewall"
-      },
-      {
-        "label": "VPN",
-        "value": "VPN"
+        "label": "Antivirus",
+        "value": "Antivirus"
       },
       {
         "label": "Proxy",
         "value": "Proxy"
       },
       {
-        "label": "Antivirus",
-        "value": "Antivirus"
+        "label": "Firewall",
+        "value": "Firewall"
+      },
+      {
+        "label": "VPN",
+        "value": "VPN"
       }
     ],
     "correctAnswer": "Antivirus",
@@ -11271,7 +11271,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protection",
     "difficulty": "easy",
     "type": "radio",
-    "label": "True/False: When asked 'What software is designed to detect and destroy computer viruses.', the correct answer is Antivirus.",
+    "label": "True or False: Antivirus is software designed to detect and destroy computer viruses.",
     "options": [
       {
         "label": "True",
@@ -11292,7 +11292,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Protection",
     "difficulty": "easy",
     "type": "text",
-    "label": "What software is designed to detect and destroy computer viruses?",
+    "label": "Provide the exact term: What software is designed to detect and destroy computer viruses?",
     "correctAnswer": "Antivirus",
     "explanation": "The correct term is Antivirus.",
     "marks": 1
@@ -11306,16 +11306,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What attack overwhelms a target server or network with a flood of internet traffic?",
     "options": [
       {
+        "label": "SQL Injection",
+        "value": "SQL Injection"
+      },
+      {
         "label": "DDoS",
         "value": "DDoS"
       },
       {
         "label": "Man-in-the-Middle",
         "value": "Man-in-the-Middle"
-      },
-      {
-        "label": "SQL Injection",
-        "value": "SQL Injection"
       },
       {
         "label": "Cross-Site Scripting",
@@ -11332,7 +11332,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: DDoS is the answer to the following question - What attack overwhelms a target server or network with a flood of internet traffic.",
+    "label": "True or False: An attack that overwhelms a target server or network with a flood of internet traffic is a DDoS attack.",
     "options": [
       {
         "label": "True",
@@ -11353,7 +11353,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "medium",
     "type": "text",
-    "label": "What attack overwhelms a target server or network with a flood of internet traffic?",
+    "label": "Answer the following concisely: What attack overwhelms a target server or network with a flood of internet traffic?",
     "correctAnswer": "DDoS",
     "explanation": "The correct term is DDoS.",
     "marks": 2
@@ -11367,20 +11367,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What transforms data into a fixed-size string of characters that cannot be reversed?",
     "options": [
       {
-        "label": "Encryption",
-        "value": "Encryption"
-      },
-      {
-        "label": "Salting",
-        "value": "Salting"
-      },
-      {
         "label": "Encoding",
         "value": "Encoding"
       },
       {
         "label": "Hashing",
         "value": "Hashing"
+      },
+      {
+        "label": "Encryption",
+        "value": "Encryption"
+      },
+      {
+        "label": "Salting",
+        "value": "Salting"
       }
     ],
     "correctAnswer": "Hashing",
@@ -11393,7 +11393,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Encoding is the answer to the following question - What transforms data into a fixed-size string of characters that cannot be reversed.",
+    "label": "True or False: Hashing transforms data into a fixed-size string of characters that cannot be reversed.",
     "options": [
       {
         "label": "True",
@@ -11404,8 +11404,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Hashing.",
+    "correctAnswer": "true",
+    "explanation": "Yes, Hashing is correct.",
     "marks": 2
   },
   {
@@ -11414,7 +11414,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What transforms data into a fixed-size string of characters that cannot be reversed?",
+    "label": "Answer the following concisely: What transforms data into a fixed-size string of characters that cannot be reversed?",
     "correctAnswer": "Hashing",
     "explanation": "The correct term is Hashing.",
     "marks": 2
@@ -11428,12 +11428,12 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is added to a password before hashing to defend against dictionary attacks?",
     "options": [
       {
-        "label": "Key",
-        "value": "Key"
-      },
-      {
         "label": "Pepper",
         "value": "Pepper"
+      },
+      {
+        "label": "Key",
+        "value": "Key"
       },
       {
         "label": "Salt",
@@ -11454,7 +11454,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Salt is the correct term for: What is added to a password before hashing to defend against dictionary attacks.",
+    "label": "True or False: A Salt is added to a password before hashing to defend against dictionary attacks.",
     "options": [
       {
         "label": "True",
@@ -11475,7 +11475,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "text",
-    "label": "Answer the following concisely: What is added to a password before hashing to defend against dictionary attacks?",
+    "label": "Provide the exact term: What is added to a password before hashing to defend against dictionary attacks?",
     "correctAnswer": "Salt",
     "explanation": "The correct term is Salt.",
     "marks": 2
@@ -11489,20 +11489,20 @@ export const questionBank: BankQuestion[] = [
     "label": "What attack intercepts communication between two parties without their knowledge?",
     "options": [
       {
-        "label": "Man-in-the-Middle",
-        "value": "Man-in-the-Middle"
+        "label": "Phishing",
+        "value": "Phishing"
       },
       {
         "label": "Eavesdropping",
         "value": "Eavesdropping"
       },
       {
-        "label": "Spoofing",
-        "value": "Spoofing"
+        "label": "Man-in-the-Middle",
+        "value": "Man-in-the-Middle"
       },
       {
-        "label": "Phishing",
-        "value": "Phishing"
+        "label": "Spoofing",
+        "value": "Spoofing"
       }
     ],
     "correctAnswer": "Man-in-the-Middle",
@@ -11515,7 +11515,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "medium",
     "type": "radio",
-    "label": "Is the following statement true or false? Spoofing is the correct term for: What attack intercepts communication between two parties without their knowledge.",
+    "label": "True or False: An attack that intercepts communication between two parties without their knowledge is a Spoofing attack.",
     "options": [
       {
         "label": "True",
@@ -11550,20 +11550,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Consider the following: What type of encryption uses the same key for both encryption and decryption?",
     "options": [
       {
-        "label": "Public Key Cryptography",
-        "value": "Public Key Cryptography"
-      },
-      {
         "label": "Asymmetric Encryption",
         "value": "Asymmetric Encryption"
+      },
+      {
+        "label": "Hashing",
+        "value": "Hashing"
       },
       {
         "label": "Symmetric Encryption",
         "value": "Symmetric Encryption"
       },
       {
-        "label": "Hashing",
-        "value": "Hashing"
+        "label": "Public Key Cryptography",
+        "value": "Public Key Cryptography"
       }
     ],
     "correctAnswer": "Symmetric Encryption",
@@ -11576,7 +11576,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "radio",
-    "label": "True or False: Hashing is the answer to the following question - What type of encryption uses the same key for both encryption and decryption.",
+    "label": "True or False: Public Key Cryptography uses the same key for both encryption and decryption.",
     "options": [
       {
         "label": "True",
@@ -11597,7 +11597,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "medium",
     "type": "text",
-    "label": "Provide the exact term: What type of encryption uses the same key for both encryption and decryption?",
+    "label": "What type of encryption uses the same key for both encryption and decryption?",
     "correctAnswer": "Symmetric Encryption",
     "explanation": "The correct term is Symmetric Encryption.",
     "marks": 2
@@ -11611,20 +11611,20 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What vulnerability allows an attacker to inject malicious code into database queries?",
     "options": [
       {
-        "label": "Cross-Site Request Forgery (CSRF)",
-        "value": "Cross-Site Request Forgery (CSRF)"
+        "label": "Cross-Site Scripting (XSS)",
+        "value": "Cross-Site Scripting (XSS)"
       },
       {
         "label": "SQL Injection",
         "value": "SQL Injection"
       },
       {
-        "label": "Cross-Site Scripting (XSS)",
-        "value": "Cross-Site Scripting (XSS)"
-      },
-      {
         "label": "Buffer Overflow",
         "value": "Buffer Overflow"
+      },
+      {
+        "label": "Cross-Site Request Forgery (CSRF)",
+        "value": "Cross-Site Request Forgery (CSRF)"
       }
     ],
     "correctAnswer": "SQL Injection",
@@ -11637,7 +11637,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Is the following statement true or false? SQL Injection is the correct term for: What vulnerability allows an attacker to inject malicious code into database queries.",
+    "label": "True or False: A vulnerability that allows an attacker to inject malicious code into database queries is Cross-Site Request Forgery (CSRF).",
     "options": [
       {
         "label": "True",
@@ -11648,8 +11648,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, SQL Injection is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is SQL Injection.",
     "marks": 3
   },
   {
@@ -11658,7 +11658,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "text",
-    "label": "What vulnerability allows an attacker to inject malicious code into database queries?",
+    "label": "Provide the exact term: What vulnerability allows an attacker to inject malicious code into database queries?",
     "correctAnswer": "SQL Injection",
     "explanation": "The correct term is SQL Injection.",
     "marks": 3
@@ -11672,16 +11672,16 @@ export const questionBank: BankQuestion[] = [
     "label": "What attack exploits a previously unknown vulnerability before a patch is available?",
     "options": [
       {
-        "label": "Zero-Day Exploit",
-        "value": "Zero-Day Exploit"
-      },
-      {
         "label": "Ransomware",
         "value": "Ransomware"
       },
       {
         "label": "Rootkit",
         "value": "Rootkit"
+      },
+      {
+        "label": "Zero-Day Exploit",
+        "value": "Zero-Day Exploit"
       },
       {
         "label": "Trojan Horse",
@@ -11698,7 +11698,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True or False: Zero-Day Exploit is the answer to the following question - What attack exploits a previously unknown vulnerability before a patch is available.",
+    "label": "True or False: An attack that exploits a previously unknown vulnerability before a patch is available is a Zero-Day Exploit.",
     "options": [
       {
         "label": "True",
@@ -11719,7 +11719,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "text",
-    "label": "What attack exploits a previously unknown vulnerability before a patch is available?",
+    "label": "Answer the following concisely: What attack exploits a previously unknown vulnerability before a patch is available?",
     "correctAnswer": "Zero-Day Exploit",
     "explanation": "The correct term is Zero-Day Exploit.",
     "marks": 3
@@ -11730,12 +11730,8 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What type of encryption uses a public key for encryption and a private key for decryption?",
+    "label": "Which of these best answers the following? What type of encryption uses a public key for encryption and a private key for decryption?",
     "options": [
-      {
-        "label": "Symmetric Encryption",
-        "value": "Symmetric Encryption"
-      },
       {
         "label": "Stream Cipher",
         "value": "Stream Cipher"
@@ -11747,6 +11743,10 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "Asymmetric Encryption",
         "value": "Asymmetric Encryption"
+      },
+      {
+        "label": "Symmetric Encryption",
+        "value": "Symmetric Encryption"
       }
     ],
     "correctAnswer": "Asymmetric Encryption",
@@ -11759,7 +11759,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What type of encryption uses a public key for encryption and a private key for decryption.', the correct answer is Asymmetric Encryption.",
+    "label": "True or False: Asymmetric Encryption uses a public key for encryption and a private key for decryption.",
     "options": [
       {
         "label": "True",
@@ -11780,7 +11780,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Cryptography",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What type of encryption uses a public key for encryption and a private key for decryption?",
+    "label": "What type of encryption uses a public key for encryption and a private key for decryption?",
     "correctAnswer": "Asymmetric Encryption",
     "explanation": "The correct term is Asymmetric Encryption.",
     "marks": 3
@@ -11791,11 +11791,15 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "radio",
-    "label": "Consider the following: What vulnerability allows attackers to inject malicious scripts into web pages viewed by other users?",
+    "label": "Which of these best answers the following? What vulnerability allows attackers to inject malicious scripts into web pages viewed by other users?",
     "options": [
       {
         "label": "Cross-Site Scripting (XSS)",
         "value": "Cross-Site Scripting (XSS)"
+      },
+      {
+        "label": "CSRF",
+        "value": "CSRF"
       },
       {
         "label": "Clickjacking",
@@ -11804,10 +11808,6 @@ export const questionBank: BankQuestion[] = [
       {
         "label": "SQL Injection",
         "value": "SQL Injection"
-      },
-      {
-        "label": "CSRF",
-        "value": "CSRF"
       }
     ],
     "correctAnswer": "Cross-Site Scripting (XSS)",
@@ -11820,7 +11820,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Attacks",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What vulnerability allows attackers to inject malicious scripts into web pages viewed by other users.', the correct answer is SQL Injection.",
+    "label": "True or False: A vulnerability allowing attackers to inject malicious scripts into web pages viewed by other users is Cross-Site Scripting (XSS).",
     "options": [
       {
         "label": "True",
@@ -11831,8 +11831,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "false",
-    "explanation": "No, the correct answer is Cross-Site Scripting (XSS).",
+    "correctAnswer": "true",
+    "explanation": "Yes, Cross-Site Scripting (XSS) is correct.",
     "marks": 3
   },
   {
@@ -11855,16 +11855,16 @@ export const questionBank: BankQuestion[] = [
     "label": "Which of these best answers the following? What is the authorized simulated cyberattack performed to evaluate system security?",
     "options": [
       {
-        "label": "Vulnerability Scanning",
-        "value": "Vulnerability Scanning"
-      },
-      {
         "label": "Penetration Testing",
         "value": "Penetration Testing"
       },
       {
         "label": "Risk Assessment",
         "value": "Risk Assessment"
+      },
+      {
+        "label": "Vulnerability Scanning",
+        "value": "Vulnerability Scanning"
       },
       {
         "label": "Threat Modeling",
@@ -11881,7 +11881,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Testing",
     "difficulty": "hard",
     "type": "radio",
-    "label": "True/False: When asked 'What is the authorized simulated cyberattack performed to evaluate system security.', the correct answer is Penetration Testing.",
+    "label": "True or False: The authorized simulated cyberattack performed to evaluate system security is called Vulnerability Scanning.",
     "options": [
       {
         "label": "True",
@@ -11892,8 +11892,8 @@ export const questionBank: BankQuestion[] = [
         "value": "false"
       }
     ],
-    "correctAnswer": "true",
-    "explanation": "Yes, Penetration Testing is correct.",
+    "correctAnswer": "false",
+    "explanation": "No, the correct answer is Penetration Testing.",
     "marks": 3
   },
   {
@@ -11902,7 +11902,7 @@ export const questionBank: BankQuestion[] = [
     "topic": "Testing",
     "difficulty": "hard",
     "type": "text",
-    "label": "Provide the exact term: What is the authorized simulated cyberattack performed to evaluate system security?",
+    "label": "Answer the following concisely: What is the authorized simulated cyberattack performed to evaluate system security?",
     "correctAnswer": "Penetration Testing",
     "explanation": "The correct term is Penetration Testing.",
     "marks": 3
