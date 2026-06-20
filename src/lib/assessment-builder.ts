@@ -87,70 +87,25 @@ export function buildCuratedAssessment(
       warning = `Requested ${questionCount} questions, but only ${subjectPool.length} unique questions were available for ${capitalize(normSubject)}.`;
     }
   } else {
-    // We have enough total questions, but we need to gather them based on criteria
-    // Set to keep track of selected question labels to ensure uniqueness
-    const selectedLabels = new Set<string>();
-
-    // Pass 1: exact type and requested difficulty
-    const targetDifficulties = normDifficulty === "mixed" ? ["easy", "medium", "hard"] : [normDifficulty];
-    
-    // Shuffle pool to ensure random selection of exact matches
+    // We have enough total questions, but we need to strictly filter them based on criteria
     const shuffledPool = [...subjectPool].sort(() => Math.random() - 0.5);
-
-    // Try to fill with exact matches first
-    for (const diff of targetDifficulties) {
-      for (const q of shuffledPool) {
-        if (q.difficulty === diff && matchesType(q, normType)) {
-          if (finalSelected.length < questionCount && !selectedLabels.has(q.label)) {
-            finalSelected.push(q);
-            selectedLabels.add(q.label);
-          }
-        }
+    const selectedLabels = new Set<string>();
+    
+    // Strict Filtering: Only accept questions that EXACTLY match requested difficulty and type
+    for (const q of shuffledPool) {
+      if (finalSelected.length >= questionCount) break;
+      
+      const difficultyMatch = normDifficulty === "mixed" || q.difficulty === normDifficulty;
+      const typeMatch = matchesType(q, normType);
+      
+      if (difficultyMatch && typeMatch && !selectedLabels.has(q.label)) {
+        finalSelected.push(q);
+        selectedLabels.add(q.label);
       }
     }
 
-    // Pass 2: Expand difficulty levels keeping type match
-    if (finalSelected.length < questionCount && normDifficulty !== "mixed") {
-      for (const diff of difficultyOrder) {
-        if (diff === normDifficulty) continue; // already checked
-        for (const q of shuffledPool) {
-          if (q.difficulty === diff && matchesType(q, normType)) {
-            if (finalSelected.length < questionCount && !selectedLabels.has(q.label)) {
-              finalSelected.push(q);
-              selectedLabels.add(q.label);
-            }
-          }
-        }
-      }
-    }
-
-    // Pass 3: Expand question types keeping requested difficulty
-    if (finalSelected.length < questionCount && normType !== "mixed") {
-      const targetDiffs = normDifficulty === "mixed" ? ["easy", "medium", "hard"] : [normDifficulty];
-      for (const diff of targetDiffs) {
-        for (const q of shuffledPool) {
-          if (q.difficulty === diff && !matchesType(q, normType)) {
-            if (finalSelected.length < questionCount && !selectedLabels.has(q.label)) {
-              finalSelected.push(q);
-              selectedLabels.add(q.label);
-            }
-          }
-        }
-      }
-    }
-
-    // Pass 4: Expand both difficulty and type to collect any remaining unique questions
     if (finalSelected.length < questionCount) {
-      for (const diff of difficultyOrder) {
-        for (const q of shuffledPool) {
-          if (!selectedLabels.has(q.label)) {
-            if (finalSelected.length < questionCount) {
-              finalSelected.push(q);
-              selectedLabels.add(q.label);
-            }
-          }
-        }
-      }
+      warning = `Requested ${questionCount} questions for ${capitalize(normSubject)} with difficulty "${normDifficulty}" and type "${normType}", but only found ${finalSelected.length} exact matches. Showing available matches.`;
     }
   }
 
