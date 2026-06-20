@@ -58,6 +58,9 @@ function DashboardContent() {
   // Actions dropdown states
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
   
+  // Analytics
+  const [showConversionModal, setShowConversionModal] = useState(false);
+  
   // Bulk Actions states
   const [selectedFormIds, setSelectedFormIds] = useState<string[]>([]);
 
@@ -394,8 +397,8 @@ function DashboardContent() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="glass p-5 rounded-xl border border-border relative overflow-hidden cursor-help hover:border-primary/50 transition-colors group"
-            onClick={() => toast("Conversion Rate = (Total Submissions ÷ Total Views) × 100", { icon: "📊" })}
+            className="glass p-5 rounded-xl border border-border relative overflow-hidden cursor-pointer hover:border-primary/50 transition-colors group"
+            onClick={() => setShowConversionModal(true)}
           >
             <div className="flex justify-between items-start">
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
@@ -795,6 +798,72 @@ function DashboardContent() {
                 </button>
               </div>
             </form>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Conversion Rate Modal */}
+      {showConversionModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setShowConversionModal(false)} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="w-full max-w-lg glass border border-border rounded-2xl shadow-2xl p-6 relative bg-background/95 max-h-[80vh] flex flex-col"
+          >
+            <div className="flex justify-between items-center pb-4 border-b border-border shrink-0">
+              <h3 className="font-extrabold text-lg text-foreground flex items-center gap-2">
+                <BarChart2 className="h-5 w-5 text-indigo-500" />
+                <span>Conversion Analytics</span>
+              </h3>
+              <button onClick={() => setShowConversionModal(false)} className="text-muted-foreground hover:text-foreground text-sm font-semibold">✕</button>
+            </div>
+
+            <div className="py-4 space-y-4 overflow-y-auto custom-scrollbar flex-1">
+              <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-xl p-4 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold text-indigo-500 uppercase tracking-wider">Overall Rate</p>
+                  <p className="text-2xl font-extrabold text-foreground mt-1">{stats?.conversionRate || 0}%</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-muted-foreground font-medium">Formula</p>
+                  <p className="text-[10px] sm:text-xs font-mono font-bold text-foreground mt-1 opacity-80">(Total Submissions ÷ Total Views) × 100</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Per Form Breakdown</h4>
+                {forms.length === 0 ? (
+                  <p className="text-sm text-muted-foreground text-center py-4">No forms available to analyze.</p>
+                ) : (
+                  <div className="space-y-2">
+                    {forms.map(form => {
+                      const views = form.views || 0;
+                      const responses = form.responses || 0;
+                      const rate = views > 0 ? Math.round((responses / views) * 100) : 0;
+                      return (
+                        <div key={form._id} className="flex items-center justify-between p-3 rounded-lg border border-border bg-muted/20 hover:bg-muted/40 transition">
+                          <div className="min-w-0 pr-4">
+                            <p className="text-sm font-bold text-foreground truncate">{form.title}</p>
+                            <p className="text-[10px] text-muted-foreground mt-1">{views} Views · {responses} Submissions</p>
+                          </div>
+                          <div className="shrink-0 text-right">
+                            <span className={`inline-flex items-center justify-center min-w-[3rem] px-2 py-1 rounded-md text-xs font-bold ${
+                              rate >= 50 ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400" :
+                              rate >= 20 ? "bg-amber-500/15 text-amber-600 dark:text-amber-400" :
+                              "bg-red-500/15 text-red-600 dark:text-red-400"
+                            }`}>
+                              {rate}%
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            </div>
           </motion.div>
         </div>
       )}
