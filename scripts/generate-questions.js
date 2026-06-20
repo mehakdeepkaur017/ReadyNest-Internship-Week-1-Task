@@ -153,9 +153,16 @@ const csConcepts = [
   "Algorithm", "Variable", "Loop", "Function", "Class", "Object", "Array", "Pointer", "Recursion", "Inheritance",
   "Polymorphism", "Encapsulation", "Abstraction", "Interface", "Database", "Network", "Protocol", "Compiler", "Interpreter", "OS",
   "Thread", "Process", "Deadlock", "Semaphore", "Mutex", "Cache", "Memory", "Storage", "CPU", "GPU",
-  "API", "Framework", "Library", "IDE", "Version Control", "Git", "Repository", "Commit", "Merge", "Branch",
-  "HTML", "CSS", "JavaScript", "TypeScript", "Python", "Java", "C++", "C#", "Ruby", "PHP"
+  "API", "Framework", "Library", "IDE", "Version Control", "Git", "Repository", "Commit", "Merge", "Branch"
 ];
+
+const dbmsConcepts = ["SQL", "NoSQL", "Normalization", "Index", "Primary Key", "Foreign Key", "Transaction", "ACID", "Join", "Query", "Table", "View", "Schema", "Trigger", "Stored Procedure", "RDBMS", "B-Tree", "Concurrency", "Locking", "Deadlock"];
+const javaConcepts = ["JVM", "JRE", "JDK", "Garbage Collection", "Bytecode", "Multithreading", "Spring Boot", "Maven", "Gradle", "Exception Handling", "Interface", "Abstract Class", "POJO", "Servlet", "JSP", "JDBC", "Hibernate", "JPA", "Stream API", "Lambda"];
+const pythonConcepts = ["List Comprehension", "Decorator", "Generator", "GIL", "Duck Typing", "Pandas", "NumPy", "Django", "Flask", "Tuple", "Dictionary", "Set", "Indentation", "pip", "virtualenv", "lambda", "yield", "self", "__init__", "pass"];
+const dsConcepts = ["Linked List", "Stack", "Queue", "Binary Tree", "Binary Search Tree", "Heap", "Hash Table", "Graph", "Trie", "Array", "Matrix", "Adjacency List", "Adjacency Matrix", "Depth First Search", "Breadth First Search", "Dijkstra", "Bellman-Ford", "Kruskal", "Prim", "AVL Tree"];
+const osConcepts = ["Kernel", "Process", "Thread", "Virtual Memory", "Paging", "Segmentation", "Scheduler", "Deadlock", "Semaphore", "Mutex", "Interrupt", "System Call", "File System", "Inode", "Bootloader", "Shell", "Context Switch", "Thrashing", "Page Fault", "Swapping"];
+const cnConcepts = ["OSI Model", "TCP/IP", "Router", "Switch", "Hub", "Subnet Mask", "IP Address", "MAC Address", "DNS", "DHCP", "HTTP", "HTTPS", "FTP", "SMTP", "POP3", "IMAP", "Port", "Socket", "Packet", "Latency"];
+const securityConcepts = ["Encryption", "Decryption", "Cryptography", "Public Key", "Private Key", "Hash", "Salt", "Firewall", "VPN", "Malware", "Virus", "Trojan", "Phishing", "DDoS", "Man-in-the-Middle", "SQL Injection", "XSS", "CSRF", "Zero-day", "Penetration"];
 
 // Generates ~40 questions of each Type/Difficulty for non-math subjects
 const subjectsInfo = [
@@ -166,13 +173,13 @@ const subjectsInfo = [
   { id: "english", data: englishWords, prop1: "w", prop2: "s", type: "Word", topic: "Vocabulary" },
   { id: "history", data: historyEvents, prop1: "y", prop2: "e", type: "Year", topic: "Events" },
   { id: "computer science", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "dbms", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "java", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "python", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "data structures", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "operating systems", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "computer networks", data: csConcepts, isArray: true, topic: "Concepts" },
-  { id: "cyber security", data: csConcepts, isArray: true, topic: "Concepts" }
+  { id: "dbms", data: dbmsConcepts, isArray: true, topic: "Concepts" },
+  { id: "java", data: javaConcepts, isArray: true, topic: "Concepts" },
+  { id: "python", data: pythonConcepts, isArray: true, topic: "Concepts" },
+  { id: "data structures", data: dsConcepts, isArray: true, topic: "Concepts" },
+  { id: "operating systems", data: osConcepts, isArray: true, topic: "Concepts" },
+  { id: "computer networks", data: cnConcepts, isArray: true, topic: "Concepts" },
+  { id: "cyber security", data: securityConcepts, isArray: true, topic: "Concepts" }
 ];
 
 function generatePool(subject, topic, baseLabel, answer, falseAnswers, type, diff) {
