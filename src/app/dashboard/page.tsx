@@ -394,14 +394,18 @@ function DashboardContent() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="glass p-5 rounded-xl border border-border relative overflow-hidden"
+            className="glass p-5 rounded-xl border border-border relative overflow-hidden cursor-help hover:border-primary/50 transition-colors group"
+            onClick={() => toast("Conversion Rate = (Total Submissions ÷ Total Views) × 100", { icon: "📊" })}
           >
             <div className="flex justify-between items-start">
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Conversion Rate</span>
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
+                Conversion Rate
+                <AlertCircle className="h-3.5 w-3.5 opacity-50 group-hover:text-primary group-hover:opacity-100 transition-all" />
+              </span>
               <BarChart2 className="h-5 w-5 text-indigo-500" />
             </div>
             <p className="text-3xl font-extrabold mt-2 text-foreground">{stats?.conversionRate || 0}%</p>
-            <p className="text-xs text-muted-foreground mt-1">Submissions per total view count</p>
+            <p className="text-xs text-muted-foreground mt-1 group-hover:text-foreground transition-colors">Click to see formula</p>
           </motion.div>
 
           <motion.div 
