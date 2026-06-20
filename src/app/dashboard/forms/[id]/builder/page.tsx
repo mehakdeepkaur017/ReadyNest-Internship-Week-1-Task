@@ -20,6 +20,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { Form, FormField, FieldType, FormStatus } from "@/lib/types";
 import { getBuilderContext, BuilderContext } from "@/lib/contextBuilder";
+import { questionBank } from "@/lib/question-bank";
 
 // Standard preset fields to add
 const FIELD_PRESETS: { type: FieldType; label: string; icon: string }[] = [
@@ -124,6 +125,15 @@ export default function FormBuilderPage() {
     redirectUrl: ""
   });
 
+  // Smart Builder States
+  const [showBuilderModal, setShowBuilderModal] = useState(false);
+  const [buildingAssessment, setBuildingAssessment] = useState(false);
+  const [builderSubject, setBuilderSubject] = useState("mathematics");
+  const [builderDifficulty, setBuilderDifficulty] = useState("mixed");
+  const [builderType, setBuilderType] = useState("mixed");
+  const [builderCount, setBuilderCount] = useState<number>(10);
+  const [builderAction, setBuilderAction] = useState<"append" | "replace">("replace");
+
   // Load Form detail
   useEffect(() => {
     const fetchForm = async () => {
@@ -220,6 +230,51 @@ export default function FormBuilderPage() {
       toast.error("Failed to save changes");
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handleSmartBuild = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBuildingAssessment(true);
+    try {
+      const { buildCuratedAssessment } = await import("@/lib/assessment-builder");
+      const result = buildCuratedAssessment(
+        builderSubject,
+        builderDifficulty,
+        builderType,
+        builderCount
+      );
+
+      if (result.warning) {
+        toast(result.warning, {
+          icon: "⚠️",
+          duration: 6000
+        });
+      }
+
+      if (builderAction === "replace") {
+        setFields(result.fields);
+      } else {
+        const appendedFields = [...fields, ...result.fields].map((f, i) => ({ ...f, order: i }));
+        setFields(appendedFields);
+      }
+
+      setIsQuizMode(true);
+      setQuizSettings(result.quizSettings);
+      
+      setCandidateInfoSettings((prev: any) => ({
+        ...prev,
+        name: { enabled: true, required: true, label: "Name" },
+        class: { enabled: true, required: true, label: "Class" },
+        rollNumber: { enabled: true, required: true, label: "Roll Number" }
+      }));
+
+      toast.success("Questions generated successfully!");
+      setShowBuilderModal(false);
+    } catch (err) {
+      toast.error("Failed to generate questions");
+    } finally {
+      setBuildingAssessment(false);
     }
   };
 
@@ -344,6 +399,15 @@ export default function FormBuilderPage() {
           >
             <Sparkles className="h-3.5 w-3.5" />
             <span>{isQuizMode ? "Quiz Mode: ON" : "Quiz Mode: OFF"}</span>
+          </button>
+
+          {/* Smart Build Button */}
+          <button
+            onClick={() => setShowBuilderModal(true)}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1.5 cursor-pointer transition bg-purple-500/10 text-purple-600 dark:text-purple-400 hover:bg-purple-500/20 border border-purple-500/20"
+          >
+            <Sparkles className="h-3.5 w-3.5 fill-purple-500/20" />
+            <span>Smart Build</span>
           </button>
 
           {/* Save Status Toggle */}

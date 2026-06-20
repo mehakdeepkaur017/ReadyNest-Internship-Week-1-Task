@@ -78,35 +78,26 @@ export function buildCuratedAssessment(
     return true;
   };
 
-  // If pool has less than or equal to requested, return all unique ones
-  if (subjectPool.length === 0) {
-    warning = `No questions are available in the question bank for ${capitalize(normSubject)}.`;
-  } else if (subjectPool.length <= questionCount) {
-    finalSelected = [...subjectPool];
-    if (subjectPool.length < questionCount) {
-      warning = `Requested ${questionCount} questions, but only ${subjectPool.length} unique questions were available for ${capitalize(normSubject)}.`;
-    }
-  } else {
-    // We have enough total questions, but we need to strictly filter them based on criteria
-    const shuffledPool = [...subjectPool].sort(() => Math.random() - 0.5);
-    const selectedIds = new Set<string>();
-    
-    // Strict Filtering: Only accept questions that EXACTLY match requested difficulty and type
-    for (const q of shuffledPool) {
-      if (finalSelected.length >= questionCount) break;
-      
-      const difficultyMatch = normDifficulty === "mixed" || q.difficulty === normDifficulty;
-      const typeMatch = matchesType(q, normType);
-      
-      if (difficultyMatch && typeMatch && !selectedIds.has(q.id || q.label)) {
-        finalSelected.push(q);
-        selectedIds.add(q.id || q.label);
-      }
-    }
+  // Strictly filter the entire pool based on criteria
+  const shuffledPool = [...subjectPool].sort(() => Math.random() - 0.5);
+  const selectedLabels = new Set<string>();
 
-    if (finalSelected.length < questionCount) {
-      warning = `Requested ${questionCount} questions for ${capitalize(normSubject)} with difficulty "${normDifficulty}" and type "${normType}", but only found ${finalSelected.length} exact matches. Showing available matches.`;
+  for (const q of shuffledPool) {
+    if (finalSelected.length >= questionCount) break;
+    
+    const difficultyMatch = normDifficulty === "mixed" || q.difficulty === normDifficulty;
+    const typeMatch = matchesType(q, normType);
+    
+    if (difficultyMatch && typeMatch && !selectedLabels.has(q.label)) {
+      finalSelected.push(q);
+      selectedLabels.add(q.label);
     }
+  }
+
+  if (finalSelected.length === 0) {
+    warning = `No questions found for ${capitalize(normSubject)} matching difficulty "${normDifficulty}" and type "${normType}".`;
+  } else if (finalSelected.length < questionCount) {
+    warning = `Requested ${questionCount} questions for ${capitalize(normSubject)}, but only found ${finalSelected.length} matching your exact criteria. You can add more manually.`;
   }
 
   // Shuffle final list
