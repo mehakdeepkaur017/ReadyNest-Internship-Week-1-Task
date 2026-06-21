@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { 
   Save, Trash2, Copy, ToggleLeft, ToggleRight,
   Settings, GripVertical, PlusCircle, MinusCircle, FileText, Sparkles, LayoutGrid,
-  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock, Share2
+  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock, Share2, Download
 } from "lucide-react";
 import { 
   DndContext, closestCenter, KeyboardSensor, PointerSensor, 
@@ -21,6 +21,7 @@ import { toast } from "react-hot-toast";
 import { Form, FormField, FieldType, FormStatus } from "@/lib/types";
 import { getBuilderContext, BuilderContext } from "@/lib/contextBuilder";
 import { questionBank } from "@/lib/question-bank";
+import QRCode from "qrcode";
 
 // Standard preset fields to add
 const FIELD_PRESETS: { type: FieldType; label: string; icon: string }[] = [
@@ -128,6 +129,10 @@ export default function FormBuilderPage() {
   // Smart Builder States
   const [showBuilderModal, setShowBuilderModal] = useState(false);
   const [buildingAssessment, setBuildingAssessment] = useState(false);
+  
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [qrUrl, setQrUrl] = useState("");
+
   const [builderSubject, setBuilderSubject] = useState("mathematics");
   const [builderDifficulty, setBuilderDifficulty] = useState("mixed");
   const [builderType, setBuilderType] = useState("mixed");
@@ -278,12 +283,20 @@ export default function FormBuilderPage() {
     }
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     if (!form?.slug) return;
-    const url = `${window.location.origin}/form/${form.slug}`;
-    navigator.clipboard.writeText(url)
-      .then(() => toast.success("Form link copied to clipboard!"))
-      .catch(() => toast.error("Failed to copy link"));
+    const publicUrl = `${window.location.origin}/form/${form.slug}`;
+    try {
+      const qrCodeDataUrl = await QRCode.toDataURL(publicUrl, { width: 300, margin: 2 });
+      setQrUrl(qrCodeDataUrl);
+      setShowShareModal(true);
+    } catch (err) {
+      toast.error("Failed to generate QR Code");
+    }
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => toast.success("Form link copied to clipboard!"));
   };
 
   const addField = (type: FieldType) => {
@@ -1466,6 +1479,63 @@ function Accordion({ title, icon: Icon, id, expanded, onToggle, children }: any)
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Share / QR Modal */}
+      {showShareModal && form && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setShowShareModal(false)} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="w-full max-w-sm glass border border-border rounded-2xl shadow-2xl p-6 relative bg-background/95 text-center space-y-4"
+          >
+            <h3 className="font-bold text-lg text-foreground truncate">{form.title}</h3>
+            
+            <div className="space-y-4 animate-in fade-in duration-200 mt-2">
+              <p className="text-xs text-muted-foreground">Scan or copy the link to share the public form.</p>
+              {qrUrl && (
+                <div className="bg-white p-4 rounded-xl inline-block mx-auto border border-border">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={qrUrl} alt="QR Code" className="h-44 w-44" />
+                </div>
+              )}
+
+              <div className="flex items-center bg-muted/50 rounded-lg p-2 gap-2 border border-border">
+                <input
+                  type="text"
+                  readOnly
+                  value={`${window.location.origin}/form/${form.slug}`}
+                  className="flex-1 text-[11px] bg-transparent text-foreground focus:outline-none truncate px-1"
+                />
+                <button
+                  onClick={() => copyToClipboard(`${window.location.origin}/form/${form.slug}`)}
+                  className="px-2.5 py-1 bg-primary text-primary-foreground text-[10px] font-semibold rounded hover:glow-hover transition cursor-pointer"
+                >
+                  Copy
+                </button>
+              </div>
+
+              <div className="flex gap-2">
+                <a
+                  href={qrUrl}
+                  download={`${form.slug}-qrcode.png`}
+                  className="flex-1 flex items-center justify-center space-x-1.5 border border-border hover:bg-muted py-2 rounded-lg text-xs font-semibold text-foreground cursor-pointer transition"
+                >
+                  <Download className="h-4 w-4" />
+                  <span>Download QR</span>
+                </a>
+                <button
+                  onClick={() => setShowShareModal(false)}
+                  className="flex-1 bg-muted border border-border hover:bg-muted/70 py-2 rounded-lg text-xs font-semibold text-foreground cursor-pointer transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
