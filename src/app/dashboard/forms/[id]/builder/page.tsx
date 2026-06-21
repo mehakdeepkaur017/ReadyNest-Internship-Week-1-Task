@@ -610,6 +610,66 @@ export default function FormBuilderPage() {
                                   className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary"
                                 />
                               </div>
+
+                              <div>
+                                <label className="block font-bold text-muted-foreground uppercase tracking-wider text-[10px]">Correct Answer(s)</label>
+                                {["radio", "dropdown"].includes(field.type) ? (
+                                  <select
+                                    value={field.correctAnswer || ""}
+                                    onChange={(e) => updateFieldProperty(field.id, "correctAnswer", e.target.value)}
+                                    className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary"
+                                  >
+                                    <option value="">Select Correct Option...</option>
+                                    {(field.options || []).map((opt) => (
+                                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                                    ))}
+                                  </select>
+                                ) : field.type === "checkbox" ? (
+                                  <div className="mt-1.5 space-y-1.5">
+                                    {(field.options || []).map((opt) => {
+                                      const isChecked = Array.isArray(field.correctAnswer) && field.correctAnswer.includes(opt.value);
+                                      return (
+                                        <label key={opt.value} className="flex items-center space-x-2 text-xs">
+                                          <input 
+                                            type="checkbox"
+                                            checked={isChecked}
+                                            onChange={(e) => {
+                                              const current = Array.isArray(field.correctAnswer) ? [...field.correctAnswer] : [];
+                                              if (e.target.checked) current.push(opt.value);
+                                              else {
+                                                const idx = current.indexOf(opt.value);
+                                                if (idx > -1) current.splice(idx, 1);
+                                              }
+                                              updateFieldProperty(field.id, "correctAnswer", current);
+                                            }}
+                                            className="rounded border-border text-primary focus:ring-primary"
+                                          />
+                                          <span>{opt.label}</span>
+                                        </label>
+                                      );
+                                    })}
+                                  </div>
+                                ) : (
+                                  <input
+                                    type="text"
+                                    value={field.correctAnswer || ""}
+                                    onChange={(e) => updateFieldProperty(field.id, "correctAnswer", e.target.value)}
+                                    placeholder="Enter acceptable answer (exact match)"
+                                    className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary"
+                                  />
+                                )}
+                              </div>
+
+                              <div>
+                                <label className="block font-bold text-muted-foreground uppercase tracking-wider text-[10px]">Explanation (Optional)</label>
+                                <textarea
+                                  value={field.explanation || ""}
+                                  onChange={(e) => updateFieldProperty(field.id, "explanation", e.target.value)}
+                                  placeholder="Explain why this is the correct answer..."
+                                  rows={2}
+                                  className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary custom-scrollbar"
+                                />
+                              </div>
                             </div>
                           )}
                         </div>
