@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { LayoutDashboard, FileText, Settings, User as UserIcon, LogOut, ChevronRight, Menu, X, Sparkles, BarChart2 } from "lucide-react";
+import { LayoutDashboard, FileText, Settings, User as UserIcon, LogOut, ChevronRight, Menu, X, Sparkles, BarChart2, ArrowLeft, MessageSquare, LayoutGrid } from "lucide-react";
 import { useState, useEffect } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 import CommandMenu from "@/components/CommandMenu";
@@ -27,12 +27,24 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     };
   }, []);
 
-  const navigation = [
+  const isFormPage = pathname.match(/\/dashboard\/forms\/([a-zA-Z0-9-]+)\/(builder|responses|analytics)/);
+  const formId = isFormPage ? isFormPage[1] : null;
+
+  const globalNavigation = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { name: "Templates", href: "/dashboard/templates", icon: Sparkles },
     { name: "Profile", href: "/dashboard/profile", icon: UserIcon },
     { name: "Settings", href: "/dashboard/settings", icon: Settings },
   ];
+
+  const formNavigation = formId ? [
+    { name: "← Back to Dashboard", href: "/dashboard", icon: ArrowLeft },
+    { name: "Builder", href: `/dashboard/forms/${formId}/builder`, icon: LayoutGrid },
+    { name: "Responses", href: `/dashboard/forms/${formId}/responses`, icon: MessageSquare },
+    { name: "Analytics", href: `/dashboard/forms/${formId}/analytics`, icon: BarChart2 },
+  ] : [];
+
+  const navigation = isFormPage ? formNavigation : globalNavigation;
 
   const handleLogout = async () => {
     await signOut({ redirect: false });
