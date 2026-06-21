@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { 
   Save, Trash2, Copy, ToggleLeft, ToggleRight,
   Settings, GripVertical, PlusCircle, MinusCircle, FileText, Sparkles, LayoutGrid,
-  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock
+  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock, Share2
 } from "lucide-react";
 import { 
   DndContext, closestCenter, KeyboardSensor, PointerSensor, 
@@ -278,6 +278,14 @@ export default function FormBuilderPage() {
     }
   };
 
+  const handleShare = () => {
+    if (!form?.slug) return;
+    const url = `${window.location.origin}/form/${form.slug}`;
+    navigator.clipboard.writeText(url)
+      .then(() => toast.success("Form link copied to clipboard!"))
+      .catch(() => toast.error("Failed to copy link"));
+  };
+
   const addField = (type: FieldType) => {
     const newField: FormField = {
       id: crypto.randomUUID ? crypto.randomUUID() : `field_${Date.now()}`,
@@ -408,6 +416,16 @@ export default function FormBuilderPage() {
           >
             <Sparkles className="h-3.5 w-3.5 fill-purple-500/20" />
             <span>Smart Build</span>
+          </button>
+
+          {/* Share Button */}
+          <button
+            onClick={handleShare}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1.5 cursor-pointer transition bg-blue-500/10 text-blue-600 dark:text-blue-400 hover:bg-blue-500/20 border border-blue-500/20"
+            title="Copy Public Link"
+          >
+            <Share2 className="h-3.5 w-3.5" />
+            <span>Share</span>
           </button>
 
           {/* Save Status Toggle */}
