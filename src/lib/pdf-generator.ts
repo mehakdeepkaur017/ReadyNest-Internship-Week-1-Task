@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
 import { FormField } from "@/lib/types";
 
-export function generateQuizPDF(formTitle: string, quizResult: any, fields: FormField[]) {
+export function generateQuizPDF(formTitle: string, quizResult: any, fields: FormField[], candidateData?: any, candidateInfoSettings?: any) {
   const doc = new jsPDF();
 
   // Header branding
@@ -29,40 +29,61 @@ export function generateQuizPDF(formTitle: string, quizResult: any, fields: Form
   doc.line(20, 64, 190, 64);
 
   // Respondent details
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(11);
-  doc.setTextColor(71, 85, 105); // slate-600
-  doc.text("Candidate Name:", 20, 74);
-  doc.setFont("helvetica", "bold");
-  doc.setTextColor(15, 23, 42);
-  doc.text(quizResult.respondentName || "Guest User", 60, 74);
+  let yPos = 74;
+
+  if (candidateData && candidateInfoSettings) {
+    Object.keys(candidateInfoSettings).forEach(key => {
+      if (key === "customFields") return;
+      const field = candidateInfoSettings[key];
+      if (field?.enabled && candidateData[key]) {
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(11);
+        doc.setTextColor(71, 85, 105);
+        doc.text(field.label + ":", 20, yPos);
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(15, 23, 42);
+        doc.text(candidateData[key].toString(), 60, yPos);
+        yPos += 7;
+      }
+    });
+
+    if (candidateInfoSettings.customFields) {
+      candidateInfoSettings.customFields.forEach((field: any) => {
+        if (field?.enabled && candidateData[field.id]) {
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(11);
+          doc.setTextColor(71, 85, 105);
+          doc.text(field.label + ":", 20, yPos);
+          doc.setFont("helvetica", "bold");
+          doc.setTextColor(15, 23, 42);
+          doc.text(candidateData[field.id].toString(), 60, yPos);
+          yPos += 7;
+        }
+      });
+    }
+  }
 
   doc.setFont("helvetica", "normal");
   doc.setTextColor(71, 85, 105);
-  doc.text("Email Address:", 20, 81);
+  doc.text("Date Taken:", 20, yPos);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(15, 23, 42);
-  doc.text(quizResult.respondentEmail || "anonymous@formforge.com", 60, 81);
+  doc.text(new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), 60, yPos);
 
-  doc.setFont("helvetica", "normal");
-  doc.setTextColor(71, 85, 105);
-  doc.text("Date Taken:", 20, 88);
-  doc.setFont("helvetica", "bold");
-  doc.setTextColor(15, 23, 42);
-  doc.text(new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), 60, 88);
+  yPos += 8;
 
   // Score stats boxes outline
   doc.setFillColor(248, 250, 252); // slate-50
-  doc.rect(20, 96, 170, 34, "F");
+  doc.rect(20, yPos, 170, 34, "F");
   doc.setDrawColor(203, 213, 225); // slate-300
-  doc.rect(20, 96, 170, 34, "S");
+  doc.rect(20, yPos, 170, 34, "S");
 
   doc.setFont("helvetica", "bold");
   doc.setFontSize(12);
   doc.setTextColor(71, 85, 105);
-  doc.text("FINAL SCORE", 35, 107);
-  doc.text("PERCENTAGE", 92, 107);
-  doc.text("TIME TAKEN", 148, 107);
+  doc.text("FINAL SCORE", 35, yPos + 11);
+  doc.text("PERCENTAGE", 92, yPos + 11);
+  doc.text("TIME TAKEN", 148, yPos + 11);
 
   doc.setFontSize(18);
   // Color the score green/red based on passing status
@@ -71,32 +92,35 @@ export function generateQuizPDF(formTitle: string, quizResult: any, fields: Form
   } else {
     doc.setTextColor(239, 68, 68); // red-600
   }
-  doc.text(`${quizResult.score} / ${quizResult.totalMarks}`, 35, 120);
-  doc.text(`${quizResult.percentage}%`, 92, 120);
+  doc.text(`${quizResult.score} / ${quizResult.totalMarks}`, 35, yPos + 24);
+  doc.text(`${quizResult.percentage}%`, 92, yPos + 24);
   
   doc.setTextColor(147, 51, 234); // purple-600 for time
   const mins = Math.floor(quizResult.timeTaken / 60);
   const secs = quizResult.timeTaken % 60;
-  doc.text(`${mins}m ${secs}s`, 148, 120);
+  doc.text(`${mins}m ${secs}s`, 148, yPos + 24);
+
+  yPos += 50;
 
   // Pass / Fail big stamp
   doc.setFontSize(16);
   if (quizResult.passed) {
     doc.setTextColor(16, 185, 129); // emerald-600
-    doc.text("STATUS: PASSED", 20, 146);
+    doc.text("STATUS: PASSED", 20, yPos);
   } else {
     doc.setTextColor(239, 68, 68); // red-600
-    doc.text("STATUS: FAILED", 20, 146);
+    doc.text("STATUS: FAILED", 20, yPos);
   }
 
   // Section: Question review
+  yPos += 16;
   doc.setFont("helvetica", "bold");
   doc.setFontSize(14);
   doc.setTextColor(15, 23, 42);
-  doc.text("Detailed Response Review", 20, 162);
-  doc.line(20, 166, 190, 166);
+  doc.text("Detailed Response Review", 20, yPos);
+  doc.line(20, yPos + 4, 190, yPos + 4);
 
-  let y = 176;
+  let y = yPos + 14;
 
   quizResult.answersAnalysis.forEach((ans: any, idx: number) => {
     const field = fields.find((f) => f.id === ans.fieldId);

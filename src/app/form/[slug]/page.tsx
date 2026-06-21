@@ -392,7 +392,7 @@ export default function PublicFormPage() {
   const handleDownloadPDF = (result: any) => {
     if (!form) return;
     try {
-      generateQuizPDF(form.title, result, form.fields);
+      generateQuizPDF(form.title, result, form.fields, candidateData, form.candidateInfoSettings);
       toast.success("PDF report downloaded successfully!");
     } catch (err) {
       toast.error("Failed to generate PDF report");
