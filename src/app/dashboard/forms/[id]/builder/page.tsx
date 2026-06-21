@@ -649,14 +649,18 @@ export default function FormBuilderPage() {
                                       );
                                     })}
                                   </div>
-                                ) : (
-                                  <input
-                                    type="text"
-                                    value={field.correctAnswer || ""}
-                                    onChange={(e) => updateFieldProperty(field.id, "correctAnswer", e.target.value)}
-                                    placeholder="Enter acceptable answers (comma separated)"
-                                    className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary"
-                                  />
+                                  <div>
+                                    <input
+                                      type="text"
+                                      value={field.correctAnswer || ""}
+                                      onChange={(e) => updateFieldProperty(field.id, "correctAnswer", e.target.value)}
+                                      placeholder="Enter acceptable answers (comma separated)"
+                                      className="mt-1.5 block w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground text-xs focus:outline-none focus:ring-1 focus:ring-primary"
+                                    />
+                                    <p className="text-[10px] text-muted-foreground mt-1.5 leading-snug">
+                                      Separate multiple acceptable answers with commas.
+                                    </p>
+                                  </div>
                                 )}
                               </div>
 
