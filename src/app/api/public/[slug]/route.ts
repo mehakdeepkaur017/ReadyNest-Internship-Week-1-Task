@@ -25,6 +25,9 @@ export async function POST(
 
     const session = await auth();
     const email = session?.user?.email;
+    const candidateInfo = body.candidateInfo || undefined;
+    const finalEmail = candidateInfo?.email || email || "anonymous@formforge.com";
+    const finalName = candidateInfo?.name || session?.user?.name || "Guest";
 
     // Check limitOneResponse
     if (form.formSettings?.limitOneResponse) {
@@ -160,13 +163,11 @@ export async function POST(
         wrongAnswersCount,
         timeTaken: body.timeTaken || 0,
         passed,
-        respondentEmail: email || "anonymous@formforge.com",
-        respondentName: session?.user?.name || "Guest",
+        respondentEmail: finalEmail,
+        respondentName: finalName,
         answersAnalysis
       };
     }
-
-    const candidateInfo = body.candidateInfo || undefined;
 
     const response = await ResponseModel.create({
       formId: form._id,
@@ -175,7 +176,7 @@ export async function POST(
       submittedAt: new Date(),
       metadata: {
         userAgent: req.headers.get("user-agent") || "",
-        respondentEmail: email || "anonymous@formforge.com",
+        respondentEmail: finalEmail,
       },
       quizResult,
     });
