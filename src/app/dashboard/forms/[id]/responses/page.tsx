@@ -8,7 +8,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { Form, FormResponse } from "@/lib/types";
-import { formatDate } from "@/lib/utils";
+import { formatDateTime } from "@/lib/utils";
 
 export default function ResponsesPage() {
   const { id } = useParams();
@@ -430,7 +430,7 @@ export default function ResponsesPage() {
                       />
                     </td>
                     <td className="p-3.5 text-foreground font-semibold whitespace-nowrap text-[11px]">
-                      {formatDate(resp.submittedAt)}
+                      {formatDateTime(resp.submittedAt)}
                     </td>
                     {getActiveCandidateFields().map((cf) => {
                       const val = getCandidateValue(resp, cf);
@@ -530,7 +530,7 @@ export default function ResponsesPage() {
               <div className="flex justify-between items-center pb-2.5 border-b border-border">
                 <div>
                   <h3 className="font-extrabold text-foreground text-sm">Submission Details</h3>
-                  <p className="text-[10px] text-muted-foreground mt-0.5">Submitted on {formatDate(selectedResponse.submittedAt)}</p>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">Submitted on {formatDateTime(selectedResponse.submittedAt)}</p>
                 </div>
                 <button onClick={() => setSelectedResponse(null)} className="text-muted-foreground hover:text-foreground">
                   <X className="h-4.5 w-4.5" />

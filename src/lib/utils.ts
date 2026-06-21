@@ -22,6 +22,17 @@ export function formatDate(date: Date | string): string {
   }).format(new Date(date));
 }
 
+export function formatDateTime(date: Date | string): string {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(new Date(date));
+}
+
 export function formatRelativeTime(date: Date | string): string {
   const now = new Date();
   const then = new Date(date);
