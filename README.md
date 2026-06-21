@@ -73,16 +73,6 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the app in action!
 
----
-
-## 🚀 Deploying to Vercel
-
-FormForge is optimized for zero-configuration deployment to Vercel.
-
-1. **Push to GitHub**: Ensure your code is pushed to your GitHub repository.
-2. **Import to Vercel**: Log into [Vercel](https://vercel.com/new), click **Add New -> Project**, and import your repository.
-3. **Configure Environment Variables**: Before clicking Deploy, copy the variables from your `.env.local` into the Vercel Environment Variables section.
-4. **Deploy!**: Vercel will automatically build and deploy your application.
 
 ---
 
