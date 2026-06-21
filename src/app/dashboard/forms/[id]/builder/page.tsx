@@ -806,7 +806,7 @@ export default function FormBuilderPage() {
               <div className="absolute inset-0 overflow-y-auto p-4 custom-scrollbar space-y-3">
                 <div className="bg-primary/10 border border-primary/20 text-primary px-3 py-2 rounded-lg text-[10px] flex items-start space-x-2">
                   <span className="font-bold mt-0.5">Note:</span>
-                  <span>For most settings (like labels, theme, and title), changes will be permanent only after clicking the <span className="font-bold text-foreground bg-foreground/10 px-1 py-0.5 rounded">Save</span> button. Toggles are saved automatically.</span>
+                  <span>For settings like labels, theme, and title, changes will be permanent only after clicking the <span className="font-bold text-foreground bg-foreground/10 px-1 py-0.5 rounded">Save</span> button.</span>
                 </div>
 
                 <Accordion 
@@ -846,7 +846,11 @@ export default function FormBuilderPage() {
                   expanded={expandedConfig} 
                   onToggle={setExpandedConfig}
                 >
-                  <p className="text-[10px] text-muted-foreground mb-4">Collect context details before the form begins.</p>
+                  <p className="text-[10px] text-muted-foreground mb-2">Collect context details before the form begins.</p>
+                  <div className="bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 px-3 py-2 rounded-lg text-[10px] flex items-start space-x-2 mb-4">
+                    <span className="font-bold mt-0.5">Note:</span>
+                    <span>Any toggle changes made below are saved and enabled instantly without needing to click the Save button.</span>
+                  </div>
                   <div className="space-y-3 p-3 border border-border/50 rounded-xl bg-background/50 shadow-inner">
                     {Object.keys(candidateInfoSettings).map((key) => {
                       if (key === "customFields") return null;
