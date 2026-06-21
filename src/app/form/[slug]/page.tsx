@@ -93,7 +93,7 @@ export default function PublicFormPage() {
 
         // Handle Shuffling
         let fieldsToRender = [...data.form.fields];
-        if (data.form.formSettings?.shuffleQuestionOrder || (data.form.isQuizMode && data.form.quizSettings?.shuffleQuestions)) {
+        if (data.form.formSettings?.shuffleQuestionOrder) {
           fieldsToRender = shuffleArray(fieldsToRender);
         }
 
