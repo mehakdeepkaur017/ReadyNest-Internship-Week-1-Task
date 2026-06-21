@@ -41,8 +41,15 @@ function DashboardContent() {
   const [builderSubject, setBuilderSubject] = useState("mathematics");
   const [builderDifficulty, setBuilderDifficulty] = useState("mixed");
   const [builderType, setBuilderType] = useState("mixed");
-  const [builderCount, setBuilderCount] = useState(10);
+  const [builderCount, setBuilderCount] = useState<number | string>(10);
   const [buildingAssessment, setBuildingAssessment] = useState(false);
+
+  useEffect(() => {
+    const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+    if (typeof builderCount === "number" && builderCount > maxAvail) {
+      setBuilderCount(maxAvail);
+    }
+  }, [builderDifficulty, builderType, builderCount]);
   
   // Create Modal
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -129,7 +136,7 @@ function DashboardContent() {
         builderSubject,
         builderDifficulty,
         builderType,
-        builderCount
+        typeof builderCount === 'number' ? builderCount : parseInt(builderCount as string) || 10
       );
 
       if (result.warning) {
@@ -952,11 +959,19 @@ function DashboardContent() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-muted-foreground uppercase tracking-wider">Question Count</label>
+                <div className="flex justify-between items-center">
+                  <label className="block text-xs font-bold text-muted-foreground uppercase tracking-wider">Question Count</label>
+                  {(() => {
+                    const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                    return (
+                      <span className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">Max: {maxAvail}</span>
+                    );
+                  })()}
+                </div>
                 <div className="flex items-center space-x-2 mt-1.5">
                   <button
                     type="button"
-                    onClick={() => setBuilderCount(prev => Math.max(1, prev - 1))}
+                    onClick={() => setBuilderCount(prev => Math.max(1, (typeof prev === 'number' ? prev : parseInt(prev) || 1) - 1))}
                     className="h-9.5 w-9.5 flex items-center justify-center rounded-lg border border-border bg-background/50 hover:bg-muted text-foreground transition font-extrabold cursor-pointer text-sm"
                   >
                     -
@@ -964,19 +979,20 @@ function DashboardContent() {
                   <input
                     type="number"
                     min={1}
-                    max={100}
+                    max={(builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5}
                     required
                     value={builderCount}
                     onChange={(e) => {
+                      const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
                       const val = parseInt(e.target.value);
                       if (isNaN(val)) {
                         setBuilderCount("" as any);
                       } else {
-                        setBuilderCount(Math.min(100, Math.max(1, val)));
+                        setBuilderCount(Math.min(maxAvail, Math.max(1, val)));
                       }
                     }}
                     onBlur={() => {
-                      if (!builderCount || isNaN(builderCount)) {
+                      if (!builderCount || typeof builderCount !== 'number' || isNaN(builderCount)) {
                         setBuilderCount(10);
                       }
                     }}
@@ -984,12 +1000,24 @@ function DashboardContent() {
                   />
                   <button
                     type="button"
-                    onClick={() => setBuilderCount(prev => Math.min(100, prev + 1))}
+                    onClick={() => {
+                      const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                      setBuilderCount(prev => Math.min(maxAvail, (typeof prev === 'number' ? prev : parseInt(prev) || 1) + 1));
+                    }}
                     className="h-9.5 w-9.5 flex items-center justify-center rounded-lg border border-border bg-background/50 hover:bg-muted text-foreground transition font-extrabold cursor-pointer text-sm"
                   >
                     +
                   </button>
                 </div>
+                {(() => {
+                  const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                  return (
+                    <p className="text-[10px] text-muted-foreground font-medium leading-tight mt-2">
+                      We currently have a maximum of {maxAvail} generated questions for this specific configuration. Need more?{" "}
+                      <span className="text-primary hover:underline cursor-pointer">Add your own</span> after generating!
+                    </p>
+                  );
+                })()}
               </div>
 
               <div className="bg-purple-500/5 border border-purple-500/20 rounded-lg p-3 text-[11px] text-muted-foreground space-y-1">
