@@ -68,18 +68,17 @@ export async function GET(
       sortObj = { "quizResult.score": -1, submittedAt: -1 };
     } else if (sortBy === "score_asc") {
       sortObj = { "quizResult.score": 1, submittedAt: -1 };
-    } else if (sortBy === "name_asc") {
-      sortObj = { "candidateInfo.name": 1, submittedAt: -1 };
-    } else if (sortBy === "name_desc") {
-      sortObj = { "candidateInfo.name": -1, submittedAt: -1 };
-    } else if (sortBy === "rollNumber_asc") {
-      sortObj = { "candidateInfo.rollNumber": 1, submittedAt: -1 };
-    } else if (sortBy === "class_asc") {
-      sortObj = { "candidateInfo.class": 1, submittedAt: -1 };
+    } else if (sortBy.startsWith("candidate_")) {
+      const match = sortBy.match(/^candidate_(.*)_(asc|desc)$/);
+      if (match) {
+        const [, fieldId, order] = match;
+        sortObj = { [`candidateInfo.${fieldId}`]: order === "asc" ? 1 : -1, submittedAt: -1 };
+      }
     }
 
     const [responses, total] = await Promise.all([
       ResponseModel.find(query)
+        .collation({ locale: 'en', strength: 2 }) // Case-insensitive sorting (A-Z and a-z treated same)
         .sort(sortObj)
         .skip((page - 1) * limit)
         .limit(limit)

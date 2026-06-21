@@ -331,10 +331,10 @@ export default function ResponsesPage() {
                   <option value="score_asc">Score: Low to High</option>
                 </>
               )}
-              <option value="name_asc">Name (A-Z)</option>
-              <option value="name_desc">Name (Z-A)</option>
-              <option value="rollNumber_asc">Roll Number</option>
-              <option value="class_asc">Class</option>
+              {getActiveCandidateFields().filter(cf => !cf.isCustom).flatMap(cf => [
+                <option key={`${cf.id}_asc`} value={`candidate_${cf.id}_asc`}>{cf.label} (A-Z)</option>,
+                <option key={`${cf.id}_desc`} value={`candidate_${cf.id}_desc`}>{cf.label} (Z-A)</option>
+              ])}
             </select>
           </div>
         </div>
