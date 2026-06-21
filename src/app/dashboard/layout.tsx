@@ -27,7 +27,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     };
   }, []);
 
-  const isFormPage = pathname.match(/\/dashboard\/forms\/([a-zA-Z0-9-]+)\/(builder|responses|analytics)/);
+  const isFormPage = pathname.match(/\/dashboard\/forms\/([a-zA-Z0-9-]+)\/(builder|responses|analytics|settings)/);
   const formId = isFormPage ? isFormPage[1] : null;
 
   const globalNavigation = [
@@ -42,6 +42,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { name: "Builder", href: `/dashboard/forms/${formId}/builder`, icon: LayoutGrid },
     { name: "Responses", href: `/dashboard/forms/${formId}/responses`, icon: MessageSquare },
     { name: "Analytics", href: `/dashboard/forms/${formId}/analytics`, icon: BarChart2 },
+    { name: "Settings", href: `/dashboard/forms/${formId}/settings`, icon: Settings },
   ] : [];
 
   const navigation = isFormPage ? formNavigation : globalNavigation;

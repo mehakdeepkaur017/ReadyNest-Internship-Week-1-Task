@@ -90,6 +90,18 @@ export interface IForm extends Document {
     showCorrectAnswers: boolean;
     showExplanations: boolean;
   };
+  formSettings?: {
+    collectEmailAddresses: "do_not_collect" | "verified" | "responder_input";
+    sendCopyOfResponse: "off" | "when_requested" | "always";
+    allowResponseEditing: boolean;
+    limitOneResponse: boolean;
+    showProgressBar: boolean;
+    shuffleQuestionOrder: boolean;
+    showSubmitAnotherResponse: boolean;
+    viewResultsSummary: boolean;
+    disableAutoSave: boolean;
+    makeQuestionsRequiredByDefault: boolean;
+  };
   candidateInfoSettings?: any;
   headerSettings?: {
     institutionName?: string;
@@ -145,6 +157,32 @@ const FormSchema = new Schema<IForm>(
         requireAuth: false,
         showCorrectAnswers: true,
         showExplanations: true
+      })
+    },
+    formSettings: {
+      type: {
+        collectEmailAddresses: { type: String, enum: ["do_not_collect", "verified", "responder_input"], default: "do_not_collect" },
+        sendCopyOfResponse: { type: String, enum: ["off", "when_requested", "always"], default: "off" },
+        allowResponseEditing: { type: Boolean, default: false },
+        limitOneResponse: { type: Boolean, default: false },
+        showProgressBar: { type: Boolean, default: false },
+        shuffleQuestionOrder: { type: Boolean, default: false },
+        showSubmitAnotherResponse: { type: Boolean, default: true },
+        viewResultsSummary: { type: Boolean, default: false },
+        disableAutoSave: { type: Boolean, default: false },
+        makeQuestionsRequiredByDefault: { type: Boolean, default: false },
+      },
+      default: () => ({
+        collectEmailAddresses: "do_not_collect",
+        sendCopyOfResponse: "off",
+        allowResponseEditing: false,
+        limitOneResponse: false,
+        showProgressBar: false,
+        shuffleQuestionOrder: false,
+        showSubmitAnotherResponse: true,
+        viewResultsSummary: false,
+        disableAutoSave: false,
+        makeQuestionsRequiredByDefault: false
       })
     },
     candidateInfoSettings: {

@@ -95,6 +95,19 @@ export interface QuizSettings {
   showExplanations: boolean;
 }
 
+export interface FormSettings {
+  collectEmailAddresses: "do_not_collect" | "verified" | "responder_input";
+  sendCopyOfResponse: "off" | "when_requested" | "always";
+  allowResponseEditing: boolean;
+  limitOneResponse: boolean;
+  showProgressBar: boolean;
+  shuffleQuestionOrder: boolean;
+  showSubmitAnotherResponse: boolean;
+  viewResultsSummary: boolean;
+  disableAutoSave: boolean;
+  makeQuestionsRequiredByDefault: boolean;
+}
+
 export interface Form {
   _id: string;
   title: string;
@@ -111,6 +124,7 @@ export interface Form {
   views: number;
   isQuizMode: boolean;
   quizSettings?: QuizSettings;
+  formSettings?: FormSettings;
   candidateInfoSettings?: CandidateInfoSettings;
   headerSettings?: HeaderSettings;
   instructions?: InstructionsSettings;
