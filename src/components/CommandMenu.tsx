@@ -131,7 +131,7 @@ export default function CommandMenu() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.15 }}
-              className="w-full max-w-lg glass border border-border rounded-xl shadow-2xl overflow-hidden z-10 flex flex-col bg-background/95 max-h-[50vh]"
+              className="w-full max-w-lg bg-background border border-border rounded-xl shadow-2xl overflow-hidden z-10 flex flex-col max-h-[50vh]"
             >
               <div className="flex items-center border-b border-border px-4 py-3 bg-muted/20">
                 <Search className="h-5 w-5 text-muted-foreground mr-3" />
