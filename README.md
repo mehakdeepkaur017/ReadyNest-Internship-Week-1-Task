@@ -30,7 +30,7 @@ FormForge leverages a modern, robust, and highly scalable technology stack:
 - **Core Framework**: Next.js 16 (App Router), React 19, TypeScript
 - **UI & Styling**: Tailwind CSS, Framer Motion, Lucide Icons
 - **Database & ORM**: MongoDB, Mongoose
-- **Authentication & Security**: NextAuth.js (Auth.js v5), bcryptjs, Zod
+- **Authentication & Security**: NextAuth.js (Auth.js v5), bcryptjs
 - **Drag & Drop**: `@dnd-kit/core`
 - **Data Visualization**: Recharts
 - **Export Utilities**: `jspdf`, `html-to-image`, `xlsx`, `csv`
