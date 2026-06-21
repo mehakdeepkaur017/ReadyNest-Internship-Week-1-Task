@@ -913,19 +913,19 @@ function DashboardContent() {
                   onChange={(e) => setBuilderSubject(e.target.value)}
                   className="mt-1 block w-full rounded-lg border border-border bg-background/50 px-3.5 py-2.5 text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent transition"
                 >
-                  <option value="mathematics">Mathematics ({questionBank.filter(q => q.subject === "mathematics").length} Questions)</option>
-                  <option value="science">Science ({questionBank.filter(q => q.subject === "science").length} Questions)</option>
-                  <option value="english">English ({questionBank.filter(q => q.subject === "english").length} Questions)</option>
-                  <option value="history">History ({questionBank.filter(q => q.subject === "history").length} Questions)</option>
-                  <option value="geography">Geography ({questionBank.filter(q => q.subject === "geography").length} Questions)</option>
-                  <option value="computer science">Computer Science ({questionBank.filter(q => q.subject === "computer science").length} Questions)</option>
-                  <option value="dbms">DBMS ({questionBank.filter(q => q.subject === "dbms").length} Questions)</option>
-                  <option value="java">Java ({questionBank.filter(q => q.subject === "java").length} Questions)</option>
-                  <option value="python">Python ({questionBank.filter(q => q.subject === "python").length} Questions)</option>
-                  <option value="data structures">Data Structures ({questionBank.filter(q => q.subject === "data structures").length} Questions)</option>
-                  <option value="operating systems">Operating Systems ({questionBank.filter(q => q.subject === "operating systems").length} Questions)</option>
-                  <option value="computer networks">Computer Networks ({questionBank.filter(q => q.subject === "computer networks").length} Questions)</option>
-                  <option value="cyber security">Cyber Security ({questionBank.filter(q => q.subject === "cyber security").length} Questions)</option>
+                  <option value="mathematics">Mathematics</option>
+                  <option value="science">Science</option>
+                  <option value="english">English</option>
+                  <option value="history">History</option>
+                  <option value="geography">Geography</option>
+                  <option value="computer science">Computer Science</option>
+                  <option value="dbms">DBMS</option>
+                  <option value="java">Java</option>
+                  <option value="python">Python</option>
+                  <option value="data structures">Data Structures</option>
+                  <option value="operating systems">Operating Systems</option>
+                  <option value="computer networks">Computer Networks</option>
+                  <option value="cyber security">Cyber Security</option>
                 </select>
               </div>
 
