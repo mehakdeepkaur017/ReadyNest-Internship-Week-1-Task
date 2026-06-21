@@ -403,7 +403,7 @@ export default function PublicFormPage() {
   const quizSettings = form.quizSettings;
   const builderContext = getBuilderContext(form.category || "Business", isQuiz);
   
-  const requiresAuth = (isQuiz && quizSettings?.requireAuth) || 
+  const requiresAuth = (isQuiz && (quizSettings?.requireAuth || (quizSettings?.maxAttempts && quizSettings.maxAttempts > 0))) || 
     form?.formSettings?.limitOneResponse || 
     form?.formSettings?.collectEmailAddresses === "verified";
 
