@@ -38,7 +38,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   ];
 
   const formNavigation = formId ? [
-    { name: "← Back to Dashboard", href: "/dashboard", icon: ArrowLeft },
+    { name: "Back to Dashboard", href: "/dashboard", icon: ArrowLeft },
     { name: "Builder", href: `/dashboard/forms/${formId}/builder`, icon: LayoutGrid },
     { name: "Responses", href: `/dashboard/forms/${formId}/responses`, icon: MessageSquare },
     { name: "Analytics", href: `/dashboard/forms/${formId}/analytics`, icon: BarChart2 },
