@@ -164,7 +164,7 @@ export default function AnalyticsPage() {
     }
   };
 
-  if (loading && !form) {
+  if (loading && (!form || !analytics)) {
     return (
       <div className="flex h-[70vh] items-center justify-center space-x-2">
         <span className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
