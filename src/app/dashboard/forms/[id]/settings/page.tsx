@@ -148,16 +148,18 @@ export default function FormSettingsPage() {
               </select>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-semibold text-foreground text-sm uppercase tracking-wider mt-4 text-muted-foreground text-xs">Requires Sign-In</p>
-                <p className="font-semibold text-foreground text-sm mt-2">Limit to 1 response</p>
+            {!isQuizMode && (
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-semibold text-foreground text-sm uppercase tracking-wider mt-4 text-muted-foreground text-xs">Requires Sign-In</p>
+                  <p className="font-semibold text-foreground text-sm mt-2">Limit to 1 response</p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer mt-6">
+                  <input type="checkbox" className="sr-only peer" checked={settings.limitOneResponse} onChange={(e) => setSettings({ ...settings, limitOneResponse: e.target.checked })} />
+                  <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                </label>
               </div>
-              <label className="relative inline-flex items-center cursor-pointer mt-6">
-                <input type="checkbox" className="sr-only peer" checked={settings.limitOneResponse} onChange={(e) => setSettings({ ...settings, limitOneResponse: e.target.checked })} />
-                <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-              </label>
-            </div>
+            )}
           </div>
         </div>
 
