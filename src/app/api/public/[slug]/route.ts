@@ -91,6 +91,15 @@ export async function POST(
           isCorrect = submittedArr.length === correctArr.length &&
             submittedArr.every((v: any) => correctArr.includes(v)) &&
             correctArr.every((v: any) => submittedArr.includes(v));
+        } else if (field.type === "text" || field.type === "textarea" || field.type === "number") {
+          const submittedVal = String(submitted || "").trim().toLowerCase();
+          const correctArr = Array.isArray(field.correctAnswer)
+            ? field.correctAnswer.map((s: any) => String(s).trim().toLowerCase())
+            : typeof field.correctAnswer === "string"
+              ? field.correctAnswer.split(",").map((s: string) => s.trim().toLowerCase())
+              : [String(field.correctAnswer || "").trim().toLowerCase()];
+              
+          isCorrect = correctArr.includes(submittedVal);
         } else {
           isCorrect = String(submitted || "").trim().toLowerCase() === String(field.correctAnswer || "").trim().toLowerCase();
         }
