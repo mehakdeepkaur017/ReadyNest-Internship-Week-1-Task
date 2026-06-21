@@ -139,6 +139,13 @@ export default function FormBuilderPage() {
   const [builderCount, setBuilderCount] = useState<number>(10);
   const [builderAction, setBuilderAction] = useState<"append" | "replace">("replace");
 
+  useEffect(() => {
+    const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+    if (builderCount > maxAvail) {
+      setBuilderCount(maxAvail);
+    }
+  }, [builderDifficulty, builderType, builderCount]);
+
   // Load Form detail
   useEffect(() => {
     const fetchForm = async () => {
@@ -1460,15 +1467,37 @@ export default function FormBuilderPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Number of Questions</label>
+                    <div className="flex justify-between items-center">
+                      <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Number of Questions</label>
+                      {(() => {
+                        const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                        return (
+                          <span className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">Max: {maxAvail}</span>
+                        );
+                      })()}
+                    </div>
                     <input
                       type="number"
                       min={1}
-                      max={50}
+                      max={(builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5}
                       value={builderCount}
-                      onChange={(e) => setBuilderCount(parseInt(e.target.value) || 10)}
+                      onChange={(e) => {
+                        const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                        setBuilderCount(Math.min(parseInt(e.target.value) || 1, maxAvail));
+                      }}
                       className="w-full bg-muted/40 border border-border px-3 py-2.5 rounded-xl text-sm font-semibold focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                     />
+                    {(() => {
+                      const maxAvail = (builderDifficulty === "mixed" ? 3 : 1) * (builderType === "mixed" ? 3 : 1) * 5;
+                      return (
+                        <p className="text-[10px] text-muted-foreground font-medium leading-tight mt-1">
+                          We currently have a maximum of {maxAvail} generated questions for this specific configuration. Need more?{" "}
+                          <button type="button" onClick={() => setShowBuilderModal(false)} className="text-primary underline font-bold hover:opacity-80">
+                            Click here to add custom questions manually.
+                          </button>
+                        </p>
+                      );
+                    })()}
                   </div>
 
                   <div className="space-y-2">
