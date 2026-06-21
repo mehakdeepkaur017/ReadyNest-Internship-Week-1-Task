@@ -804,6 +804,11 @@ export default function FormBuilderPage() {
             ) : (
               /* CONFIGURATION MODE (ACCORDIONS) */
               <div className="absolute inset-0 overflow-y-auto p-4 custom-scrollbar space-y-3">
+                <div className="bg-primary/10 border border-primary/20 text-primary px-3 py-2 rounded-lg text-[10px] flex items-start space-x-2">
+                  <span className="font-bold mt-0.5">Note:</span>
+                  <span>For most settings (like labels, theme, and title), changes will be permanent only after clicking the <span className="font-bold text-foreground bg-foreground/10 px-1 py-0.5 rounded">Save</span> button. Toggles are saved automatically.</span>
+                </div>
+
                 <Accordion 
                   id="general" 
                   title="General Settings" 
@@ -856,10 +861,16 @@ export default function FormBuilderPage() {
                               <button
                                 type="button"
                                 onClick={() => {
-                                  setCandidateInfoSettings((prev: any) => ({
-                                    ...prev,
-                                    [key]: { ...prev[key], enabled: !prev[key].enabled }
-                                  }));
+                                  const updatedSettings = {
+                                    ...candidateInfoSettings,
+                                    [key]: { ...candidateInfoSettings[key], enabled: !candidateInfoSettings[key].enabled }
+                                  };
+                                  setCandidateInfoSettings(updatedSettings);
+                                  fetch(`/api/forms/${id}`, {
+                                    method: "PUT",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({ candidateInfoSettings: updatedSettings }),
+                                  }).catch(console.error);
                                 }}
                                 className={`text-[9px] font-bold px-1.5 py-0.5 rounded border transition ${
                                   field.enabled ? "bg-primary/10 text-primary border-primary/20" : "border-border text-muted-foreground hover:bg-muted"
@@ -871,10 +882,16 @@ export default function FormBuilderPage() {
                                 <button
                                   type="button"
                                   onClick={() => {
-                                    setCandidateInfoSettings((prev: any) => ({
-                                      ...prev,
-                                      [key]: { ...prev[key], required: !prev[key].required }
-                                    }));
+                                    const updatedSettings = {
+                                      ...candidateInfoSettings,
+                                      [key]: { ...candidateInfoSettings[key], required: !candidateInfoSettings[key].required }
+                                    };
+                                    setCandidateInfoSettings(updatedSettings);
+                                    fetch(`/api/forms/${id}`, {
+                                      method: "PUT",
+                                      headers: { "Content-Type": "application/json" },
+                                      body: JSON.stringify({ candidateInfoSettings: updatedSettings }),
+                                    }).catch(console.error);
                                   }}
                                   className={`text-[9px] font-bold px-1.5 py-0.5 rounded border transition ${
                                     field.required ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:bg-muted"
