@@ -987,6 +987,7 @@ export default function PublicFormPage() {
                   {field.type === "date" && (
                     <input
                       type="date"
+                      max="9999-12-31"
                       value={formData[field.id] || ""}
                       onChange={(e) => handleInputChange(field.id, e.target.value)}
                       className="block w-full rounded-lg border border-border/30 bg-background/30 px-3.5 py-2.5 text-foreground focus:outline-none focus:ring-1 focus:ring-primary/20 text-xs transition"
