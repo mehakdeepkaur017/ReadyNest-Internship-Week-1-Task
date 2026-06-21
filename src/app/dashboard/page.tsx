@@ -558,6 +558,14 @@ function DashboardContent() {
                         </button>
                       )}
 
+                      <Link
+                        href={`/dashboard/forms/${form._id}/builder`}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition cursor-pointer text-xs font-bold ml-1 mr-1"
+                      >
+                        <FileEdit className="h-3.5 w-3.5" />
+                        <span>Edit</span>
+                      </Link>
+
                       <div className="relative">
                         <button
                           onClick={() => setOpenDropdownId(openDropdownId === form._id ? null : form._id)}
