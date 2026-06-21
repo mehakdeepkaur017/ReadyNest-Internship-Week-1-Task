@@ -1,25 +1,40 @@
-# FormForge 🚀
+<div align="center">
+  <h1>🚀 FormForge</h1>
+  <p><strong>A Next-Generation Dynamic Form & Assessment Builder</strong></p>
+  <p>
+    Built with Next.js App Router, React 19, and Tailwind CSS. FormForge handles everything from simple surveys to complex, algorithmically generated examinations.
+  </p>
+</div>
 
-FormForge is a modern, powerful, and dynamic form-building application designed to let you effortlessly create surveys, quizzes, assessments, and data collection forms. Built with the latest Next.js 15 App Router and React 19, FormForge boasts a sleek, highly interactive, and fully responsive user interface.
+---
 
-## ✨ Key Features
+## ✨ Why FormForge?
 
-- **Drag-and-Drop Form Builder**: Visually construct your forms with a seamless drag-and-drop interface. Support for Short Text, Long Text, Multiple Choice, Checkboxes, Dropdowns, Date, File Uploads, Ratings, and more!
-- **Advanced Quizzes & Assessments**: Create scored quizzes with customizable passing thresholds, automatic grading, and time limits.
-- **Robust Analytics & Insights**: Track form performance with beautiful area and bar charts, visual statistics, response leaderboards, and an interactive Date Range filter.
-- **PDF Export**: Generate high-resolution, branded PDF reports of your Form Analytics or Quiz Results with a single click.
-- **Shareable Public Links**: Effortlessly share your forms with respondents via auto-generated secure public links.
-- **Authentication**: Secure user accounts managed via NextAuth and MongoDB.
+FormForge isn't just another form builder. It’s an advanced, full-stack platform designed for performance, security, and exceptional user experience. Whether you're an educator building timed quizzes or an HR professional collecting applications, FormForge adapts to your needs.
+
+### 🔥 Core Features
+
+- **Algorithmic Smart Assessments:** Instantly generate complete quizzes from a localized, high-performance question bank engine. Features auto-grading, customizable pass/fail thresholds, and a real-time respondent leaderboard.
+- **Advanced Drag & Drop Builder:** Visually construct forms with a seamless interface powered by `dnd-kit`. Supports Short/Long Text, Multiple Choice, Checkboxes, Dropdowns, Date, File Uploads, Ratings, and more.
+- **Pre-Built Templates:** Jumpstart your work with professionally designed industry templates (HR, Healthcare, Real Estate, IT Support, etc.).
+- **Dynamic Candidate Configuration:** Granular control over respondent data collection (Name, Email, Roll Number, Custom Fields) with instant, auto-saving toggle configurations.
+- **Deep Analytics & Insights:** Track form performance with beautiful, interactive Area, Bar, and Pie charts (powered by Recharts), plus a comprehensive Question-by-Question breakdown.
+- **Comprehensive Data Export:** Generate high-resolution, branded PDF reports of your analytics, or execute a one-click export of raw candidate responses to CSV/Excel formats.
+- **Secure Authentication & Active Session Management:** Robust user accounts secured via Auth.js (NextAuth), featuring active device session tracking. Monitor your logins and remotely revoke unauthorized sessions.
+- **Frictionless Distribution:** Effortlessly share your forms with respondents via auto-generated secure public links and instantly downloadable QR codes.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **UI & Styling**: React 19, Tailwind CSS v4, Lucide Icons
-- **Database**: MongoDB (Mongoose)
-- **Authentication**: NextAuth.js (v5)
-- **Drag & Drop**: `@hello-pangea/dnd`
-- **Charts**: Recharts
-- **PDF Generation**: `jspdf` & `html-to-image`
+FormForge leverages a modern, robust, and highly scalable technology stack:
+
+- **Core Framework**: Next.js 16 (App Router), React 19, TypeScript
+- **UI & Styling**: Tailwind CSS, Framer Motion, Lucide Icons
+- **Database & ORM**: MongoDB, Mongoose
+- **Authentication & Security**: NextAuth.js (Auth.js v5), bcryptjs, Zod
+- **Drag & Drop**: `@dnd-kit/core`
+- **Data Visualization**: Recharts
+- **Export Utilities**: `jspdf`, `html-to-image`, `xlsx`, `csv`
+- **Emails**: Resend, Nodemailer
 
 ---
 
@@ -37,15 +52,19 @@ npm install
 ```
 
 ### 3. Configure Environment Variables
-Create a `.env.local` file in the root directory and add the following variables:
+Create a `.env.local` file in the root directory and add the following required variables:
 ```env
-# MongoDB Connection String (Required)
+# MongoDB Connection String
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/formforge
 
-# NextAuth Configuration (Required)
-# You can generate a secret by running: openssl rand -base64 32
-NEXTAUTH_SECRET=your-super-secret-key
-NEXTAUTH_URL=http://localhost:3000
+# NextAuth Configuration
+# Generate a secret by running: openssl rand -base64 32
+AUTH_SECRET=your-super-secret-key
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Email Config (Optional, for forgotten password functionality)
+EMAIL_SERVER_USER=your_email
+EMAIL_SERVER_PASSWORD=your_password
 ```
 
 ### 4. Run the Development Server
@@ -58,15 +77,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🚀 Deploying to Vercel
 
-FormForge is optimized for seamless deployment to Vercel.
+FormForge is optimized for zero-configuration deployment to Vercel.
 
-1. **Push to GitHub**: Ensure your code is pushed to a GitHub repository.
-2. **Import to Vercel**: Log into [Vercel](https://vercel.com/new), click **Add New -> Project**, and import your GitHub repository.
+1. **Push to GitHub**: Ensure your code is pushed to your GitHub repository.
+2. **Import to Vercel**: Log into [Vercel](https://vercel.com/new), click **Add New -> Project**, and import your repository.
 3. **Configure Environment Variables**: Before clicking Deploy, copy the variables from your `.env.local` into the Vercel Environment Variables section.
-    - Set `NEXTAUTH_URL` to your production URL (e.g., `https://formforge-app.vercel.app`).
 4. **Deploy!**: Vercel will automatically build and deploy your application.
 
 ---
 
 ## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+Contributions, issues, and feature requests are heartily welcome! Feel free to check the issues page or open a Pull Request.
