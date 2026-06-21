@@ -67,13 +67,17 @@ export function buildCuratedAssessment(
   // Matcher function for question type
   const matchesType = (q: BankQuestion, type: string): boolean => {
     if (type === "mixed" || !type) return true;
-    if (type === "mcq") return q.type === "radio";
-    if (type === "true_false") {
+    if (type === "mcq") {
       if (q.type !== "radio") return false;
-      const choices = q.options?.map(o => o.value) || [];
+      const choices = q.options?.map(o => o.value.toLowerCase()) || [];
+      return !(choices.includes("true") && choices.includes("false"));
+    }
+    if (type === "tf" || type === "true_false") {
+      if (q.type !== "radio") return false;
+      const choices = q.options?.map(o => o.value.toLowerCase()) || [];
       return choices.includes("true") && choices.includes("false");
     }
-    if (type === "short_answer") return q.type === "text";
+    if (type === "sa" || type === "short_answer") return q.type === "text";
     if (type === "checkbox") return q.type === "checkbox";
     return true;
   };
