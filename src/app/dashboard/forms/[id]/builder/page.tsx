@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { 
   Save, Trash2, Copy, ToggleLeft, ToggleRight,
   Settings, GripVertical, PlusCircle, MinusCircle, FileText, Sparkles, LayoutGrid,
-  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock, Share2, Download
+  ChevronDown, ChevronUp, ArrowLeft, Palette, LayoutTemplate, Clock, Share2, Download, Plus, ListChecks
 } from "lucide-react";
 import { 
   DndContext, closestCenter, KeyboardSensor, PointerSensor, 
@@ -299,7 +299,7 @@ export default function FormBuilderPage() {
     navigator.clipboard.writeText(text).then(() => toast.success("Form link copied to clipboard!"));
   };
 
-  const addField = (type: FieldType) => {
+  const addField = (type: FieldType, insertAfterId?: string) => {
     const newField: FormField = {
       id: crypto.randomUUID ? crypto.randomUUID() : `field_${Date.now()}`,
       type,
@@ -316,6 +316,18 @@ export default function FormBuilderPage() {
       order: fields.length,
     };
 
+    if (insertAfterId) {
+      const idx = fields.findIndex(f => f.id === insertAfterId);
+      if (idx !== -1) {
+        const updated = [...fields];
+        updated.splice(idx + 1, 0, newField);
+        setFields(updated);
+        setSelectedFieldId(newField.id);
+        toast.success(`Added ${type} field`);
+        return;
+      }
+    }
+
     const updated = [...fields, newField];
     setFields(updated);
     setSelectedFieldId(newField.id);
@@ -329,6 +341,16 @@ export default function FormBuilderPage() {
       label: `${field.label} (Copy)`,
       order: fields.length,
     };
+
+    const idx = fields.findIndex(f => f.id === field.id);
+    if (idx !== -1) {
+      const updated = [...fields];
+      updated.splice(idx + 1, 0, duplicated);
+      setFields(updated);
+      setSelectedFieldId(duplicated.id);
+      toast.success("Field duplicated!");
+      return;
+    }
 
     setFields([...fields, duplicated]);
     setSelectedFieldId(duplicated.id);
@@ -1233,8 +1255,53 @@ export default function FormBuilderPage() {
                       Select elements from the Builder to start creating your form.
                     </div>
                   ) : (
-                    fields.map((field) => (
-                      <div key={field.id} className="space-y-2 relative group">
+                    fields.map((field) => {
+                      const isSelected = selectedFieldId === field.id;
+                      return (
+                      <div 
+                        key={field.id} 
+                        onClick={() => setSelectedFieldId(field.id)}
+                        className={`space-y-2 relative group p-5 -mx-5 rounded-xl transition-all cursor-pointer border ${
+                          isSelected 
+                            ? "bg-background shadow-xl border-border border-l-[6px] border-l-primary scale-[1.02] z-10" 
+                            : "bg-transparent border-transparent hover:bg-background/40 hover:border-border/40 hover:shadow-sm"
+                        }`}
+                      >
+                        {/* FAB Google Forms style */}
+                        {isSelected && (
+                          <div className="absolute -right-14 top-0 flex flex-col gap-1 bg-background border border-border rounded-xl p-1.5 shadow-lg z-20 animate-in fade-in slide-in-from-left-2">
+                            <button
+                              onClick={(e) => { e.stopPropagation(); addField("text", field.id); }}
+                              className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition cursor-pointer"
+                              title="Add Text Question"
+                            >
+                              <Plus className="h-4 w-4" />
+                            </button>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); addField("radio", field.id); }}
+                              className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition cursor-pointer"
+                              title="Add Multiple Choice"
+                            >
+                              <ListChecks className="h-4 w-4" />
+                            </button>
+                            <div className="h-px w-full bg-border/50 my-1"></div>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); duplicateField(field); }}
+                              className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition cursor-pointer"
+                              title="Duplicate Question"
+                            >
+                              <Copy className="h-4 w-4" />
+                            </button>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); deleteField(field.id); }}
+                              className="p-2 rounded-lg hover:bg-red-500/10 text-muted-foreground hover:text-red-500 transition cursor-pointer"
+                              title="Delete Question"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </button>
+                          </div>
+                        )}
+
                         <label className="block text-sm font-bold">
                           {field.label}
                           {field.required && <span className="text-red-500 ml-1">*</span>}
@@ -1286,7 +1353,8 @@ export default function FormBuilderPage() {
                           </div>
                         )}
                       </div>
-                    ))
+                    );
+                  })
                   )}
 
                   <div className="pt-6 border-t border-border/20 mt-8">
@@ -1442,43 +1510,6 @@ export default function FormBuilderPage() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
-  );
-}
-
-// Reusable Accordion Component for Configuration Workspace
-function Accordion({ title, icon: Icon, id, expanded, onToggle, children }: any) {
-  const isOpen = expanded === id;
-  return (
-    <div className="border border-border/80 rounded-xl overflow-hidden mb-3 bg-muted/5 shadow-sm">
-      <button 
-        onClick={() => onToggle(isOpen ? null : id)}
-        className={`w-full flex items-center justify-between p-3.5 transition-colors cursor-pointer ${
-          isOpen ? "bg-muted/40 border-b border-border/50" : "bg-background hover:bg-muted/20"
-        }`}
-      >
-        <div className="flex items-center gap-2.5 font-bold text-xs text-foreground">
-          <div className={`p-1.5 rounded-lg ${isOpen ? "bg-primary/10" : "bg-muted"}`}>
-            <Icon className={`h-3.5 w-3.5 ${isOpen ? "text-primary" : "text-muted-foreground"}`} />
-          </div>
-          {title}
-        </div>
-        {isOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="p-4 bg-background/50">
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Share / QR Modal */}
       {showShareModal && form && (
@@ -1536,6 +1567,43 @@ function Accordion({ title, icon: Icon, id, expanded, onToggle, children }: any)
           </motion.div>
         </div>
       )}
+    </div>
+  );
+}
+
+// Reusable Accordion Component for Configuration Workspace
+function Accordion({ title, icon: Icon, id, expanded, onToggle, children }: any) {
+  const isOpen = expanded === id;
+  return (
+    <div className="border border-border/80 rounded-xl overflow-hidden mb-3 bg-muted/5 shadow-sm">
+      <button 
+        onClick={() => onToggle(isOpen ? null : id)}
+        className={`w-full flex items-center justify-between p-3.5 transition-colors cursor-pointer ${
+          isOpen ? "bg-muted/40 border-b border-border/50" : "bg-background hover:bg-muted/20"
+        }`}
+      >
+        <div className="flex items-center gap-2.5 font-bold text-xs text-foreground">
+          <div className={`p-1.5 rounded-lg ${isOpen ? "bg-primary/10" : "bg-muted"}`}>
+            <Icon className={`h-3.5 w-3.5 ${isOpen ? "text-primary" : "text-muted-foreground"}`} />
+          </div>
+          {title}
+        </div>
+        {isOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-background/50">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
