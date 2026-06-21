@@ -17,15 +17,27 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [profileImage, setProfileImage] = useState<string | null>(null);
 
   useEffect(() => {
-    setProfileImage(localStorage.getItem("profileImage"));
-    const handleStorage = () => setProfileImage(localStorage.getItem("profileImage"));
-    window.addEventListener("storage", handleStorage);
-    window.addEventListener("profileImageUpdated", handleStorage);
-    return () => {
-      window.removeEventListener("storage", handleStorage);
-      window.removeEventListener("profileImageUpdated", handleStorage);
-    };
-  }, []);
+    if (session?.user?.email) {
+      setProfileImage(localStorage.getItem(`profileImage_${session.user.email}`));
+      
+      const handleStorage = () => setProfileImage(localStorage.getItem(`profileImage_${session.user.email}`));
+      const handleCustomEvent = (e: Event) => {
+        const customEvent = e as CustomEvent;
+        if (customEvent.detail?.email === session.user.email) {
+          setProfileImage(localStorage.getItem(`profileImage_${session.user.email}`));
+        }
+      };
+
+      window.addEventListener("storage", handleStorage);
+      window.addEventListener("profileImageUpdated", handleCustomEvent);
+      return () => {
+        window.removeEventListener("storage", handleStorage);
+        window.removeEventListener("profileImageUpdated", handleCustomEvent);
+      };
+    } else {
+      setProfileImage(null);
+    }
+  }, [session]);
 
   const isFormPage = pathname.match(/\/dashboard\/forms\/([a-zA-Z0-9-]+)\/(builder|responses|analytics|settings)/);
   const formId = isFormPage ? isFormPage[1] : null;

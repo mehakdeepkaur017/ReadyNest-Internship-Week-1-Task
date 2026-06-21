@@ -48,23 +48,23 @@ export default function ProfilePage() {
     };
     fetchStats();
     
-    // Load persisted profile image
-    const savedImage = localStorage.getItem("profileImage");
-    if (savedImage) {
-      setProfileImage(savedImage);
+    // Load persisted profile image specifically for this user
+    if (session?.user?.email) {
+      const savedImage = localStorage.getItem(`profileImage_${session.user.email}`);
+      setProfileImage(savedImage || null);
     }
-  }, []);
+  }, [session]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
+    if (e.target.files && e.target.files[0] && session?.user?.email) {
       const file = e.target.files[0];
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64String = reader.result as string;
         setProfileImage(base64String);
         try {
-          localStorage.setItem("profileImage", base64String);
-          window.dispatchEvent(new Event("profileImageUpdated"));
+          localStorage.setItem(`profileImage_${session.user.email}`, base64String);
+          window.dispatchEvent(new CustomEvent("profileImageUpdated", { detail: { email: session.user.email } }));
           toast.success("Profile picture updated!");
         } catch (error) {
           toast.error("Image too large to save locally.");
