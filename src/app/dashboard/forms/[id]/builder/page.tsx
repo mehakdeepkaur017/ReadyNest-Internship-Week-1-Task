@@ -649,6 +649,7 @@ export default function FormBuilderPage() {
                                       );
                                     })}
                                   </div>
+                                ) : (
                                   <div>
                                     <input
                                       type="text"
