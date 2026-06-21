@@ -53,7 +53,7 @@ export default function FormSettingsPage() {
       const res = await fetch(`/api/forms/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ formSettings: settings, isQuizMode }),
+        body: JSON.stringify({ formSettings: settings, isQuizMode, quizSettings: form?.quizSettings }),
       });
       if (!res.ok) throw new Error("Failed to save settings");
       toast.success("Settings saved successfully!");
@@ -98,11 +98,32 @@ export default function FormSettingsPage() {
               <h3 className="text-lg font-bold text-foreground">Make this a quiz</h3>
               <p className="text-sm text-muted-foreground mt-1">Assign point values, set answers and automatically provide feedback</p>
             </div>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" className="sr-only peer" checked={isQuizMode} onChange={(e) => setIsQuizMode(e.target.checked)} />
-              <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-            </label>
+            <div className="flex items-center space-x-3">
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" className="sr-only peer" checked={isQuizMode} onChange={(e) => setIsQuizMode(e.target.checked)} />
+                <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+              </label>
+            </div>
           </div>
+          
+          {isQuizMode && (
+            <div className="p-6 pt-0 mt-4 border-b border-border/50">
+              <div className="flex items-center justify-between max-w-sm">
+                <div>
+                  <p className="font-semibold text-foreground text-sm">Maximum Attempts</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Set to 0 for unlimited attempts</p>
+                </div>
+                <input
+                  type="number"
+                  min="0"
+                  max="10"
+                  value={form?.quizSettings?.maxAttempts || 0}
+                  onChange={(e) => setForm(prev => prev ? { ...prev, quizSettings: { ...prev.quizSettings, maxAttempts: parseInt(e.target.value) || 0 } } as Form : null)}
+                  className="bg-muted/50 border border-border rounded-lg px-3 py-2 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary w-24 text-center"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Responses */}
