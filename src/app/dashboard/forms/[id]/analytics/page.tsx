@@ -40,6 +40,33 @@ export default function AnalyticsPage() {
     });
   };
 
+  const getActiveCandidateFields = () => {
+    if (!form || !form.candidateInfoSettings) return [];
+    const fields: any[] = [];
+    Object.keys(form.candidateInfoSettings).forEach(key => {
+      if (key === "customFields") return;
+      const setting = (form.candidateInfoSettings as any)[key];
+      if (setting?.enabled) {
+        fields.push({ id: key, label: setting.label || key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1'), isCustom: false });
+      }
+    });
+    (form.candidateInfoSettings.customFields || []).forEach((cf: any) => {
+      if (cf.enabled !== false) {
+        fields.push({ id: cf.id, label: cf.label, isCustom: true });
+      }
+    });
+    return fields;
+  };
+
+  const getCandidateValue = (candidateInfo: any, field: any) => {
+    if (!candidateInfo) return "";
+    if (field.isCustom) {
+      const customVal = (candidateInfo.customFields || []).find((c: any) => c.fieldId === field.id || c.label === field.label);
+      return customVal ? customVal.value : "";
+    }
+    return candidateInfo[field.id] || "";
+  };
+
   const getSortedLeaderboard = () => {
     if (!analytics?.quizStats?.leaderboard) return [];
     
@@ -405,23 +432,32 @@ export default function AnalyticsPage() {
                           <tr key={idx} className="hover:bg-muted/10">
                             <td className="py-2.5 px-3 font-bold text-muted-foreground">#{idx + 1}</td>
                             <td className="py-2.5 px-3">
-                              <div className="font-semibold text-foreground">{item.name || "Anonymous"}</div>
-                              {item.email && item.email !== "anonymous" && <div className="text-[10px] text-muted-foreground">{item.email}</div>}
-                              {item.candidateInfo && (
-                                <div className="text-[10px] text-purple-600 dark:text-purple-400 mt-0.5 space-y-0.5">
-                                  {Object.keys(item.candidateInfo).map(key => {
-                                    if (key === 'customFields' || key === 'name' || key === 'email' || !item.candidateInfo[key]) return null;
-                                    const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                                    return (
-                                      <div key={key}><span>{formattedKey}: {item.candidateInfo[key]}</span></div>
-                                    );
-                                  })}
-                                  {(item.candidateInfo.customFields || []).map((cf: any) => {
-                                    if (!cf.value) return null;
-                                    return <div key={cf.fieldId}><span>{cf.label}: {cf.value}</span></div>
-                                  })}
-                                </div>
-                              )}
+                              {(() => {
+                                const activeFields = getActiveCandidateFields();
+                                if (activeFields.length === 0) {
+                                  return <div className="font-semibold text-foreground">Anonymous</div>;
+                                }
+                                
+                                const firstField = activeFields[0];
+                                const firstValue = getCandidateValue(item.candidateInfo, firstField) || "Anonymous";
+                                
+                                const otherFields = activeFields.slice(1);
+                                
+                                return (
+                                  <>
+                                    <div className="font-semibold text-foreground">{firstValue}</div>
+                                    {otherFields.length > 0 && (
+                                      <div className="text-[10px] text-purple-600 dark:text-purple-400 mt-0.5 space-y-0.5">
+                                        {otherFields.map(cf => {
+                                          const val = getCandidateValue(item.candidateInfo, cf);
+                                          if (!val) return null;
+                                          return <div key={cf.id}><span>{cf.label}: {val}</span></div>;
+                                        })}
+                                      </div>
+                                    )}
+                                  </>
+                                );
+                              })()}
                             </td>
                             <td className="py-2.5 px-3 font-bold text-foreground">{item.score} / {item.totalMarks}</td>
                             <td className="py-2.5 px-3 font-bold text-foreground">{item.percentage}%</td>
