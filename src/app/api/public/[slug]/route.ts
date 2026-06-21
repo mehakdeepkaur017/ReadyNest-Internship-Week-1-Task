@@ -229,7 +229,20 @@ export async function GET(
     // Increment view count
     await Form.findByIdAndUpdate(form._id, { $inc: { views: 1 } });
 
-    return NextResponse.json({ form });
+    // Check if the user has already responded if limitOneResponse is enabled
+    let hasResponded = false;
+    if (form.formSettings?.limitOneResponse) {
+      const session = await auth();
+      if (session?.user?.email) {
+        const existingResponse = await ResponseModel.findOne({
+          formId: form._id,
+          "metadata.respondentEmail": session.user.email,
+        });
+        hasResponded = !!existingResponse;
+      }
+    }
+
+    return NextResponse.json({ form, hasResponded });
   } catch (error) {
     console.error("Get public form error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

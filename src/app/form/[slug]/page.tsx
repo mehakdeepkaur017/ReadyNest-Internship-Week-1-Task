@@ -29,6 +29,7 @@ export default function PublicFormPage() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [hasResponded, setHasResponded] = useState(false);
   const [started, setStarted] = useState(false);
   const [formData, setFormData] = useState<Record<string, any>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -71,6 +72,9 @@ export default function PublicFormPage() {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error);
         setForm(data.form);
+        if (data.hasResponded) {
+          setHasResponded(true);
+        }
 
         // Prepopulate default values
         const defaults: Record<string, any> = {};
@@ -419,7 +423,7 @@ export default function PublicFormPage() {
       )}
 
       {/* Floating Timer Badge */}
-      {!submitted && started && isQuiz && quizSettings && quizSettings.timeLimit > 0 && (
+      {!submitted && started && !hasResponded && isQuiz && quizSettings && quizSettings.timeLimit > 0 && (
         <div className="fixed top-4 right-4 z-50 bg-background/90 backdrop-blur-md border border-purple-500/25 px-4.5 py-2.5 rounded-2xl shadow-xl flex items-center space-x-2.5 text-xs font-black text-purple-600 dark:text-purple-400">
           <Clock className="h-4 w-4 animate-spin text-purple-500" />
           <span>TIME REMAINING: {formatTime(timeLeft)}</span>
@@ -427,7 +431,31 @@ export default function PublicFormPage() {
       )}
 
       <AnimatePresence mode="wait">
-        {requiresAuth && !session ? (
+        {hasResponded ? (
+          /* Already Responded Screen */
+          <motion.div
+            key="already-responded-card"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            style={{
+              backgroundColor: theme.cardColor,
+              borderRadius: theme.borderRadius,
+              color: theme.textColor,
+            }}
+            className="w-full max-w-md shadow-2xl p-8 text-center border border-border/20 space-y-5"
+          >
+            <AlertCircle className="h-12 w-12 text-amber-500 mx-auto" />
+            <div className="space-y-1.5">
+              <h2 className="font-extrabold text-lg" style={{ color: theme.textColor }}>
+                Already Responded
+              </h2>
+              <p className="text-xs opacity-75">
+                You have already submitted a response for this form. Multiple submissions are not allowed.
+              </p>
+            </div>
+          </motion.div>
+        ) : requiresAuth && !session ? (
           /* Auth Required Screen */
           <motion.div
             key="auth-card"

@@ -8,6 +8,7 @@ export interface IResponse extends Document {
   metadata?: {
     userAgent?: string;
     ip?: string;
+    respondentEmail?: string;
   };
   quizResult?: {
     score: number;
@@ -38,6 +39,7 @@ const ResponseSchema = new Schema<IResponse>(
     metadata: {
       userAgent: { type: String },
       ip: { type: String },
+      respondentEmail: { type: String },
     },
     quizResult: {
       type: {
