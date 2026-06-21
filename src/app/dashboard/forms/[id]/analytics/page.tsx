@@ -8,8 +8,10 @@ import {
 } from "lucide-react";
 import { 
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  BarChart, Bar, Legend
+  BarChart, Bar, Legend, PieChart, Pie, Cell
 } from "recharts";
+
+const CHART_COLORS = ['#0ea5e9', '#8b5cf6', '#f59e0b', '#10b981', '#f43f5e', '#64748b'];
 import { toast } from "react-hot-toast";
 import { Form, AnalyticsData } from "@/lib/types";
 import { jsPDF } from "jspdf";
@@ -30,6 +32,7 @@ export default function AnalyticsPage() {
     key: "score",
     direction: "desc"
   });
+  const [chartView, setChartView] = useState<"bar" | "pie">("bar");
 
   const handleSortLeaderboard = (key: "score" | "name" | "rollNumber" | "class" | "timeTaken" | "submittedAt" | "percentage") => {
     setLeaderboardSort(prev => {
@@ -617,9 +620,26 @@ export default function AnalyticsPage() {
 
       {/* Question by Question results breakdowns */}
       <div className="space-y-5">
-        <div>
-          <h2 className="text-lg font-bold text-foreground">Question-by-Question breakdown</h2>
-          <p className="text-xs text-muted-foreground mt-0.5">Explore detailed response statistics for each field</p>
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h2 className="text-lg font-bold text-foreground">Question-by-Question breakdown</h2>
+            <p className="text-xs text-muted-foreground mt-0.5">Explore detailed response statistics for each field</p>
+          </div>
+          
+          <div className="flex items-center space-x-1.5 bg-muted/50 p-1 rounded-lg border border-border">
+            <button 
+              onClick={() => setChartView('bar')}
+              className={`px-3 py-1.5 text-[11px] font-bold rounded-md transition ${chartView === 'bar' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              Progress Bars
+            </button>
+            <button 
+              onClick={() => setChartView('pie')}
+              className={`px-3 py-1.5 text-[11px] font-bold rounded-md transition ${chartView === 'pie' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              Pie Charts
+            </button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -635,21 +655,67 @@ export default function AnalyticsPage() {
 
               {/* Selection Distribution chart */}
               {stat.optionsDistribution && (
-                <div className="space-y-2 mt-2 text-xs">
-                  {stat.optionsDistribution.map((opt: any) => (
-                    <div key={opt.value} className="space-y-1">
-                      <div className="flex justify-between text-[11px]">
-                        <span className="text-muted-foreground">{opt.label}</span>
-                        <span className="font-bold text-foreground">{opt.count} ({opt.percentage}%)</span>
+                <div className="space-y-2 mt-2 text-xs flex-1 flex flex-col justify-center">
+                  {chartView === 'bar' ? (
+                    stat.optionsDistribution.map((opt: any) => (
+                      <div key={opt.value} className="space-y-1">
+                        <div className="flex justify-between text-[11px]">
+                          <span className="text-muted-foreground truncate mr-2" title={opt.label}>{opt.label}</span>
+                          <span className="font-bold text-foreground whitespace-nowrap">{opt.count} ({opt.percentage}%)</span>
+                        </div>
+                        <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+                          <div 
+                            className="h-full bg-primary" 
+                            style={{ width: `${opt.percentage}%` }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-primary" 
-                          style={{ width: `${opt.percentage}%` }}
-                        />
-                      </div>
+                    ))
+                  ) : (
+                    <div className="h-[220px] w-full mt-2 relative">
+                      {stat.optionsDistribution.every((opt: any) => opt.count === 0) ? (
+                        <div className="absolute inset-0 flex items-center justify-center text-[10px] text-muted-foreground italic">
+                          No data to display
+                        </div>
+                      ) : (
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie
+                              data={stat.optionsDistribution.filter((opt: any) => opt.count > 0)}
+                              cx="50%"
+                              cy="45%"
+                              innerRadius={45}
+                              outerRadius={75}
+                              paddingAngle={2}
+                              dataKey="count"
+                              nameKey="label"
+                            >
+                              {stat.optionsDistribution.filter((opt: any) => opt.count > 0).map((entry: any, index: number) => (
+                                <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip 
+                              formatter={(value: any, name: any, props: any) => [`${value} (${props.payload.percentage}%)`, name]}
+                              contentStyle={{ 
+                                background: "rgba(255,255,255,0.95)", 
+                                borderRadius: "8px", 
+                                border: "1px solid #E2E8F0",
+                                color: "#0F172A",
+                                fontSize: "11px",
+                                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+                              }} 
+                            />
+                            <Legend 
+                              layout="horizontal" 
+                              verticalAlign="bottom" 
+                              align="center"
+                              wrapperStyle={{ fontSize: '10px', paddingTop: '10px' }}
+                            />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      )}
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
 
