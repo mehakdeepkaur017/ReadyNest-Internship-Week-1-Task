@@ -661,7 +661,7 @@ export default function PublicFormPage() {
                 </h2>
                 <p className="text-xs opacity-75 mt-1">{success.description}</p>
               </div>
-              {success.showButton && form?.formSettings?.showSubmitAnotherResponse !== false && (
+              {success.showButton && form?.formSettings?.showSubmitAnotherResponse !== false && !form?.formSettings?.limitOneResponse && (
                 <button
                   onClick={() => {
                     if (success.redirectUrl) {
