@@ -85,13 +85,14 @@ export default function PublicFormPage() {
         });
         setFormData(defaults);
 
-        // Handle Shuffling if quiz mode is active
+        // Handle Shuffling
         let fieldsToRender = [...data.form.fields];
+        if (data.form.formSettings?.shuffleQuestionOrder || (data.form.isQuizMode && data.form.quizSettings?.shuffleQuestions)) {
+          fieldsToRender = shuffleArray(fieldsToRender);
+        }
+
         if (data.form.isQuizMode) {
           const settings = data.form.quizSettings;
-          if (settings?.shuffleQuestions) {
-            fieldsToRender = shuffleArray(fieldsToRender);
-          }
           if (settings?.shuffleOptions) {
             fieldsToRender = fieldsToRender.map(field => {
               if (field.options && field.options.length > 0) {
@@ -104,6 +105,14 @@ export default function PublicFormPage() {
             setTimeLeft(settings.timeLimit * 60);
           }
         }
+        // Handle Email Collection
+        if (data.form.formSettings?.collectEmailAddresses === "responder_input") {
+          data.form.candidateInfoSettings = {
+            ...data.form.candidateInfoSettings,
+            email: { enabled: true, required: true, label: "Email Address" }
+          };
+        }
+
         setShuffledFields(fieldsToRender);
       } catch (err: any) {
         toast.error(err.message || "Failed to load form");
@@ -383,6 +392,10 @@ export default function PublicFormPage() {
   const isQuiz = form.isQuizMode;
   const quizSettings = form.quizSettings;
   const builderContext = getBuilderContext(form.category || "Business", isQuiz);
+  
+  const requiresAuth = (isQuiz && quizSettings?.requireAuth) || 
+    form?.formSettings?.limitOneResponse || 
+    form?.formSettings?.collectEmailAddresses === "verified";
 
   return (
     <div
@@ -396,7 +409,7 @@ export default function PublicFormPage() {
       <Toaster position="top-right" />
 
       {/* Progress bar (top) */}
-      {!submitted && started && (
+      {!submitted && started && form?.formSettings?.showProgressBar && (
         <div className="fixed top-0 left-0 right-0 h-1 bg-muted/40 z-50">
           <motion.div 
             style={{ width: `${progress}%`, backgroundColor: theme.primaryColor }}
@@ -414,7 +427,7 @@ export default function PublicFormPage() {
       )}
 
       <AnimatePresence mode="wait">
-        {isQuiz && quizSettings?.requireAuth && !session ? (
+        {requiresAuth && !session ? (
           /* Auth Required Screen */
           <motion.div
             key="auth-card"
@@ -434,7 +447,7 @@ export default function PublicFormPage() {
                 Authentication Required
               </h2>
               <p className="text-xs opacity-75">
-                The creator of this quiz requires respondents to be authenticated. Please sign in with your account to continue.
+                Authentication is required to submit this form. Please sign in with your account to continue.
               </p>
             </div>
             <button
@@ -446,7 +459,7 @@ export default function PublicFormPage() {
               }}
               className="w-full py-3 text-xs font-bold cursor-pointer transition hover:opacity-90 shadow-sm"
             >
-              Sign In to Start Quiz
+              Sign In to Continue
             </button>
           </motion.div>
         ) : submitted ? (
@@ -620,7 +633,7 @@ export default function PublicFormPage() {
                 </h2>
                 <p className="text-xs opacity-75 mt-1">{success.description}</p>
               </div>
-              {success.showButton && (
+              {success.showButton && form?.formSettings?.showSubmitAnotherResponse !== false && (
                 <button
                   onClick={() => {
                     if (success.redirectUrl) {

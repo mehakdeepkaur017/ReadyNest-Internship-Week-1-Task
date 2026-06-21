@@ -97,14 +97,10 @@ export interface QuizSettings {
 
 export interface FormSettings {
   collectEmailAddresses: "do_not_collect" | "verified" | "responder_input";
-  sendCopyOfResponse: "off" | "when_requested" | "always";
-  allowResponseEditing: boolean;
   limitOneResponse: boolean;
   showProgressBar: boolean;
   shuffleQuestionOrder: boolean;
   showSubmitAnotherResponse: boolean;
-  viewResultsSummary: boolean;
-  disableAutoSave: boolean;
   makeQuestionsRequiredByDefault: boolean;
 }
 

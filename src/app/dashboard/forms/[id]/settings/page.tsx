@@ -8,14 +8,10 @@ import toast from "react-hot-toast";
 
 const defaultSettings: FormSettings = {
   collectEmailAddresses: "do_not_collect",
-  sendCopyOfResponse: "off",
-  allowResponseEditing: false,
   limitOneResponse: false,
   showProgressBar: false,
   shuffleQuestionOrder: false,
   showSubmitAnotherResponse: true,
-  viewResultsSummary: false,
-  disableAutoSave: false,
   makeQuestionsRequiredByDefault: false,
 };
 
@@ -133,34 +129,6 @@ export default function FormSettingsPage() {
 
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold text-foreground text-sm">Send responders a copy of their response</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Requires Collect email addresses</p>
-              </div>
-              <select
-                value={settings.sendCopyOfResponse}
-                onChange={(e) => setSettings({ ...settings, sendCopyOfResponse: e.target.value as any })}
-                className="bg-muted/50 border border-border rounded-lg px-3 py-2 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary w-48"
-                disabled={settings.collectEmailAddresses === "do_not_collect"}
-              >
-                <option value="off">Off</option>
-                <option value="when_requested">When requested</option>
-                <option value="always">Always</option>
-              </select>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-semibold text-foreground text-sm">Allow response editing</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Responses can be changed after being submitted</p>
-              </div>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" className="sr-only peer" checked={settings.allowResponseEditing} onChange={(e) => setSettings({ ...settings, allowResponseEditing: e.target.checked })} />
-                <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-              </label>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div>
                 <p className="font-semibold text-foreground text-sm uppercase tracking-wider mt-4 text-muted-foreground text-xs">Requires Sign-In</p>
                 <p className="font-semibold text-foreground text-sm mt-2">Limit to 1 response</p>
               </div>
@@ -210,30 +178,6 @@ export default function FormSettingsPage() {
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" checked={settings.showSubmitAnotherResponse} onChange={(e) => setSettings({ ...settings, showSubmitAnotherResponse: e.target.checked })} />
-                  <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                </label>
-              </div>
-
-              <div className="flex items-center justify-between mt-6">
-                <div>
-                  <p className="font-semibold text-foreground text-sm">View results summary</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Share results summary with respondents.</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" checked={settings.viewResultsSummary} onChange={(e) => setSettings({ ...settings, viewResultsSummary: e.target.checked })} />
-                  <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                </label>
-              </div>
-            </div>
-
-            <div className="border-t border-border/50 pt-6">
-              <p className="font-semibold text-foreground text-sm uppercase tracking-wider text-muted-foreground text-xs mb-4">Restrictions</p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Disable auto-save for all respondents</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" checked={settings.disableAutoSave} onChange={(e) => setSettings({ ...settings, disableAutoSave: e.target.checked })} />
                   <div className="w-11 h-6 bg-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                 </label>
               </div>

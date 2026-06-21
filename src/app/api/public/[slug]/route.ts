@@ -23,6 +23,29 @@ export async function POST(
     // Support either direct data body (form mode) or nested {data, timeTaken} (quiz mode)
     const data = body.data || body;
 
+    const session = await auth();
+    const email = session?.user?.email;
+
+    // Check limitOneResponse
+    if (form.formSettings?.limitOneResponse) {
+      if (!email) {
+        return NextResponse.json(
+          { error: "Authentication is required to submit this form. Please log in." },
+          { status: 401 }
+        );
+      }
+      const existingResponse = await ResponseModel.findOne({
+        formId: form._id,
+        "metadata.respondentEmail": email,
+      });
+      if (existingResponse) {
+        return NextResponse.json(
+          { error: "You have already submitted a response for this form." },
+          { status: 403 }
+        );
+      }
+    }
+
     // Basic server-side validation
     for (const field of form.fields) {
       if (field.required && (!data[field.id] || data[field.id] === "")) {
@@ -36,8 +59,6 @@ export async function POST(
     // Quiz Mode Grading & Validations
     let quizResult = undefined;
     if (form.isQuizMode) {
-      const session = await auth();
-      const email = session?.user?.email;
 
       if (form.quizSettings?.requireAuth && !email) {
         return NextResponse.json(
@@ -154,6 +175,7 @@ export async function POST(
       submittedAt: new Date(),
       metadata: {
         userAgent: req.headers.get("user-agent") || "",
+        respondentEmail: email || "anonymous@formforge.com",
       },
       quizResult,
     });
@@ -189,7 +211,7 @@ export async function GET(
     const { slug } = await params;
 
     const form = await Form.findOne({ slug, status: "published" })
-      .select("title description fields slug coverImage themeSettings welcomeScreen successScreen isQuizMode quizSettings candidateInfoSettings headerSettings instructions")
+      .select("title description fields slug coverImage themeSettings welcomeScreen successScreen isQuizMode quizSettings candidateInfoSettings headerSettings instructions formSettings")
       .lean();
 
     if (!form) {

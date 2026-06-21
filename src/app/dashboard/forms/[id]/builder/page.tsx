@@ -306,7 +306,7 @@ export default function FormBuilderPage() {
       label: `Untitled ${type.toUpperCase()}`,
       placeholder: `Enter your ${type}...`,
       helpText: "",
-      required: false,
+      required: form?.formSettings?.makeQuestionsRequiredByDefault || false,
       options: ["dropdown", "radio", "checkbox"].includes(type)
         ? [
             { label: "Option 1", value: "option_1" },
