@@ -34,7 +34,7 @@ FormForge leverages a modern, robust, and highly scalable technology stack:
 - **Drag & Drop**: `@dnd-kit/core`
 - **Data Visualization**: Recharts
 - **Export Utilities**: `jspdf`, `html-to-image`, `xlsx`, `csv`
-- **Emails**: Resend, Nodemailer
+- **Emails**: Nodemailer
 
 ---
 
