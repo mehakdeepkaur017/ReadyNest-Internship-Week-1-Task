@@ -30,6 +30,7 @@ export default function PublicFormPage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [hasResponded, setHasResponded] = useState(false);
+  const [attemptErrorMessage, setAttemptErrorMessage] = useState("");
   const [started, setStarted] = useState(false);
   const [formData, setFormData] = useState<Record<string, any>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -74,6 +75,7 @@ export default function PublicFormPage() {
         setForm(data.form);
         if (data.hasResponded) {
           setHasResponded(true);
+          setAttemptErrorMessage(data.attemptErrorMessage || "You have already submitted a response for this form. Multiple submissions are not allowed.");
         }
 
         // Prepopulate default values
@@ -127,25 +129,29 @@ export default function PublicFormPage() {
     fetchForm();
   }, [slug]);
 
-  // Unified Timer Effect (Counts elapsed timeTaken and handles timeLeft countdown if applicable)
+  // Unified Timer Effect (Robust against background throttling)
   useEffect(() => {
     let interval: NodeJS.Timeout;
     
     if (started && !submitted && form?.isQuizMode) {
-      const hasTimeLimit = form.quizSettings && form.quizSettings.timeLimit > 0;
+      const hasTimeLimit = !!(form.quizSettings && form.quizSettings.timeLimit > 0);
+      const initialTimeLimit = hasTimeLimit ? form.quizSettings!.timeLimit * 60 : 0;
+      const startTime = Date.now();
       
       interval = setInterval(() => {
+        const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+        
         if (hasTimeLimit) {
-          setTimeLeft((prev) => {
-            if (prev <= 1) {
-              clearInterval(interval);
-              handleAutoSubmit();
-              return 0;
-            }
-            return prev - 1;
-          });
+          const remaining = Math.max(0, initialTimeLimit - elapsedSeconds);
+          setTimeLeft(remaining);
+          
+          if (remaining <= 0) {
+            clearInterval(interval);
+            handleAutoSubmit();
+            return;
+          }
         }
-        setTimeTaken((prev) => prev + 1);
+        setTimeTaken(elapsedSeconds);
       }, 1000);
     }
     
@@ -451,7 +457,7 @@ export default function PublicFormPage() {
                 Already Responded
               </h2>
               <p className="text-xs opacity-75">
-                You have already submitted a response for this form. Multiple submissions are not allowed.
+                {attemptErrorMessage}
               </p>
             </div>
           </motion.div>

@@ -229,20 +229,36 @@ export async function GET(
     // Increment view count
     await Form.findByIdAndUpdate(form._id, { $inc: { views: 1 } });
 
-    // Check if the user has already responded if limitOneResponse is enabled
+    // Check if the user has already responded if limitOneResponse is enabled OR quiz attempts are maxed
     let hasResponded = false;
-    if (form.formSettings?.limitOneResponse) {
-      const session = await auth();
-      if (session?.user?.email) {
+    let attemptErrorMessage = "You have already submitted a response for this form. Multiple submissions are not allowed.";
+
+    const session = await auth();
+    const email = session?.user?.email;
+
+    if (email) {
+      if (form.formSettings?.limitOneResponse) {
         const existingResponse = await ResponseModel.findOne({
           formId: form._id,
-          "metadata.respondentEmail": session.user.email,
+          "metadata.respondentEmail": email,
         });
-        hasResponded = !!existingResponse;
+        if (existingResponse) {
+          hasResponded = true;
+          attemptErrorMessage = "You have already submitted a response for this form. Multiple submissions are not allowed.";
+        }
+      } else if (form.isQuizMode && form.quizSettings?.maxAttempts > 0) {
+        const attemptCount = await ResponseModel.countDocuments({
+          formId: form._id,
+          "quizResult.respondentEmail": email,
+        });
+        if (attemptCount >= form.quizSettings.maxAttempts) {
+          hasResponded = true;
+          attemptErrorMessage = `You have reached the maximum attempt limit (${form.quizSettings.maxAttempts}) for this quiz.`;
+        }
       }
     }
 
-    return NextResponse.json({ form, hasResponded });
+    return NextResponse.json({ form, hasResponded, attemptErrorMessage });
   } catch (error) {
     console.error("Get public form error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
