@@ -410,8 +410,8 @@ export default function ResponsesPage() {
                   {form.isQuizMode && (
                     <th className="p-3.5 font-bold text-muted-foreground uppercase tracking-wider text-[10px]">Score</th>
                   )}
-                  {form.fields.slice(0, 3).map((field) => (
-                    <th key={field.id} className="p-3.5 font-bold text-muted-foreground uppercase tracking-wider text-[10px] truncate max-w-[150px]">
+                  {form.fields.map((field) => (
+                    <th key={field.id} className="p-3.5 font-bold text-muted-foreground uppercase tracking-wider text-[10px] truncate max-w-[150px]" title={field.label}>
                       {field.label}
                     </th>
                   ))}
@@ -453,7 +453,7 @@ export default function ResponsesPage() {
                         ) : "-"}
                       </td>
                     )}
-                    {form.fields.slice(0, 3).map((field) => {
+                    {form.fields.map((field) => {
                       const val = resp.data[field.id];
                       let displayVal = "";
                       if (val) {
