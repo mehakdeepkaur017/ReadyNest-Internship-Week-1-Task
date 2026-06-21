@@ -131,6 +131,7 @@ export default function FormBuilderPage() {
   const [buildingAssessment, setBuildingAssessment] = useState(false);
   
   const [showShareModal, setShowShareModal] = useState(false);
+  const [showBulkRequireModal, setShowBulkRequireModal] = useState(false);
   const [qrUrl, setQrUrl] = useState("");
 
   const [builderSubject, setBuilderSubject] = useState("mathematics");
@@ -754,8 +755,21 @@ export default function FormBuilderPage() {
 
                     {/* Canvas List */}
                     <div>
-                      <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3 flex justify-between">
-                        <span>Form Structure</span>
+                      <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <span>Form Structure</span>
+                          {fields.length > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => setShowBulkRequireModal(true)}
+                              className="text-[9px] px-1.5 py-0.5 rounded bg-primary/10 text-primary hover:bg-primary/20 transition cursor-pointer font-bold flex items-center space-x-1"
+                              title="Select multiple fields to require validation"
+                            >
+                              <ListChecks className="h-3 w-3" />
+                              <span>Bulk Require</span>
+                            </button>
+                          )}
+                        </div>
                         <span>{fields.length} items</span>
                       </h3>
                       
@@ -1592,6 +1606,64 @@ export default function FormBuilderPage() {
                   Close
                 </button>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Bulk Require Modal */}
+      {showBulkRequireModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setShowBulkRequireModal(false)} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="w-full max-w-md glass border border-border rounded-2xl shadow-2xl p-6 relative bg-background/95 flex flex-col max-h-[80vh]"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-bold text-lg text-foreground flex items-center gap-2">
+                <ListChecks className="h-5 w-5 text-primary" />
+                Bulk Require Fields
+              </h3>
+              <button onClick={() => setShowBulkRequireModal(false)} className="text-muted-foreground hover:text-foreground text-sm font-semibold">✕</button>
+            </div>
+            <p className="text-xs text-muted-foreground mb-4">Select the fields below that should require validation.</p>
+            
+            <div className="overflow-y-auto custom-scrollbar flex-1 space-y-2 pr-2">
+              {fields.map(field => (
+                <label key={field.id} className="flex items-center space-x-3 p-3 rounded-xl border border-border bg-background hover:bg-muted/30 cursor-pointer transition">
+                  <input
+                    type="checkbox"
+                    checked={field.required}
+                    onChange={(e) => {
+                      setFields(fields.map(f => f.id === field.id ? { ...f, required: e.target.checked } : f));
+                    }}
+                    className="h-4 w-4 rounded border-border text-primary focus:ring-primary"
+                  />
+                  <div className="flex-1">
+                    <span className="font-bold text-sm text-foreground">{field.label}</span>
+                    <span className="block text-[10px] text-muted-foreground uppercase">{field.type}</span>
+                  </div>
+                </label>
+              ))}
+            </div>
+
+            <div className="pt-4 border-t border-border mt-4 flex justify-between items-center gap-3">
+              <button
+                type="button"
+                onClick={() => setFields(fields.map(f => ({ ...f, required: true })))}
+                className="text-xs font-bold text-primary hover:underline transition cursor-pointer"
+              >
+                Select All
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowBulkRequireModal(false)}
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-xl text-sm font-bold transition hover:opacity-90 cursor-pointer shadow-lg shadow-primary/25"
+              >
+                Done
+              </button>
             </div>
           </motion.div>
         </div>
