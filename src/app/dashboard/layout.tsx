@@ -60,8 +60,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const navigation = isFormPage ? formNavigation : globalNavigation;
 
   const handleLogout = async () => {
-    await signOut({ redirect: false });
-    router.push("/");
+    await signOut({ callbackUrl: "/" });
   };
 
   return (
